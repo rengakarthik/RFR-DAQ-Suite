@@ -19,7 +19,7 @@ namespace RFR_DAQ_Suite
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Welcome to RFR DAQ Suite");
+            MessageBox.Show("Welcome to RFR DAQ Suite!");
         }
     }
 }
