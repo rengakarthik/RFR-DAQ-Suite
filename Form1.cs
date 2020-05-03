@@ -21,5 +21,15 @@ namespace RFR_DAQ_Suite
         {
             MessageBox.Show("Welcome to RFR DAQ Suite!");
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Speed_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
