@@ -24,7 +24,10 @@ namespace RFR_DAQ_Suite
         public Form1()
         {
             InitializeComponent();
+<<<<<<< HEAD
             ChartLoad_channel1();
+=======
+>>>>>>> parent of b7e1805... Addedd Comments... :(
         }
 
 
@@ -154,10 +157,17 @@ namespace RFR_DAQ_Suite
                 StreamReader read = new StreamReader(File.OpenRead(open.FileName));
                 String fileName = open.FileName;
                 file.Text = Path.GetFileName(fileName);
+<<<<<<< HEAD
+
+=======
 
 
                 String text = read.ReadToEnd();
+>>>>>>> parent of b7e1805... Addedd Comments... :(
 
+                String text = read.ReadToEnd();
+
+<<<<<<< HEAD
 
                 String[] lines = text.Split('\n');
 
@@ -169,6 +179,18 @@ namespace RFR_DAQ_Suite
 
                 current.elements = new Double[current.nrow - 1, current.ncol];
 
+=======
+                String[] lines = text.Split('\n');
+
+                current.nrow = lines.Length - 1;
+
+                current.ncol = lines[1].Split(',').Length;
+
+                
+
+                current.elements = new Double[current.nrow - 1, current.ncol];
+
+>>>>>>> parent of b7e1805... Addedd Comments... :(
                 String[] row;
                 row = new String[current.ncol];
                 current.colnames = new string[current.ncol];
@@ -235,6 +257,7 @@ namespace RFR_DAQ_Suite
             }
 
            
+<<<<<<< HEAD
 
         }
 
@@ -287,6 +310,14 @@ namespace RFR_DAQ_Suite
             chart_channel1.Series["file2"].Points.AddXY(3, 1);
             chart_channel1.Series["file2"].Points.AddXY(4, 3);
 
+=======
+
+        }
+
+        private void file1_Click(object sender, EventArgs e)
+        {
+
+>>>>>>> parent of b7e1805... Addedd Comments... :(
         }
     }
 }

@@ -8,6 +8,7 @@ C:\Users\Sac\Desktop\RFR\DAQ\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csproj
 C:\Users\Sac\Desktop\RFR\DAQ\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csproj.CoreCompileInputs.cache
 C:\Users\Sac\Desktop\RFR\DAQ\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.exe
 C:\Users\Sac\Desktop\RFR\DAQ\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.pdb
+<<<<<<< HEAD
 C:\Users\HP\Source\Repos\RFR-DAQ-Suite\RFR-DAQ-Suite-master\bin\Debug\RFR DAQ Suite.exe.config
 C:\Users\HP\Source\Repos\RFR-DAQ-Suite\RFR-DAQ-Suite-master\bin\Debug\RFR DAQ Suite.exe
 C:\Users\HP\Source\Repos\RFR-DAQ-Suite\RFR-DAQ-Suite-master\bin\Debug\RFR DAQ Suite.pdb
@@ -18,3 +19,5 @@ C:\Users\HP\Source\Repos\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Su
 C:\Users\HP\Source\Repos\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csproj.CoreCompileInputs.cache
 C:\Users\HP\Source\Repos\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.exe
 C:\Users\HP\Source\Repos\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.pdb
+=======
+>>>>>>> parent of b7e1805... Addedd Comments... :(
