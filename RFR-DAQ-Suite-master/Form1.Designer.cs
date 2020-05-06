@@ -72,7 +72,6 @@
             this.ProgName = new System.Windows.Forms.Label();
             this.varStat1 = new System.Windows.Forms.Label();
             this.varStat2 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
@@ -418,21 +417,12 @@
             this.varStat2.TabIndex = 45;
             this.varStat2.Text = "Variables Empty";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(713, 393);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(171, 160);
-            this.listBox1.TabIndex = 46;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowText;
             this.ClientSize = new System.Drawing.Size(946, 573);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.varStat2);
             this.Controls.Add(this.varStat1);
             this.Controls.Add(this.ProgName);
@@ -514,7 +504,6 @@
         private System.Windows.Forms.Label ProgName;
         private System.Windows.Forms.Label varStat1;
         private System.Windows.Forms.Label varStat2;
-        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

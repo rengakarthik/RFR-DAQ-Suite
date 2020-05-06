@@ -25,7 +25,7 @@ namespace RFR_DAQ_Suite
             public int nrow, ncol;
             public double[,] elements;
             public string[] colnames;
-            public double[] x1, y1, z1, x2, y2, z2;
+            public double[] x1, y1, z1;
             // The extracted data is stord in the above
             // You need not worry on how they got there
 
@@ -70,9 +70,9 @@ namespace RFR_DAQ_Suite
         {
             try
             {
-                filldata(ref second.x2, ref second);
-                filldata(ref second.y2, ref second);
-                filldata(ref second.z2, ref second);
+                filldata(ref second.x1, ref second);
+                filldata(ref second.y1, ref second);
+                filldata(ref second.z1, ref second);
                 varStat2.Text = "Done !!";
 
             }
@@ -178,7 +178,7 @@ namespace RFR_DAQ_Suite
                         {
 
                             current.colnames[j] = row[j];
-                            listBox1.Items.Add(current.colnames[j]);
+                            //listBox1.Items.Add(current.colnames[j]);
 
                         }
                         else
