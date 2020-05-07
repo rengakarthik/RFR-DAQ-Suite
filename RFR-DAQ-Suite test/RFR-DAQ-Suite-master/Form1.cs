@@ -17,6 +17,7 @@ namespace RFR_DAQ_Suite
         public Form1()
         {
             InitializeComponent();   // Danger !! Don't Touch... Might explode!
+            ChartLoad_channel1();
         }
 
 
@@ -252,6 +253,48 @@ namespace RFR_DAQ_Suite
 
         }
 
+        private void chart2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        void ChartLoad_channel1()
+        {
+            var chart = chart1.ChartAreas[0];
+
+            chart.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+
+            chart.AxisX.LabelStyle.Format = "";
+            chart.AxisY.LabelStyle.Format = "";
+            chart.AxisX.LabelStyle.IsEndLabelVisible = true;
+
+            chart.AxisX.Minimum = 0;
+            chart.AxisY.Minimum = 0;
+
+            chart.AxisX.Interval = 0.5;
+            chart.AxisY.Interval = 1;
+
+            chart1.Series[0].IsVisibleInLegend = false;
+
+            chart1.Series.Add("file1");
+            chart1.Series["file1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            chart1.Series["file1"].Color = Color.Green;
+
+            chart1.Series.Add("file2");
+            chart1.Series["file2"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            chart1.Series["file2"].Color = Color.Blue;
+
+            chart1.Series["file1"].Points.AddXY(1, 2);
+            chart1.Series["file1"].Points.AddXY(2, 1);
+            chart1.Series["file1"].Points.AddXY(3, 3);
+            chart1.Series["file1"].Points.AddXY(4, 2);
+
+            chart1.Series["file2"].Points.AddXY(1, 4);
+            chart1.Series["file2"].Points.AddXY(2, 2);
+            chart1.Series["file2"].Points.AddXY(3, 1);
+            chart1.Series["file2"].Points.AddXY(4, 3);
+
+        }
     }
 
 }
