@@ -73,9 +73,9 @@ namespace RFR_DAQ_Suite
             try
             {
                 // To get the channel data.
-                filldata(ref first.x1, ref first);
-                filldata(ref first.y1, ref first);
-                filldata(ref first.z1, ref first);
+                filldata(ref first.x1, ref first, comboBox1.SelectedIndex);
+                filldata(ref first.y1, ref first, comboBox2.SelectedIndex);
+                filldata(ref first.z1, ref first, comboBox3.SelectedIndex);
                 varStat1.Text = "Done !!";
 
             }
@@ -95,9 +95,9 @@ namespace RFR_DAQ_Suite
             {
                 // Same thing as above.
 
-                filldata(ref second.x1, ref second);
-                filldata(ref second.y1, ref second);
-                filldata(ref second.z1, ref second);
+                filldata(ref second.x1, ref second, comboBox4.SelectedIndex);
+                filldata(ref second.y1, ref second, comboBox5.SelectedIndex);
+                filldata(ref second.z1, ref second, comboBox6.SelectedIndex);
                 varStat2.Text = "Done !!";
 
             }
@@ -238,20 +238,38 @@ namespace RFR_DAQ_Suite
 
         }
 
-        public void filldata(ref double[] x, ref workhorse current)         // Fills data int the channels (one at a time) for further processing
+        public void filldata(ref double[] x, ref workhorse current, int index)         // Fills data int the channels (one at a time) for further processing
         {
 
             x = new double[current.nrow - 1];       // Because header row has been removed
 
-            for (int i = 1; i < current.nrow - 1; i++)
+            for (int i = 0; i < current.nrow - 1; i++)
             {
-                x[i] = current.elements[i, comboBox1.SelectedIndex];       // Dropdown items are indexed from 0
+                x[i] = current.elements[i, index];       // Dropdown items are indexed from 0
+                //listBox1.Items.Add(x[i]);
             }
 
 
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            listBox1.Items.Clear();
+            listBox2.Items.Clear();
+            listBox3.Items.Clear();
+
+
+            for (int i =0; i< first.nrow - 1; i++) 
+            {
+
+                listBox1.Items.Add(first.x1[i]);
+                listBox2.Items.Add(first.y1[i]);
+                listBox3.Items.Add(first.z1[i]);
+
+            }
+        }
     }
 
 }
