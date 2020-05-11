@@ -20,7 +20,7 @@ namespace RFR_DAQ_Suite
         }
 
 
-        public struct workhorse
+        public class workhorse
         {
 
             // This is a user defined data type called 'Structure'. Read online.
@@ -34,8 +34,8 @@ namespace RFR_DAQ_Suite
 
         }
 
-        workhorse first;        // Ojects for channels 1 aand 2.
-        workhorse second;
+        workhorse first = new workhorse();        // Ojects for channels 1 aand 2.
+        workhorse second = new workhorse();
 
 
 
@@ -45,8 +45,11 @@ namespace RFR_DAQ_Suite
             // Reads the file loaded in first channel 
 
             readit(file1, ref first);
+
             populate(comboBox1, ref first);        // Populates the dropdown menus.
+
             populate(comboBox2, ref first);
+
             populate(comboBox3, ref first);
 
 
@@ -57,9 +60,12 @@ namespace RFR_DAQ_Suite
 
             // Same as above, but for channel 2
 
-            readit(file2,ref second);
+            readit(file2, ref second);
+
             populate(comboBox4, ref second);
+
             populate(comboBox5, ref second);
+
             populate(comboBox6, ref second);
 
         }
@@ -70,47 +76,62 @@ namespace RFR_DAQ_Suite
 
             // The try-catch block checkes whether all fields have been filled.
 
-            try
-            {
-                // To get the channel data.
-                filldata(ref first.x1, ref first, comboBox1.SelectedIndex);
-                filldata(ref first.y1, ref first, comboBox2.SelectedIndex);
-                filldata(ref first.z1, ref first, comboBox3.SelectedIndex);
-                varStat1.Text = "Done !!";
 
-            }
-            catch
-            {
+            // To get the channel data.
+            filldata(ref first.x1, ref first, comboBox1.SelectedIndex);
+            filldata(ref first.y1, ref first, comboBox2.SelectedIndex);
+            filldata(ref first.z1, ref first, comboBox3.SelectedIndex);
+            varStat1.Text = "Variables Loaded";
 
-                MessageBox.Show("Pls fill all three boxes", "Error !!", MessageBoxButtons.OK);      // Error message.
-
-            }
 
 
         }
 
         private void Load_file2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Same thing as above.
 
-                filldata(ref second.x1, ref second, comboBox4.SelectedIndex);
-                filldata(ref second.y1, ref second, comboBox5.SelectedIndex);
-                filldata(ref second.z1, ref second, comboBox6.SelectedIndex);
-                varStat2.Text = "Done !!";
+            // Same thing as above.
 
-            }
-            catch
-            {
+            filldata(ref second.x1, ref second, comboBox4.SelectedIndex);
+            filldata(ref second.y1, ref second, comboBox5.SelectedIndex);
+            filldata(ref second.z1, ref second, comboBox6.SelectedIndex);
+            varStat2.Text = "Variables Loaded";
 
-                MessageBox.Show("Pls fill all three boxes", "Error !!", MessageBoxButtons.OK);      // Lol
-
-            }
 
 
         }
 
+
+
+        private void Purge1_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();               // Clears the dropdown for current run
+            comboBox1.ResetText();                 // Clears Text in the combobox textbox
+            comboBox2.Items.Clear();
+            comboBox1.ResetText();
+            comboBox3.Items.Clear();
+            comboBox1.ResetText();
+            first.x1 = null;
+            first.y1 = null;
+            first.z1 = null;
+            varStat1.Text = "Variables Emptied !";
+
+        }
+
+
+        private void Purge2_Click(object sender, EventArgs e)
+        {
+            comboBox4.Items.Clear();            // Same as above but for channel 2
+            comboBox1.ResetText();
+            comboBox5.Items.Clear();
+            comboBox1.ResetText();
+            comboBox6.Items.Clear();
+            comboBox1.ResetText();
+            second.x1 = null;
+            second.x1 = null;
+            second.x1 = null;
+            varStat2.Text = "Variables Emptied !!";
+        }
 
 
         // The next few are empty functions that are to be used to add functionality to the specified actions as suggested by the names...
@@ -200,7 +221,7 @@ namespace RFR_DAQ_Suite
                     {
                         if (i == 0)
                         {
-                            
+
                             current.colnames[j] = row[j];       // Stores column names.
 
                         }
@@ -240,14 +261,29 @@ namespace RFR_DAQ_Suite
 
         public void filldata(ref double[] x, ref workhorse current, int index)         // Fills data int the channels (one at a time) for further processing
         {
-
-            x = new double[current.nrow - 1];       // Because header row has been removed
-
-            for (int i = 0; i < current.nrow - 1; i++)
+            try
             {
-                x[i] = current.elements[i, index];       // Dropdown items are indexed from 0
-                //listBox1.Items.Add(x[i]);
+
+                x = new double[current.nrow - 1];       // Because header row has been removed
+
+                for (int i = 0; i < current.nrow - 1; i++)
+                {
+                    x[i] = current.elements[i, index];       // Dropdown items are indexed from 0
+                                                             //listBox1.Items.Add(x[i]);
+                }
+
             }
+            catch
+            {
+
+                for (int i = 0; i < current.nrow - 1; i++)
+                {
+                    x[i] = 0;                                // Set default value to zero
+
+                }
+
+            }
+
 
 
 
@@ -261,15 +297,28 @@ namespace RFR_DAQ_Suite
             listBox3.Items.Clear();
 
 
-            for (int i =0; i< first.nrow - 1; i++) 
+            try
+            {
+                for (int i = 0; i < first.nrow - 1; i++)
+                {
+
+                    listBox1.Items.Add(first.x1[i]);
+                    listBox2.Items.Add(first.y1[i]);
+                    listBox3.Items.Add(first.z1[i]);
+
+                }
+            }
+            catch
             {
 
-                listBox1.Items.Add(first.x1[i]);
-                listBox2.Items.Add(first.y1[i]);
-                listBox3.Items.Add(first.z1[i]);
+                MessageBox.Show("variables purged !", "Lol !", MessageBoxButtons.OK);
 
             }
+
+
         }
+
+
     }
 
 }

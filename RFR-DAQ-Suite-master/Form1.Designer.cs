@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -76,6 +76,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox3 = new System.Windows.Forms.ListBox();
+            this.Purge1 = new System.Windows.Forms.Button();
+            this.Purge2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
@@ -84,18 +86,18 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea7.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.chart1.Legends.Add(legend7);
             this.chart1.Location = new System.Drawing.Point(22, 276);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Channel 3";
-            this.chart1.Series.Add(series1);
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series7.Legend = "Legend1";
+            series7.Name = "Channel 3";
+            this.chart1.Series.Add(series7);
             this.chart1.Size = new System.Drawing.Size(440, 100);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -103,36 +105,36 @@
             // 
             // chart2
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
+            chartArea8.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.chart2.Legends.Add(legend8);
             this.chart2.Location = new System.Drawing.Point(22, 64);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "Channel 1";
-            this.chart2.Series.Add(series2);
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series8.Legend = "Legend1";
+            series8.Name = "Channel 1";
+            this.chart2.Series.Add(series8);
             this.chart2.Size = new System.Drawing.Size(440, 100);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
             // 
             // chart3
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart3.Legends.Add(legend3);
+            chartArea9.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.chart3.Legends.Add(legend9);
             this.chart3.Location = new System.Drawing.Point(22, 170);
             this.chart3.Name = "chart3";
             this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "Channel 2";
-            this.chart3.Series.Add(series3);
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series9.Legend = "Legend1";
+            series9.Name = "Channel 2";
+            this.chart3.Series.Add(series9);
             this.chart3.Size = new System.Drawing.Size(440, 100);
             this.chart3.TabIndex = 2;
             this.chart3.Text = "chart3";
@@ -173,7 +175,7 @@
             // 
             // Load_file1
             // 
-            this.Load_file1.Location = new System.Drawing.Point(561, 266);
+            this.Load_file1.Location = new System.Drawing.Point(492, 266);
             this.Load_file1.Name = "Load_file1";
             this.Load_file1.Size = new System.Drawing.Size(75, 23);
             this.Load_file1.TabIndex = 8;
@@ -183,7 +185,7 @@
             // 
             // Load_file2
             // 
-            this.Load_file2.Location = new System.Drawing.Point(786, 266);
+            this.Load_file2.Location = new System.Drawing.Point(742, 266);
             this.Load_file2.Name = "Load_file2";
             this.Load_file2.Size = new System.Drawing.Size(75, 23);
             this.Load_file2.TabIndex = 10;
@@ -457,12 +459,34 @@
             this.listBox3.Size = new System.Drawing.Size(57, 95);
             this.listBox3.TabIndex = 49;
             // 
+            // Purge1
+            // 
+            this.Purge1.Location = new System.Drawing.Point(611, 266);
+            this.Purge1.Name = "Purge1";
+            this.Purge1.Size = new System.Drawing.Size(75, 23);
+            this.Purge1.TabIndex = 50;
+            this.Purge1.Text = "Purge";
+            this.Purge1.UseVisualStyleBackColor = true;
+            this.Purge1.Click += new System.EventHandler(this.Purge1_Click);
+            // 
+            // Purge2
+            // 
+            this.Purge2.Location = new System.Drawing.Point(847, 266);
+            this.Purge2.Name = "Purge2";
+            this.Purge2.Size = new System.Drawing.Size(75, 23);
+            this.Purge2.TabIndex = 51;
+            this.Purge2.Text = "Purge";
+            this.Purge2.UseVisualStyleBackColor = true;
+            this.Purge2.Click += new System.EventHandler(this.Purge2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowText;
             this.ClientSize = new System.Drawing.Size(946, 573);
+            this.Controls.Add(this.Purge2);
+            this.Controls.Add(this.Purge1);
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.button1);
@@ -552,6 +576,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.Button Purge1;
+        private System.Windows.Forms.Button Purge2;
     }
 }
 
