@@ -128,8 +128,8 @@ namespace RFR_DAQ_Suite
             comboBox6.Items.Clear();
             comboBox6.ResetText();
             second.x1 = null;
-            second.x1 = null;
-            second.x1 = null;
+            second.y1 = null;
+            second.z1 = null;
             varStat2.Text = "Variables Emptied !!";
         }
 
