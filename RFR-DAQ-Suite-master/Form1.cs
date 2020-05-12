@@ -108,9 +108,9 @@ namespace RFR_DAQ_Suite
             comboBox1.Items.Clear();               // Clears the dropdown for current run
             comboBox1.ResetText();                 // Clears Text in the combobox textbox
             comboBox2.Items.Clear();
-            comboBox1.ResetText();
+            comboBox2.ResetText();
             comboBox3.Items.Clear();
-            comboBox1.ResetText();
+            comboBox3.ResetText();
             first.x1 = null;
             first.y1 = null;
             first.z1 = null;
@@ -122,11 +122,11 @@ namespace RFR_DAQ_Suite
         private void Purge2_Click(object sender, EventArgs e)
         {
             comboBox4.Items.Clear();            // Same as above but for channel 2
-            comboBox1.ResetText();
+            comboBox4.ResetText();
             comboBox5.Items.Clear();
-            comboBox1.ResetText();
+            comboBox5.ResetText();
             comboBox6.Items.Clear();
-            comboBox1.ResetText();
+            comboBox6.ResetText();
             second.x1 = null;
             second.x1 = null;
             second.x1 = null;
