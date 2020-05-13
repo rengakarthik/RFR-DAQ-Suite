@@ -19,7 +19,7 @@ namespace RFR_DAQ_Suite
     {
 
         Timer timer;
-        Stopwatch stopwatch;
+        //Stopwatch stopwatch;
         //Random random;
         int xaxis;
 
