@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms.DataVisualization.Charting;
+using System.Diagnostics;
+
 
 namespace RFR_DAQ_Suite
 {
@@ -16,7 +19,8 @@ namespace RFR_DAQ_Suite
     {
 
         Timer timer;
-        Random random;
+        Stopwatch stopwatch;
+        //Random random;
         int xaxis;
 
         public Form1()
@@ -328,9 +332,9 @@ namespace RFR_DAQ_Suite
         {
 
 
-            random = new Random();
+            //random = new Random();
             timer = new Timer();
-            timer.Interval = 2000;
+            timer.Interval = 40;    //present playback speed is 0.5x
             timer.Tick += timer_Tick;
             timer.Start();
 
@@ -343,11 +347,10 @@ namespace RFR_DAQ_Suite
             chart.AxisY.LabelStyle.Format = "";
             chart.AxisX.LabelStyle.IsEndLabelVisible = true;
 
-            chart.AxisX.Minimum = 0;
-            chart.AxisY.Minimum = 0;
+            //chart.AxisX.Minimum = 0;
 
             chart.AxisX.Interval = 1;
-            chart.AxisY.Interval = 0.1;
+            chart.AxisY.Interval = 0.2;
 
             chart1.Series[0].IsVisibleInLegend = false;
 
@@ -355,40 +358,55 @@ namespace RFR_DAQ_Suite
             chart1.Series["File1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             chart1.Series["File1"].Color = Color.Blue;
 
-            //chart1.Series.Add("File2");
-            //chart1.Series["File2"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            //chart1.Series["File2"].Color = Color.Green;
-
-
-            //for(int i = 0; i < first.nrow - 1; i++)
-            //{
-              //  chart1.Series["File1"].Points.AddXY(i, first.x1[i]);
-
-            //}
-
-            //System.Threading.Thread.Sleep(3000);
-
-            //for (int i = 0; i < second.nrow - 1; i++)
-            //{
-                //chart1.Series["File2"].Points.AddXY(i, second.x1[i]);
-
-            //}
+            chart1.Series.Add("File2");
+            chart1.Series["File2"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            chart1.Series["File2"].Color = Color.Green;
 
 
         }
 
         void timer_Tick(object sender,EventArgs e)
         {
-            chart1.Series["File1"].Points.AddXY(xaxis++, first.x1[xaxis]);
+            chart1.Series["File1"].Points.AddXY(xaxis, first.x1[xaxis]);
+            chart1.Series["File2"].Points.AddXY(xaxis++, second.x1[xaxis]);
 
             if (chart1.Series["File1"].Points.Count > 10)
             {
                 chart1.Series["File1"].Points.Remove(chart1.Series["File1"].Points[0]);
+                chart1.Series["File2"].Points.Remove(chart1.Series["File2"].Points[0]);
+
+
                 chart1.ChartAreas[0].AxisX.Minimum = chart1.Series["File1"].Points[0].XValue;
+
                 chart1.ChartAreas[0].AxisX.Maximum = xaxis;
+
+
             }
         }
 
+        private void Stop_Click(object sender, EventArgs e)
+        {
+            timer.Stop();
+            System.Threading.Thread.Sleep(5000); //waits for 5s before clearing the data after stopping
+            chart1.Series["File1"].Points.Clear();
+            chart1.Series["File2"].Points.Clear();
+
+
+            //while (chart1.Series.Count > 0) 
+            //{
+            //    chart1.Series.RemoveAt(0); 
+            //}
+
+
+            //chart1.Series.Remove("File1");
+
+            xaxis = 0;
+        }
+
+        private void Pause_Click(object sender, EventArgs e)
+        {
+            timer.Stop();
+        }
     }
 
 }
