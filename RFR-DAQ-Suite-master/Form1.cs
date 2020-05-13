@@ -14,10 +14,16 @@ namespace RFR_DAQ_Suite
 
     public partial class Form1 : Form
     {
+
+        Timer timer;
+        Random random;
+        int xaxis;
+
         public Form1()
         {
             InitializeComponent();   // Danger !! Don't Touch... Might explode!
         }
+
 
 
         public class workhorse
@@ -144,7 +150,7 @@ namespace RFR_DAQ_Suite
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Speed_SelectedIndexChanged(object sender, EventArgs e)
@@ -318,6 +324,70 @@ namespace RFR_DAQ_Suite
 
         }
 
+        public void Play_Click(object sender, EventArgs e)
+        {
+
+
+            random = new Random();
+            timer = new Timer();
+            timer.Interval = 2000;
+            timer.Tick += timer_Tick;
+            timer.Start();
+
+
+            var chart = chart1.ChartAreas[0];
+
+            chart.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+
+            chart.AxisX.LabelStyle.Format = "";
+            chart.AxisY.LabelStyle.Format = "";
+            chart.AxisX.LabelStyle.IsEndLabelVisible = true;
+
+            chart.AxisX.Minimum = 0;
+            chart.AxisY.Minimum = 0;
+
+            chart.AxisX.Interval = 1;
+            chart.AxisY.Interval = 0.1;
+
+            chart1.Series[0].IsVisibleInLegend = false;
+
+            chart1.Series.Add("File1");
+            chart1.Series["File1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            chart1.Series["File1"].Color = Color.Blue;
+
+            //chart1.Series.Add("File2");
+            //chart1.Series["File2"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            //chart1.Series["File2"].Color = Color.Green;
+
+
+            //for(int i = 0; i < first.nrow - 1; i++)
+            //{
+              //  chart1.Series["File1"].Points.AddXY(i, first.x1[i]);
+
+            //}
+
+            //System.Threading.Thread.Sleep(3000);
+
+            //for (int i = 0; i < second.nrow - 1; i++)
+            //{
+                //chart1.Series["File2"].Points.AddXY(i, second.x1[i]);
+
+            //}
+
+
+        }
+
+        void timer_Tick(object sender,EventArgs e)
+        {
+            chart1.Series["File1"].Points.AddXY(xaxis++, first.x1[xaxis]);
+
+            if (chart1.Series["File1"].Points.Count > 10)
+            {
+                chart1.Series["File1"].Points.Remove(chart1.Series["File1"].Points[0]);
+                chart1.ChartAreas[0].AxisX.Minimum = chart1.Series["File1"].Points[0].XValue;
+                chart1.ChartAreas[0].AxisX.Maximum = xaxis;
+            }
+        }
 
     }
 
