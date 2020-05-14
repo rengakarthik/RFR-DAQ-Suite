@@ -22,6 +22,7 @@ namespace RFR_DAQ_Suite
         //Stopwatch stopwatch;
         //Random random;
         int xaxis;
+        int started;
 
         public Form1()
         {
@@ -330,39 +331,43 @@ namespace RFR_DAQ_Suite
 
         public void Play_Click(object sender, EventArgs e)
         {
+            if(started==0)
+            { 
+                //random = new Random();
+                timer = new Timer();
+                timer.Interval = 20;    //present playback speed is 0.5x
+                timer.Tick += timer_Tick;
+                timer.Start();
 
 
-            //random = new Random();
-            timer = new Timer();
-            timer.Interval = 20;    //present playback speed is 0.5x
-            timer.Tick += timer_Tick;
-            timer.Start();
+                var chart = chart1.ChartAreas[0];
 
+                chart.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
 
-            var chart = chart1.ChartAreas[0];
+                chart.AxisX.LabelStyle.Format = "";
+                chart.AxisY.LabelStyle.Format = "";
+                chart.AxisX.LabelStyle.IsEndLabelVisible = true;
 
-            chart.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+                //chart.AxisX.Minimum = 0;
 
-            chart.AxisX.LabelStyle.Format = "";
-            chart.AxisY.LabelStyle.Format = "";
-            chart.AxisX.LabelStyle.IsEndLabelVisible = true;
+                chart.AxisX.Interval = 1;
+                chart.AxisY.Interval = 0.2;
 
-            //chart.AxisX.Minimum = 0;
+                chart1.Series[0].IsVisibleInLegend = false;
 
-            chart.AxisX.Interval = 1;
-            chart.AxisY.Interval = 0.2;
+                chart1.Series.Add("File1");
+                chart1.Series["File1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+                chart1.Series["File1"].Color = Color.Blue;
 
-            chart1.Series[0].IsVisibleInLegend = false;
-
-            chart1.Series.Add("File1");
-            chart1.Series["File1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            chart1.Series["File1"].Color = Color.Blue;
-
-            chart1.Series.Add("File2");
-            chart1.Series["File2"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            chart1.Series["File2"].Color = Color.Green;
-
-
+                chart1.Series.Add("File2");
+                chart1.Series["File2"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+                chart1.Series["File2"].Color = Color.Green;
+                started = 1;
+            }
+            else
+            {
+                timer.Start();
+            }
         }
 
         void timer_Tick(object sender,EventArgs e)
