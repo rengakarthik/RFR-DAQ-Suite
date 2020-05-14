@@ -334,7 +334,7 @@ namespace RFR_DAQ_Suite
 
             //random = new Random();
             timer = new Timer();
-            timer.Interval = 40;    //present playback speed is 0.5x
+            timer.Interval = 20;    //present playback speed is 0.5x
             timer.Tick += timer_Tick;
             timer.Start();
 
@@ -416,6 +416,16 @@ namespace RFR_DAQ_Suite
         private void Pause_Click(object sender, EventArgs e)
         {
             timer.Stop();
+        }
+
+        private void Slow_Click(object sender, EventArgs e)
+        {
+            timer.Interval *= 2;
+        }
+
+        private void fast_Click(object sender, EventArgs e)
+        {
+            timer.Interval /= 2;
         }
     }
 
