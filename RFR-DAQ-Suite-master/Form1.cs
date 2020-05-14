@@ -337,7 +337,7 @@ namespace RFR_DAQ_Suite
             { 
                 //random = new Random();
                 timer = new Timer();
-                timer.Interval = 20;    //present playback speed is 1x
+                timer.Interval = 80;    //present playback speed is 0.25x
                 timer.Tick += timer_Tick;
                 timer.Start();
 
@@ -352,7 +352,7 @@ namespace RFR_DAQ_Suite
 
                 //chart.AxisX.Minimum = 0;
 
-                chart.AxisX.Interval = 1000;
+                chart.AxisX.Interval = 200;
                 chart.AxisY.Interval = 0.2;
 
                 chart1.Series[0].IsVisibleInLegend = false;
@@ -369,6 +369,7 @@ namespace RFR_DAQ_Suite
             else
             {
                 timer.Start();
+                Play.Text = "Play";
             }
         }
 
@@ -376,11 +377,57 @@ namespace RFR_DAQ_Suite
         {
             try
             {
-                chart1.Series["File1"].Points.AddXY(first.t1[xaxis], first.x1[xaxis]);
-                chart1.Series["File2"].Points.AddXY(second.t1[xaxis++], second.x1[xaxis]);
+                //chart1.Series["File1"].Points.AddXY(first.t1[xaxis], first.x1[xaxis]);
+                //chart1.Series["File2"].Points.AddXY(second.t1[xaxis++], second.x1[xaxis]);
 
-                if (chart1.Series["File1"].Points.Count > 100)
+                if (chart1.Series["File1"].Points.Count <= 100)
                 {
+                    chart1.Series["File1"].Points.AddXY(first.t1[xaxis], first.x1[xaxis]);
+                    chart1.Series["File2"].Points.AddXY(second.t1[xaxis], second.x1[xaxis]);
+
+
+                    for (int n = 0; n < xaxis; n++)
+                    {
+                        chart1.Series["File1"].Points[n].MarkerStyle = MarkerStyle.Circle;
+                        chart1.Series["File1"].Points[n].MarkerSize = 1;
+                        chart1.Series["File2"].Points[n].MarkerStyle = MarkerStyle.Circle;
+                        chart1.Series["File2"].Points[n].MarkerSize = 1;
+                    }
+
+
+                    chart1.Series["File1"].Points[xaxis].MarkerStyle = MarkerStyle.Cross;
+                    chart1.Series["File1"].Points[xaxis].MarkerSize = 10;
+                    chart1.Series["File2"].Points[xaxis].MarkerStyle = MarkerStyle.Cross;
+                    chart1.Series["File2"].Points[xaxis].MarkerSize = 10;
+
+
+                    xaxis += xaxis;
+                    //chart1.ChartAreas[0].AxisX.Maximum = first.t1[xaxis];
+
+
+                }
+
+                else if (chart1.Series["File1"].Points.Count > 100)
+                {
+
+                    chart1.Series["File1"].Points.AddXY(first.t1[xaxis], first.x1[xaxis]);
+                    chart1.Series["File2"].Points.AddXY(second.t1[xaxis++], second.x1[xaxis]);
+
+
+                    chart1.Series["File1"].Points[100].MarkerStyle = MarkerStyle.Cross;
+                    chart1.Series["File1"].Points[100].MarkerSize = 10;
+                    chart1.Series["File2"].Points[100].MarkerStyle = MarkerStyle.Cross;
+                    chart1.Series["File2"].Points[100].MarkerSize = 10;
+
+                    for (int m = 0; m < 100; m++)
+                    {
+                        chart1.Series["File1"].Points[m].MarkerStyle = MarkerStyle.Circle;
+                        chart1.Series["File1"].Points[m].MarkerSize = 1;
+                        chart1.Series["File2"].Points[m].MarkerStyle = MarkerStyle.Circle;
+                        chart1.Series["File2"].Points[m].MarkerSize = 1;
+                    }
+                    
+
                     chart1.Series["File1"].Points.Remove(chart1.Series["File1"].Points[0]);
                     chart1.Series["File2"].Points.Remove(chart1.Series["File2"].Points[0]);
 
@@ -404,18 +451,9 @@ namespace RFR_DAQ_Suite
         private void Stop_Click(object sender, EventArgs e)
         {
             timer.Stop();
-            System.Threading.Thread.Sleep(5000); //waits for 5s before clearing the data after stopping
+            System.Threading.Thread.Sleep(1000); //waits for 1s before clearing the data after stopping
             chart1.Series["File1"].Points.Clear();
             chart1.Series["File2"].Points.Clear();
-
-
-            //while (chart1.Series.Count > 0) 
-            //{
-            //    chart1.Series.RemoveAt(0); 
-            //}
-
-
-            //chart1.Series.Remove("File1");
 
             xaxis = 0;
         }
@@ -423,6 +461,7 @@ namespace RFR_DAQ_Suite
         private void Pause_Click(object sender, EventArgs e)
         {
             timer.Stop();
+            Play.Text = "Resume";
         }
 
         private void Slow_Click(object sender, EventArgs e)
