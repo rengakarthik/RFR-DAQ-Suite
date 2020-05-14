@@ -367,21 +367,31 @@ namespace RFR_DAQ_Suite
 
         void timer_Tick(object sender,EventArgs e)
         {
-            chart1.Series["File1"].Points.AddXY(xaxis, first.x1[xaxis]);
-            chart1.Series["File2"].Points.AddXY(xaxis++, second.x1[xaxis]);
-
-            if (chart1.Series["File1"].Points.Count > 10)
+            try
             {
-                chart1.Series["File1"].Points.Remove(chart1.Series["File1"].Points[0]);
-                chart1.Series["File2"].Points.Remove(chart1.Series["File2"].Points[0]);
+                chart1.Series["File1"].Points.AddXY(xaxis, first.x1[xaxis]);
+                chart1.Series["File2"].Points.AddXY(xaxis++, second.x1[xaxis]);
+
+                if (chart1.Series["File1"].Points.Count > 10)
+                {
+                    chart1.Series["File1"].Points.Remove(chart1.Series["File1"].Points[0]);
+                    chart1.Series["File2"].Points.Remove(chart1.Series["File2"].Points[0]);
 
 
-                chart1.ChartAreas[0].AxisX.Minimum = chart1.Series["File1"].Points[0].XValue;
+                    chart1.ChartAreas[0].AxisX.Minimum = chart1.Series["File1"].Points[0].XValue;
 
-                chart1.ChartAreas[0].AxisX.Maximum = xaxis;
+                    chart1.ChartAreas[0].AxisX.Maximum = xaxis;
 
 
+                }
             }
+            catch
+            {
+                timer.Stop();
+                MessageBox.Show("End of Data", "Done");
+  
+            }
+
         }
 
         private void Stop_Click(object sender, EventArgs e)

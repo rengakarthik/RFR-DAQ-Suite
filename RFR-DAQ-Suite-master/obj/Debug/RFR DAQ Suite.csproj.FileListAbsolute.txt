@@ -38,3 +38,13 @@ C:\Users\HP\Source\Repos\RFR-DAQ-Suite-5\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ 
 C:\Users\HP\Source\Repos\RFR-DAQ-Suite-5\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csproj.CoreCompileInputs.cache
 C:\Users\HP\Source\Repos\RFR-DAQ-Suite-5\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.exe
 C:\Users\HP\Source\Repos\RFR-DAQ-Suite-5\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.pdb
+C:\Users\harih\Source\Repos\rengakarthik\RFR-DAQ-Suite\RFR-DAQ-Suite-master\bin\Debug\RFR DAQ Suite.exe.config
+C:\Users\harih\Source\Repos\rengakarthik\RFR-DAQ-Suite\RFR-DAQ-Suite-master\bin\Debug\RFR DAQ Suite.exe
+C:\Users\harih\Source\Repos\rengakarthik\RFR-DAQ-Suite\RFR-DAQ-Suite-master\bin\Debug\RFR DAQ Suite.pdb
+C:\Users\harih\Source\Repos\rengakarthik\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csprojAssemblyReference.cache
+C:\Users\harih\Source\Repos\rengakarthik\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\RFR_DAQ_Suite.Form1.resources
+C:\Users\harih\Source\Repos\rengakarthik\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\RFR_DAQ_Suite.Properties.Resources.resources
+C:\Users\harih\Source\Repos\rengakarthik\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csproj.GenerateResource.cache
+C:\Users\harih\Source\Repos\rengakarthik\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csproj.CoreCompileInputs.cache
+C:\Users\harih\Source\Repos\rengakarthik\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.exe
+C:\Users\harih\Source\Repos\rengakarthik\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.pdb
