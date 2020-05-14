@@ -39,7 +39,7 @@ namespace RFR_DAQ_Suite
             public int nrow, ncol;          // For number of rows and columns.
             public double[,] elements;      // To store the numerical data
             public string[] colnames;       // To store the headers
-            public double[] x1, y1, z1;     // For Data Analysis
+            public double[] x1, y1, z1, t1;     // For Data Analysis
             // The extracted data is stord in the above
             // You need not worry on how they got there
 
@@ -92,6 +92,7 @@ namespace RFR_DAQ_Suite
             filldata(ref first.x1, ref first, comboBox1.SelectedIndex);
             filldata(ref first.y1, ref first, comboBox2.SelectedIndex);
             filldata(ref first.z1, ref first, comboBox3.SelectedIndex);
+            filldata(ref first.t1, ref first, 0);
             varStat1.Text = "Variables Loaded";
 
 
@@ -106,6 +107,7 @@ namespace RFR_DAQ_Suite
             filldata(ref second.x1, ref second, comboBox4.SelectedIndex);
             filldata(ref second.y1, ref second, comboBox5.SelectedIndex);
             filldata(ref second.z1, ref second, comboBox6.SelectedIndex);
+            filldata(ref second.t1, ref second, 0);
             varStat2.Text = "Variables Loaded";
 
 
@@ -335,7 +337,7 @@ namespace RFR_DAQ_Suite
             { 
                 //random = new Random();
                 timer = new Timer();
-                timer.Interval = 20;    //present playback speed is 0.5x
+                timer.Interval = 20;    //present playback speed is 1x
                 timer.Tick += timer_Tick;
                 timer.Start();
 
@@ -350,7 +352,7 @@ namespace RFR_DAQ_Suite
 
                 //chart.AxisX.Minimum = 0;
 
-                chart.AxisX.Interval = 1;
+                chart.AxisX.Interval = 1000;
                 chart.AxisY.Interval = 0.2;
 
                 chart1.Series[0].IsVisibleInLegend = false;
@@ -374,10 +376,10 @@ namespace RFR_DAQ_Suite
         {
             try
             {
-                chart1.Series["File1"].Points.AddXY(xaxis, first.x1[xaxis]);
-                chart1.Series["File2"].Points.AddXY(xaxis++, second.x1[xaxis]);
+                chart1.Series["File1"].Points.AddXY(first.t1[xaxis], first.x1[xaxis]);
+                chart1.Series["File2"].Points.AddXY(second.t1[xaxis++], second.x1[xaxis]);
 
-                if (chart1.Series["File1"].Points.Count > 10)
+                if (chart1.Series["File1"].Points.Count > 100)
                 {
                     chart1.Series["File1"].Points.Remove(chart1.Series["File1"].Points[0]);
                     chart1.Series["File2"].Points.Remove(chart1.Series["File2"].Points[0]);
@@ -385,7 +387,7 @@ namespace RFR_DAQ_Suite
 
                     chart1.ChartAreas[0].AxisX.Minimum = chart1.Series["File1"].Points[0].XValue;
 
-                    chart1.ChartAreas[0].AxisX.Maximum = xaxis;
+                    chart1.ChartAreas[0].AxisX.Maximum = first.t1[xaxis];
 
 
                 }
