@@ -676,9 +676,10 @@ namespace RFR_DAQ_Suite
             int j;
             String str = "accelx";
 
-            for (j = 0; j < current.ncol - 1; j++)
+            for (j = 1; j < current.ncol - 1; j++)
             {
-                if (String.Compare(current.colnames[j], 1, str, 0, 6, true) == 0) // make sure that the col name is like "accelx"
+                String strcol = current.colnames[j];
+                if (String.Compare(strcol,strcol.IndexOf("A") , str, 0, 6, true) == 0) // make sure that the col name is like "accelx"
                 {
                     for (int i = 1; i < current.nrow - 1; i++)
                     {
@@ -698,9 +699,10 @@ namespace RFR_DAQ_Suite
             int j;
             String str = "accely";
         
-            for (j = 0; j < current.ncol - 1; j++)
+            for (j = 1; j < current.ncol - 1; j++)
             {
-                if (String.Compare(current.colnames[j], 1, str, 0, 6, true) == 0)// make sure that the col name is like "accely"
+                String strcol = current.colnames[j];
+                if (String.Compare(strcol, strcol.IndexOf("A"), str, 0, 6, true) == 0)// make sure that the col name is like "accely"
                 {
                    
                     for (int i = 1; i < current.nrow - 1; i++)
