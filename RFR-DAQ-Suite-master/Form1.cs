@@ -337,7 +337,10 @@ namespace RFR_DAQ_Suite
             {
 
 
-                var chart = chart1.ChartAreas[0];
+                var chart_1 = chart1.ChartAreas[0];
+                var chart_2 = chart2.ChartAreas[0];
+                var chart_3 = chart3.ChartAreas[0];
+
 
 
                 timer = new Timer();
@@ -347,17 +350,34 @@ namespace RFR_DAQ_Suite
 
 
 
-                chart.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-
-                chart.AxisX.LabelStyle.Format = "";
-                chart.AxisY.LabelStyle.Format = "";
-                chart.AxisX.LabelStyle.IsEndLabelVisible = true;
+                chart_1.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+                chart_2.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+                chart_3.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
 
 
-                chart.AxisX.Interval = 200;
-                chart.AxisY.Interval = 0.2;
-                chart.AxisY.Minimum = -0.5;
-                chart.AxisY.Maximum = 0.6;
+                chart_1.AxisX.LabelStyle.Format = "";
+                chart_1.AxisY.LabelStyle.Format = "";
+                chart_1.AxisX.LabelStyle.IsEndLabelVisible = true;
+
+                chart_2.AxisX.LabelStyle.Format = "";
+                chart_2.AxisY.LabelStyle.Format = "";
+                chart_2.AxisX.LabelStyle.IsEndLabelVisible = true;
+
+                chart_3.AxisX.LabelStyle.Format = "";
+                chart_3.AxisY.LabelStyle.Format = "";
+                chart_3.AxisX.LabelStyle.IsEndLabelVisible = true;
+
+
+
+                chart_1.AxisX.Interval = 200;
+                chart_1.AxisY.Interval = 0.2;
+
+                chart_2.AxisX.Interval = 200;
+                chart_2.AxisY.Interval = 0.2;
+
+                chart_3.AxisX.Interval = 200;
+                chart_3.AxisY.Interval = 0.2;
+
 
                 chart1.Series[0].IsVisibleInLegend = false;
                 chart1.ChartAreas[0].InnerPlotPosition.Auto = true;
@@ -372,6 +392,37 @@ namespace RFR_DAQ_Suite
                 chart1.Series.Add("File2");
                 chart1.Series["File2"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
                 chart1.Series["File2"].Color = Color.Green;
+
+
+                chart2.Series[0].IsVisibleInLegend = false;
+                chart2.ChartAreas[0].InnerPlotPosition.Auto = true;
+
+                chart2.ChartAreas[0].AxisX.MajorGrid.LineColor = Color.FromArgb(50, 200, 200, 200);
+                chart2.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.FromArgb(50, 200, 200, 200);
+
+                chart2.Series.Add("File1");
+                chart2.Series["File1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+                chart2.Series["File1"].Color = Color.Blue;
+
+                chart2.Series.Add("File2");
+                chart2.Series["File2"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+                chart2.Series["File2"].Color = Color.Green;
+
+
+                chart3.Series[0].IsVisibleInLegend = false;
+                chart3.ChartAreas[0].InnerPlotPosition.Auto = true;
+
+                chart3.ChartAreas[0].AxisX.MajorGrid.LineColor = Color.FromArgb(50, 200, 200, 200);
+                chart3.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.FromArgb(50, 200, 200, 200);
+
+                chart3.Series.Add("File1");
+                chart3.Series["File1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+                chart3.Series["File1"].Color = Color.Blue;
+
+                chart3.Series.Add("File2");
+                chart3.Series["File2"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+                chart3.Series["File2"].Color = Color.Green;
+
                 started = 1;
             }
             else
@@ -392,6 +443,12 @@ namespace RFR_DAQ_Suite
                     chart1.Series["File1"].Points.AddXY(first.t1[xaxis], first.x1[xaxis]);
                     chart1.Series["File2"].Points.AddXY(second.t1[xaxis], second.x1[xaxis]);
 
+                    chart2.Series["File1"].Points.AddXY(first.t1[xaxis], first.y1[xaxis]);
+                    chart2.Series["File2"].Points.AddXY(second.t1[xaxis], second.y1[xaxis]);
+
+                    chart3.Series["File1"].Points.AddXY(first.t1[xaxis], first.z1[xaxis]);
+                    chart3.Series["File2"].Points.AddXY(second.t1[xaxis], second.z1[xaxis]);
+
 
                     for (int n = 0; n < xaxis; n++)
                     {
@@ -399,6 +456,16 @@ namespace RFR_DAQ_Suite
                         chart1.Series["File1"].Points[n].MarkerSize = 1;
                         chart1.Series["File2"].Points[n].MarkerStyle = MarkerStyle.Circle;
                         chart1.Series["File2"].Points[n].MarkerSize = 1;
+
+                        chart2.Series["File1"].Points[n].MarkerStyle = MarkerStyle.Circle;
+                        chart2.Series["File1"].Points[n].MarkerSize = 1;
+                        chart2.Series["File2"].Points[n].MarkerStyle = MarkerStyle.Circle;
+                        chart2.Series["File2"].Points[n].MarkerSize = 1;
+
+                        chart3.Series["File1"].Points[n].MarkerStyle = MarkerStyle.Circle;
+                        chart3.Series["File1"].Points[n].MarkerSize = 1;
+                        chart3.Series["File2"].Points[n].MarkerStyle = MarkerStyle.Circle;
+                        chart3.Series["File2"].Points[n].MarkerSize = 1;
                     }
 
 
@@ -406,6 +473,16 @@ namespace RFR_DAQ_Suite
                     chart1.Series["File1"].Points[xaxis].MarkerSize = 10;
                     chart1.Series["File2"].Points[xaxis].MarkerStyle = MarkerStyle.Cross;
                     chart1.Series["File2"].Points[xaxis].MarkerSize = 10;
+
+                    chart2.Series["File1"].Points[xaxis].MarkerStyle = MarkerStyle.Cross;
+                    chart2.Series["File1"].Points[xaxis].MarkerSize = 10;
+                    chart2.Series["File2"].Points[xaxis].MarkerStyle = MarkerStyle.Cross;
+                    chart2.Series["File2"].Points[xaxis].MarkerSize = 10;
+
+                    chart3.Series["File1"].Points[xaxis].MarkerStyle = MarkerStyle.Cross;
+                    chart3.Series["File1"].Points[xaxis].MarkerSize = 10;
+                    chart3.Series["File2"].Points[xaxis].MarkerStyle = MarkerStyle.Cross;
+                    chart3.Series["File2"].Points[xaxis].MarkerSize = 10;
 
 
                     xaxis += xaxis;
@@ -420,11 +497,29 @@ namespace RFR_DAQ_Suite
                     chart1.Series["File1"].Points.AddXY(first.t1[xaxis], first.x1[xaxis]);
                     chart1.Series["File2"].Points.AddXY(second.t1[xaxis++], second.x1[xaxis]);
 
+                    chart2.Series["File1"].Points.AddXY(first.t1[xaxis], first.y1[xaxis]);
+                    chart2.Series["File2"].Points.AddXY(second.t1[xaxis], second.y1[xaxis]);
+
+                    chart3.Series["File1"].Points.AddXY(first.t1[xaxis], first.z1[xaxis]);
+                    chart3.Series["File2"].Points.AddXY(second.t1[xaxis], second.z1[xaxis]);
+
 
                     chart1.Series["File1"].Points[50].MarkerStyle = MarkerStyle.Cross;
                     chart1.Series["File1"].Points[50].MarkerSize = 10;
                     chart1.Series["File2"].Points[50].MarkerStyle = MarkerStyle.Cross;
                     chart1.Series["File2"].Points[50].MarkerSize = 10;
+
+                    chart2.Series["File1"].Points[50].MarkerStyle = MarkerStyle.Cross;
+                    chart2.Series["File1"].Points[50].MarkerSize = 10;
+                    chart2.Series["File2"].Points[50].MarkerStyle = MarkerStyle.Cross;
+                    chart2.Series["File2"].Points[50].MarkerSize = 10;
+
+                    chart3.Series["File1"].Points[50].MarkerStyle = MarkerStyle.Cross;
+                    chart3.Series["File1"].Points[50].MarkerSize = 10;
+                    chart3.Series["File2"].Points[50].MarkerStyle = MarkerStyle.Cross;
+                    chart3.Series["File2"].Points[50].MarkerSize = 10;
+
+
 
                     for (int m = 0; m < 50; m++)
                     {
@@ -432,17 +527,37 @@ namespace RFR_DAQ_Suite
                         chart1.Series["File1"].Points[m].MarkerSize = 1;
                         chart1.Series["File2"].Points[m].MarkerStyle = MarkerStyle.Circle;
                         chart1.Series["File2"].Points[m].MarkerSize = 1;
+
+                        chart2.Series["File1"].Points[m].MarkerStyle = MarkerStyle.Circle;
+                        chart2.Series["File1"].Points[m].MarkerSize = 1;
+                        chart2.Series["File2"].Points[m].MarkerStyle = MarkerStyle.Circle;
+                        chart2.Series["File2"].Points[m].MarkerSize = 1;
+
+                        chart3.Series["File1"].Points[m].MarkerStyle = MarkerStyle.Circle;
+                        chart3.Series["File1"].Points[m].MarkerSize = 1;
+                        chart3.Series["File2"].Points[m].MarkerStyle = MarkerStyle.Circle;
+                        chart3.Series["File2"].Points[m].MarkerSize = 1;
                     }
-                    
+
+
 
                     chart1.Series["File1"].Points.Remove(chart1.Series["File1"].Points[0]);
                     chart1.Series["File2"].Points.Remove(chart1.Series["File2"].Points[0]);
 
+                    chart2.Series["File1"].Points.Remove(chart2.Series["File1"].Points[0]);
+                    chart2.Series["File2"].Points.Remove(chart2.Series["File2"].Points[0]);
+
+                    chart3.Series["File1"].Points.Remove(chart3.Series["File1"].Points[0]);
+                    chart3.Series["File2"].Points.Remove(chart3.Series["File2"].Points[0]);
+
 
                     chart1.ChartAreas[0].AxisX.Minimum = chart1.Series["File1"].Points[0].XValue;
+                    chart2.ChartAreas[0].AxisX.Minimum = chart2.Series["File1"].Points[0].XValue;
+                    chart3.ChartAreas[0].AxisX.Minimum = chart3.Series["File1"].Points[0].XValue;
 
-                    chart1.ChartAreas[0].AxisX.Maximum = first.t1[xaxis+10];
-
+                    chart1.ChartAreas[0].AxisX.Maximum = first.t1[xaxis + 10];
+                    chart2.ChartAreas[0].AxisX.Maximum = first.t1[xaxis + 10];
+                    chart3.ChartAreas[0].AxisX.Maximum = first.t1[xaxis + 10];
 
                 }
             }
@@ -458,9 +573,15 @@ namespace RFR_DAQ_Suite
         private void Stop_Click(object sender, EventArgs e)
         {
             timer.Stop();
-            System.Threading.Thread.Sleep(1000); //waits for 1s before clearing the data after stopping
+            System.Threading.Thread.Sleep(1500); //waits for 1.5s before clearing the data after stopping
             chart1.Series["File1"].Points.Clear();
             chart1.Series["File2"].Points.Clear();
+
+            chart2.Series["File1"].Points.Clear();
+            chart2.Series["File2"].Points.Clear();
+
+            chart3.Series["File1"].Points.Clear();
+            chart3.Series["File2"].Points.Clear();
 
             xaxis = 0;
         }

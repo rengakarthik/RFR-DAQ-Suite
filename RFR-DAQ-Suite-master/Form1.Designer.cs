@@ -58,7 +58,6 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.Speed = new System.Windows.Forms.CheckedListBox();
             this.Read1 = new System.Windows.Forms.Button();
             this.Read2 = new System.Windows.Forms.Button();
             this.file1 = new System.Windows.Forms.Label();
@@ -92,8 +91,8 @@
             this.chart3.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart3.Legends.Add(legend1);
-            this.chart3.Location = new System.Drawing.Point(29, 519);
-            this.chart3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chart3.Location = new System.Drawing.Point(29, 377);
+            this.chart3.Margin = new System.Windows.Forms.Padding(4);
             this.chart3.Name = "chart3";
             this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
             series1.ChartArea = "ChartArea1";
@@ -101,7 +100,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Channel 3";
             this.chart3.Series.Add(series1);
-            this.chart3.Size = new System.Drawing.Size(587, 123);
+            this.chart3.Size = new System.Drawing.Size(801, 234);
             this.chart3.TabIndex = 0;
             this.chart3.Text = "chart3";
             this.chart3.Click += new System.EventHandler(this.chart1_Click);
@@ -113,7 +112,7 @@
             legend2.Name = "Legend1";
             this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(29, 79);
-            this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
             series2.ChartArea = "ChartArea1";
@@ -131,8 +130,8 @@
             this.chart2.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.chart2.Legends.Add(legend3);
-            this.chart2.Location = new System.Drawing.Point(29, 377);
-            this.chart2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chart2.Location = new System.Drawing.Point(867, 463);
+            this.chart2.Margin = new System.Windows.Forms.Padding(4);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             series3.ChartArea = "ChartArea1";
@@ -140,7 +139,7 @@
             series3.Legend = "Legend1";
             series3.Name = "Channel 2";
             this.chart2.Series.Add(series3);
-            this.chart2.Size = new System.Drawing.Size(587, 123);
+            this.chart2.Size = new System.Drawing.Size(801, 234);
             this.chart2.TabIndex = 2;
             this.chart2.Text = "chart2";
             this.chart2.Click += new System.EventHandler(this.chart3_Click);
@@ -154,7 +153,7 @@
             // Play
             // 
             this.Play.Location = new System.Drawing.Point(52, 679);
-            this.Play.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Play.Margin = new System.Windows.Forms.Padding(4);
             this.Play.Name = "Play";
             this.Play.Size = new System.Drawing.Size(100, 28);
             this.Play.TabIndex = 3;
@@ -165,7 +164,7 @@
             // Pause
             // 
             this.Pause.Location = new System.Drawing.Point(204, 679);
-            this.Pause.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Pause.Margin = new System.Windows.Forms.Padding(4);
             this.Pause.Name = "Pause";
             this.Pause.Size = new System.Drawing.Size(100, 28);
             this.Pause.TabIndex = 5;
@@ -176,7 +175,7 @@
             // Stop
             // 
             this.Stop.Location = new System.Drawing.Point(364, 679);
-            this.Stop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Stop.Margin = new System.Windows.Forms.Padding(4);
             this.Stop.Name = "Stop";
             this.Stop.Size = new System.Drawing.Size(100, 28);
             this.Stop.TabIndex = 6;
@@ -187,7 +186,7 @@
             // Load_file1
             // 
             this.Load_file1.Location = new System.Drawing.Point(867, 331);
-            this.Load_file1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Load_file1.Margin = new System.Windows.Forms.Padding(4);
             this.Load_file1.Name = "Load_file1";
             this.Load_file1.Size = new System.Drawing.Size(100, 28);
             this.Load_file1.TabIndex = 8;
@@ -198,7 +197,7 @@
             // Load_file2
             // 
             this.Load_file2.Location = new System.Drawing.Point(1199, 331);
-            this.Load_file2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Load_file2.Margin = new System.Windows.Forms.Padding(4);
             this.Load_file2.Name = "Load_file2";
             this.Load_file2.Size = new System.Drawing.Size(100, 28);
             this.Load_file2.TabIndex = 10;
@@ -209,7 +208,7 @@
             // Annimation_channel1
             // 
             this.Annimation_channel1.Location = new System.Drawing.Point(107, 714);
-            this.Annimation_channel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Annimation_channel1.Margin = new System.Windows.Forms.Padding(4);
             this.Annimation_channel1.Name = "Annimation_channel1";
             this.Annimation_channel1.Size = new System.Drawing.Size(173, 123);
             this.Annimation_channel1.TabIndex = 12;
@@ -219,7 +218,7 @@
             // Annimation_channel2
             // 
             this.Annimation_channel2.Location = new System.Drawing.Point(364, 714);
-            this.Annimation_channel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Annimation_channel2.Margin = new System.Windows.Forms.Padding(4);
             this.Annimation_channel2.Name = "Annimation_channel2";
             this.Annimation_channel2.Size = new System.Drawing.Size(173, 123);
             this.Annimation_channel2.TabIndex = 13;
@@ -229,7 +228,7 @@
             // Annimation_channel3
             // 
             this.Annimation_channel3.Location = new System.Drawing.Point(619, 714);
-            this.Annimation_channel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Annimation_channel3.Margin = new System.Windows.Forms.Padding(4);
             this.Annimation_channel3.Name = "Annimation_channel3";
             this.Annimation_channel3.Size = new System.Drawing.Size(173, 123);
             this.Annimation_channel3.TabIndex = 14;
@@ -240,7 +239,7 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(1007, 167);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(132, 24);
             this.comboBox1.TabIndex = 20;
@@ -249,7 +248,7 @@
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(1009, 217);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(132, 24);
             this.comboBox2.TabIndex = 21;
@@ -258,7 +257,7 @@
             // 
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(1007, 270);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(132, 24);
             this.comboBox3.TabIndex = 22;
@@ -267,7 +266,7 @@
             // 
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(1323, 162);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(132, 24);
             this.comboBox4.TabIndex = 23;
@@ -276,7 +275,7 @@
             // 
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(1323, 217);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox5.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(132, 24);
             this.comboBox5.TabIndex = 24;
@@ -285,28 +284,15 @@
             // 
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(1323, 266);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox6.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(132, 24);
             this.comboBox6.TabIndex = 25;
             // 
-            // Speed
-            // 
-            this.Speed.BackColor = System.Drawing.SystemColors.Window;
-            this.Speed.FormattingEnabled = true;
-            this.Speed.Items.AddRange(new object[] {
-            "speed"});
-            this.Speed.Location = new System.Drawing.Point(776, 583);
-            this.Speed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Speed.Name = "Speed";
-            this.Speed.Size = new System.Drawing.Size(112, 4);
-            this.Speed.TabIndex = 30;
-            this.Speed.SelectedIndexChanged += new System.EventHandler(this.Speed_SelectedIndexChanged);
-            // 
             // Read1
             // 
             this.Read1.Location = new System.Drawing.Point(1025, 90);
-            this.Read1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Read1.Margin = new System.Windows.Forms.Padding(4);
             this.Read1.Name = "Read1";
             this.Read1.Size = new System.Drawing.Size(100, 28);
             this.Read1.TabIndex = 31;
@@ -317,7 +303,7 @@
             // Read2
             // 
             this.Read2.Location = new System.Drawing.Point(1339, 94);
-            this.Read2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Read2.Margin = new System.Windows.Forms.Padding(4);
             this.Read2.Name = "Read2";
             this.Read2.Size = new System.Drawing.Size(100, 28);
             this.Read2.TabIndex = 32;
@@ -465,16 +451,16 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(1003, 610);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox1.Location = new System.Drawing.Point(864, 714);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(81, 116);
             this.listBox1.TabIndex = 46;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1169, 782);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(1199, 777);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 47;
@@ -486,8 +472,8 @@
             // 
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(1159, 610);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox2.Location = new System.Drawing.Point(992, 714);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(4);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(80, 116);
             this.listBox2.TabIndex = 48;
@@ -496,8 +482,8 @@
             // 
             this.listBox3.FormattingEnabled = true;
             this.listBox3.ItemHeight = 16;
-            this.listBox3.Location = new System.Drawing.Point(1299, 610);
-            this.listBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox3.Location = new System.Drawing.Point(1101, 714);
+            this.listBox3.Margin = new System.Windows.Forms.Padding(4);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(75, 116);
             this.listBox3.TabIndex = 49;
@@ -505,7 +491,7 @@
             // Purge1
             // 
             this.Purge1.Location = new System.Drawing.Point(1025, 331);
-            this.Purge1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Purge1.Margin = new System.Windows.Forms.Padding(4);
             this.Purge1.Name = "Purge1";
             this.Purge1.Size = new System.Drawing.Size(100, 28);
             this.Purge1.TabIndex = 50;
@@ -516,7 +502,7 @@
             // Purge2
             // 
             this.Purge2.Location = new System.Drawing.Point(1339, 331);
-            this.Purge2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Purge2.Margin = new System.Windows.Forms.Padding(4);
             this.Purge2.Name = "Purge2";
             this.Purge2.Size = new System.Drawing.Size(100, 28);
             this.Purge2.TabIndex = 51;
@@ -527,7 +513,7 @@
             // Slow
             // 
             this.Slow.Location = new System.Drawing.Point(516, 678);
-            this.Slow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Slow.Margin = new System.Windows.Forms.Padding(4);
             this.Slow.Name = "Slow";
             this.Slow.Size = new System.Drawing.Size(100, 28);
             this.Slow.TabIndex = 52;
@@ -538,7 +524,7 @@
             // fast
             // 
             this.fast.Location = new System.Drawing.Point(669, 678);
-            this.fast.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fast.Margin = new System.Windows.Forms.Padding(4);
             this.fast.Name = "fast";
             this.fast.Size = new System.Drawing.Size(100, 28);
             this.fast.TabIndex = 53;
@@ -551,7 +537,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowText;
-            this.ClientSize = new System.Drawing.Size(1486, 852);
+            this.ClientSize = new System.Drawing.Size(1731, 852);
             this.Controls.Add(this.fast);
             this.Controls.Add(this.Slow);
             this.Controls.Add(this.Purge2);
@@ -573,7 +559,6 @@
             this.Controls.Add(this.file1);
             this.Controls.Add(this.Read2);
             this.Controls.Add(this.Read1);
-            this.Controls.Add(this.Speed);
             this.Controls.Add(this.comboBox6);
             this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.comboBox4);
@@ -627,7 +612,6 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.CheckedListBox Speed;
         private System.Windows.Forms.Button Read1;
         private System.Windows.Forms.Button Read2;
         private System.Windows.Forms.Label file1;
