@@ -674,12 +674,12 @@ namespace RFR_DAQ_Suite
 
 
             int j;
-            String str = "accelx";
+            String str = "Accelx";
 
             for (j = 1; j < current.ncol - 1; j++)
             {
-                String strcol = current.colnames[j];
-                if (String.Compare(strcol,strcol.IndexOf("A") , str, 0, 6, true) == 0) // make sure that the col name is like "accelx"
+                
+                if (String.Compare(current.colnames[j], 1 , str, 0, 6, true) == 0) // make sure that the col name is like "accelx"
                 {
                     for (int i = 1; i < current.nrow - 1; i++)
                     {
@@ -697,12 +697,12 @@ namespace RFR_DAQ_Suite
             x = new double[current.nrow - 1];  // Because header row has been removed
 
             int j;
-            String str = "accely";
+            String str = "Accely";
         
             for (j = 1; j < current.ncol - 1; j++)
             {
-                String strcol = current.colnames[j];
-                if (String.Compare(strcol, strcol.IndexOf("A"), str, 0, 6, true) == 0)// make sure that the col name is like "accely"
+               
+                if (String.Compare(current.colnames[j], 1, str, 0, 6, true) == 0)// make sure that the col name is like "accely"
                 {
                    
                     for (int i = 1; i < current.nrow - 1; i++)
