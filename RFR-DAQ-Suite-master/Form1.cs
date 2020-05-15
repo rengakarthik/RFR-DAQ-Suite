@@ -17,6 +17,11 @@ namespace RFR_DAQ_Suite
 
     public partial class Form1 : Form
     {
+        List<Double> ax1 = new List<double>();// list declaration to enable easier addition and removal of data
+        List<Double> ay1 = new List<double>();// lists for accelx and accely from two files
+
+        List<Double> ax2 = new List<double>();
+        List<Double> ay2 = new List<double>();
 
         Timer timer;
         //Stopwatch stopwatch;
@@ -27,6 +32,43 @@ namespace RFR_DAQ_Suite
         public Form1()
         {
             InitializeComponent();   // Danger !! Don't Touch... Might explode!
+
+            ax1.Clear(); // clearing the lists once the form is loaded
+            ay1.Clear();
+            ax2.Clear();
+            ay2.Clear();
+
+            // customizing the plot for better visualization
+
+            chart4.ChartAreas[0].AxisX.Minimum = -1.5;
+
+            chart4.ChartAreas[0].AxisX.Maximum = 1.5;
+
+            chart4.ChartAreas[0].AxisX.Interval = 0.1;
+
+            chart4.ChartAreas[0].AxisY.Minimum = -1.5;
+
+            chart4.ChartAreas[0].AxisY.Maximum = 1.5;
+
+            chart4.ChartAreas[0].AxisY.Interval = 0.1;
+
+            chart4.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = false;
+            chart4.ChartAreas["ChartArea1"].AxisY.MajorGrid.Enabled = false;
+
+            chart4.ChartAreas["ChartArea1"].AxisX.Crossing = 0;
+            chart4.ChartAreas["ChartArea1"].AxisY.Crossing = 0;
+
+            chart4.ChartAreas["ChartArea1"].AxisX.Title = "Accely";
+            chart4.ChartAreas["ChartArea1"].AxisY.Title = "Accelx";
+
+            chart4.ChartAreas["ChartArea1"].AxisX.LabelAutoFitMaxFontSize = 5;
+            chart4.ChartAreas["ChartArea1"].AxisY.LabelAutoFitMaxFontSize = 5;
+
+            chart4.Series["plot1"].MarkerSize = 5;
+            chart4.Series["plot2"].MarkerSize = 5;
+
+            chart4.Series["plot1"].Color = Color.Red;
+            chart4.Series["plot2"].Color = Color.Blue;
         }
 
 
@@ -39,7 +81,7 @@ namespace RFR_DAQ_Suite
             public int nrow, ncol;          // For number of rows and columns.
             public double[,] elements;      // To store the numerical data
             public string[] colnames;       // To store the headers
-            public double[] x1, y1, z1, t1;     // For Data Analysis
+            public double[] x1, y1, z1, t1,ax,ay;     // For Data Analysis
             // The extracted data is stord in the above
             // You need not worry on how they got there
 
@@ -93,6 +135,8 @@ namespace RFR_DAQ_Suite
             filldata(ref first.y1, ref first, comboBox2.SelectedIndex);
             filldata(ref first.z1, ref first, comboBox3.SelectedIndex);
             filldata(ref first.t1, ref first, 0);
+            fillaccelxdata(ref first.ax, ref first); // loading the acceleration data into the variables 
+            fillaccelydata(ref first.ay, ref first);
             varStat1.Text = "Variables Loaded";
 
 
@@ -108,6 +152,8 @@ namespace RFR_DAQ_Suite
             filldata(ref second.y1, ref second, comboBox5.SelectedIndex);
             filldata(ref second.z1, ref second, comboBox6.SelectedIndex);
             filldata(ref second.t1, ref second, 0);
+            fillaccelxdata(ref second.ax, ref second);
+            fillaccelydata(ref second.ay, ref second);
             varStat2.Text = "Variables Loaded";
 
 
@@ -436,7 +482,22 @@ namespace RFR_DAQ_Suite
         {
             try
             {
-                
+                ax1.Clear(); // clearing each time to plot new points thereby the moving effect
+                ay1.Clear();
+                ax2.Clear();
+                ay2.Clear();
+
+                ax1.Add(first.ax[xaxis]); // loading data fro workhorse to lists
+                ay1.Add(first.ay[xaxis]);
+
+                ax2.Add(second.ax[xaxis]);
+                ay2.Add(second.ay[xaxis]);
+
+                chart4.Series["plot1"].Points.DataBindXY(ax1, ay1); //plotting the data using the lists
+                chart4.Series["plot2"].Points.DataBindXY(ax2, ay2);
+
+                chart4.Invalidate(); // use this to plot and replot the points
+
 
                 if (chart1.Series["File1"].Points.Count <= 50)
                 {
@@ -583,6 +644,9 @@ namespace RFR_DAQ_Suite
             chart3.Series["File1"].Points.Clear();
             chart3.Series["File2"].Points.Clear();
 
+            chart4.Series["plot1"].Points.Clear(); // clearing the lists 
+            chart4.Series["plot2"].Points.Clear();
+
             xaxis = 0;
         }
 
@@ -600,6 +664,54 @@ namespace RFR_DAQ_Suite
         private void fast_Click(object sender, EventArgs e)
         {
             timer.Interval /= 2;
+        }
+
+        // functions to load data to acceleration variables
+        public void fillaccelxdata(ref double[] x, ref workhorse current)         // Fills data int the channels (one at a time) for further processing
+        {
+
+            x = new double[current.nrow - 1];  // Because header row has been removed 
+
+
+            int j;
+            String str = "accelx";
+
+            for (j = 0; j < current.ncol - 1; j++)
+            {
+                if (String.Compare(current.colnames[j], 1, str, 0, 6, true) == 0) // make sure that the col name is like "accelx"
+                {
+                    for (int i = 1; i < current.nrow - 1; i++)
+                    {
+                        x[i] = current.elements[i, j];       // Dropdown items are indexed from 0
+                    }
+                }
+
+
+            }
+
+        }
+        public void fillaccelydata(ref double[] x, ref workhorse current)         // Fills data int the channels (one at a time) for further processing
+        {
+
+            x = new double[current.nrow - 1];  // Because header row has been removed
+
+            int j;
+            String str = "accely";
+        
+            for (j = 0; j < current.ncol - 1; j++)
+            {
+                if (String.Compare(current.colnames[j], 1, str, 0, 6, true) == 0)// make sure that the col name is like "accely"
+                {
+                   
+                    for (int i = 1; i < current.nrow - 1; i++)
+                    {
+                        x[i] = current.elements[i,j];       // Dropdown items are indexed from 0
+                    }
+                }
+
+
+            }
+            
         }
     }
 

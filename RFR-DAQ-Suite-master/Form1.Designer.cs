@@ -38,6 +38,10 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -48,8 +52,6 @@
             this.Stop = new System.Windows.Forms.Button();
             this.Load_file1 = new System.Windows.Forms.Button();
             this.Load_file2 = new System.Windows.Forms.Button();
-            this.Annimation_channel1 = new System.Windows.Forms.Button();
-            this.Annimation_channel2 = new System.Windows.Forms.Button();
             this.Annimation_channel3 = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -79,10 +81,12 @@
             this.Purge2 = new System.Windows.Forms.Button();
             this.Slow = new System.Windows.Forms.Button();
             this.fast = new System.Windows.Forms.Button();
+            this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
             this.SuspendLayout();
             // 
             // chart3
@@ -91,7 +95,7 @@
             this.chart3.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart3.Legends.Add(legend1);
-            this.chart3.Location = new System.Drawing.Point(29, 377);
+            this.chart3.Location = new System.Drawing.Point(29, 353);
             this.chart3.Margin = new System.Windows.Forms.Padding(4);
             this.chart3.Name = "chart3";
             this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
@@ -111,7 +115,7 @@
             this.chart1.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(29, 79);
+            this.chart1.Location = new System.Drawing.Point(29, 78);
             this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
@@ -120,7 +124,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Channel 1";
             this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(801, 281);
+            this.chart1.Size = new System.Drawing.Size(801, 249);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
             // 
@@ -152,7 +156,7 @@
             // 
             // Play
             // 
-            this.Play.Location = new System.Drawing.Point(52, 679);
+            this.Play.Location = new System.Drawing.Point(43, 607);
             this.Play.Margin = new System.Windows.Forms.Padding(4);
             this.Play.Name = "Play";
             this.Play.Size = new System.Drawing.Size(100, 28);
@@ -163,7 +167,7 @@
             // 
             // Pause
             // 
-            this.Pause.Location = new System.Drawing.Point(204, 679);
+            this.Pause.Location = new System.Drawing.Point(202, 607);
             this.Pause.Margin = new System.Windows.Forms.Padding(4);
             this.Pause.Name = "Pause";
             this.Pause.Size = new System.Drawing.Size(100, 28);
@@ -174,7 +178,7 @@
             // 
             // Stop
             // 
-            this.Stop.Location = new System.Drawing.Point(364, 679);
+            this.Stop.Location = new System.Drawing.Point(360, 607);
             this.Stop.Margin = new System.Windows.Forms.Padding(4);
             this.Stop.Name = "Stop";
             this.Stop.Size = new System.Drawing.Size(100, 28);
@@ -204,26 +208,6 @@
             this.Load_file2.Text = "Initiate";
             this.Load_file2.UseVisualStyleBackColor = true;
             this.Load_file2.Click += new System.EventHandler(this.Load_file2_Click);
-            // 
-            // Annimation_channel1
-            // 
-            this.Annimation_channel1.Location = new System.Drawing.Point(107, 714);
-            this.Annimation_channel1.Margin = new System.Windows.Forms.Padding(4);
-            this.Annimation_channel1.Name = "Annimation_channel1";
-            this.Annimation_channel1.Size = new System.Drawing.Size(173, 123);
-            this.Annimation_channel1.TabIndex = 12;
-            this.Annimation_channel1.Text = "Annimation Channel 1";
-            this.Annimation_channel1.UseVisualStyleBackColor = true;
-            // 
-            // Annimation_channel2
-            // 
-            this.Annimation_channel2.Location = new System.Drawing.Point(364, 714);
-            this.Annimation_channel2.Margin = new System.Windows.Forms.Padding(4);
-            this.Annimation_channel2.Name = "Annimation_channel2";
-            this.Annimation_channel2.Size = new System.Drawing.Size(173, 123);
-            this.Annimation_channel2.TabIndex = 13;
-            this.Annimation_channel2.Text = "Annimation Channel 2";
-            this.Annimation_channel2.UseVisualStyleBackColor = true;
             // 
             // Annimation_channel3
             // 
@@ -512,7 +496,7 @@
             // 
             // Slow
             // 
-            this.Slow.Location = new System.Drawing.Point(516, 678);
+            this.Slow.Location = new System.Drawing.Point(511, 607);
             this.Slow.Margin = new System.Windows.Forms.Padding(4);
             this.Slow.Name = "Slow";
             this.Slow.Size = new System.Drawing.Size(100, 28);
@@ -523,7 +507,7 @@
             // 
             // fast
             // 
-            this.fast.Location = new System.Drawing.Point(669, 678);
+            this.fast.Location = new System.Drawing.Point(667, 607);
             this.fast.Margin = new System.Windows.Forms.Padding(4);
             this.fast.Name = "fast";
             this.fast.Size = new System.Drawing.Size(100, 28);
@@ -532,12 +516,36 @@
             this.fast.UseVisualStyleBackColor = true;
             this.fast.Click += new System.EventHandler(this.fast_Click);
             // 
+            // chart4
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart4.Legends.Add(legend4);
+            this.chart4.Location = new System.Drawing.Point(29, 642);
+            this.chart4.Name = "chart4";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series4.Legend = "Legend1";
+            series4.Name = "plot1";
+            series4.YValuesPerPoint = 2;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series5.Legend = "Legend1";
+            series5.Name = "plot2";
+            this.chart4.Series.Add(series4);
+            this.chart4.Series.Add(series5);
+            this.chart4.Size = new System.Drawing.Size(544, 338);
+            this.chart4.TabIndex = 54;
+            this.chart4.Text = "chart4";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowText;
-            this.ClientSize = new System.Drawing.Size(1731, 852);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.chart4);
             this.Controls.Add(this.fast);
             this.Controls.Add(this.Slow);
             this.Controls.Add(this.Purge2);
@@ -566,8 +574,6 @@
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Annimation_channel3);
-            this.Controls.Add(this.Annimation_channel2);
-            this.Controls.Add(this.Annimation_channel1);
             this.Controls.Add(this.Load_file2);
             this.Controls.Add(this.Load_file1);
             this.Controls.Add(this.Stop);
@@ -585,6 +591,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -602,8 +609,6 @@
         private System.Windows.Forms.Button Stop;
         private System.Windows.Forms.Button Load_file1;
         private System.Windows.Forms.Button Load_file2;
-        private System.Windows.Forms.Button Annimation_channel1;
-        private System.Windows.Forms.Button Annimation_channel2;
         private System.Windows.Forms.Button Annimation_channel3;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -633,6 +638,7 @@
         private System.Windows.Forms.Button Purge2;
         private System.Windows.Forms.Button Slow;
         private System.Windows.Forms.Button fast;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
     }
 }
 
