@@ -94,3 +94,19 @@ C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ
 C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.exe
 C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.pdb
 C:\Users\kesha\source\repos\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite_Content.g.cs
+D:\Visual Studio apps\RFR-DAQ-Suite-master\bin\Debug\RFR DAQ Suite.exe.config
+D:\Visual Studio apps\RFR-DAQ-Suite-master\bin\Debug\RFR DAQ Suite.exe
+D:\Visual Studio apps\RFR-DAQ-Suite-master\bin\Debug\RFR DAQ Suite.pdb
+D:\Visual Studio apps\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csprojAssemblyReference.cache
+D:\Visual Studio apps\RFR-DAQ-Suite-master\obj\Debug\Gauge.g.cs
+D:\Visual Studio apps\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite_Content.g.cs
+D:\Visual Studio apps\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite_MarkupCompile.cache
+D:\Visual Studio apps\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite_MarkupCompile.lref
+D:\Visual Studio apps\RFR-DAQ-Suite-master\obj\Debug\Gauge.baml
+D:\Visual Studio apps\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.g.resources
+D:\Visual Studio apps\RFR-DAQ-Suite-master\obj\Debug\RFR_DAQ_Suite.Form1.resources
+D:\Visual Studio apps\RFR-DAQ-Suite-master\obj\Debug\RFR_DAQ_Suite.Properties.Resources.resources
+D:\Visual Studio apps\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csproj.GenerateResource.cache
+D:\Visual Studio apps\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csproj.CoreCompileInputs.cache
+D:\Visual Studio apps\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.exe
+D:\Visual Studio apps\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.pdb
