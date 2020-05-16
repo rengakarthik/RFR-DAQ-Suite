@@ -81,7 +81,7 @@ namespace RFR_DAQ_Suite
             public int nrow, ncol;          // For number of rows and columns.
             public double[,] elements;      // To store the numerical data
             public string[] colnames;       // To store the headers
-            public double[] x1, y1, z1, t1,ax,ay;     // For Data Analysis
+            public double[] x1, y1, z1, t1,ax,ay, str;     // For Data Analysis
             // The extracted data is stord in the above
             // You need not worry on how they got there
 
@@ -91,7 +91,8 @@ namespace RFR_DAQ_Suite
         workhorse second = new workhorse();
 
 
-
+        int str1Filled = 0;
+        int str2Filled = 0;
         private void Read1_Click(object sender, EventArgs e)
         {
 
@@ -105,6 +106,7 @@ namespace RFR_DAQ_Suite
 
             populate(comboBox3, ref first);
 
+            str1Filled = 1;
 
         }
 
@@ -120,6 +122,8 @@ namespace RFR_DAQ_Suite
             populate(comboBox5, ref second);
 
             populate(comboBox6, ref second);
+
+            str2Filled = 1;
 
         }
 
@@ -379,6 +383,7 @@ namespace RFR_DAQ_Suite
 
         public void Play_Click(object sender, EventArgs e)
         {
+            
             if(started==0)
             {
 
@@ -387,14 +392,18 @@ namespace RFR_DAQ_Suite
                 var chart_2 = chart2.ChartAreas[0];
                 var chart_3 = chart3.ChartAreas[0];
 
-
+                if (str1Filled == 1 && str2Filled == 1)
+                {
+                    filldata(ref first.str, ref first, 15);
+                    filldata(ref second.str, ref second, 15);
+                }
 
                 timer = new Timer();
                 timer.Interval = 80;    //present playback speed is 0.25x
                 timer.Tick += timer_Tick;
                 timer.Start();
 
-
+                
 
                 chart_1.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
                 chart_2.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
@@ -477,11 +486,22 @@ namespace RFR_DAQ_Suite
                 Play.Text = "Play";
             }
         }
-
+        int firstCounter;
+        int secondCounter;
         void timer_Tick(object sender,EventArgs e)
         {
+
             try
             {
+                if (firstCounter<first.nrow - 1 && secondCounter < second.nrow - 1)
+                {
+                    firstCounter++; secondCounter++;
+                    gauge1.value1 = (first.str[firstCounter] - 1) * 180;
+                    gauge1.value2 = (second.str[secondCounter] - 1) * 180;
+                    gauge1.ChangeValue();
+                    
+                }
+
                 ax1.Clear(); // clearing each time to plot new points thereby the moving effect
                 ay1.Clear();
                 ax2.Clear();
@@ -641,6 +661,12 @@ namespace RFR_DAQ_Suite
         private void Stop_Click(object sender, EventArgs e)
         {
             timer.Stop();
+
+            firstCounter = 0; secondCounter = 0;
+            gauge1.value1 = 0; gauge1.value2 = 0;
+            gauge1.ChangeValue();
+            
+
             System.Threading.Thread.Sleep(1500); //waits for 1.5s before clearing the data after stopping
             chart1.Series["File1"].Points.Clear();
             chart1.Series["File2"].Points.Clear();
