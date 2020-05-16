@@ -707,7 +707,7 @@ namespace RFR_DAQ_Suite
 
 
             int j;
-            String str = "Accelx";
+            String str = "Accely";
 
             for (j = 1; j < current.ncol - 1; j++)
             {
@@ -730,7 +730,7 @@ namespace RFR_DAQ_Suite
             x = new double[current.nrow - 1];  // Because header row has been removed
 
             int j;
-            String str = "Accely";
+            String str = "Accelz";
         
             for (j = 1; j < current.ncol - 1; j++)
             {
