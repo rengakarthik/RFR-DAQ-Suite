@@ -496,8 +496,8 @@ namespace RFR_DAQ_Suite
                 if (firstCounter<first.nrow - 1 && secondCounter < second.nrow - 1)
                 {
                     firstCounter++; secondCounter++;
-                    gauge1.value1 = (first.str[firstCounter] - 1) * 180;
-                    gauge1.value2 = (second.str[secondCounter] - 1) * 180;
+                    gauge1.value1 = first.str[firstCounter] * 180;
+                    gauge1.value2 = second.str[secondCounter] * 180;
                     gauge1.ChangeValue();
                     
                 }
