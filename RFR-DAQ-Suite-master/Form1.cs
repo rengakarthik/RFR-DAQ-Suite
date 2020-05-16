@@ -23,10 +23,11 @@ namespace RFR_DAQ_Suite
         List<Double> ax2 = new List<double>();
         List<Double> ay2 = new List<double>();
 
-        Timer timer; //timer added
-
-        int xaxis;    //an integer variable called xaxis: used to move the x-axis to make it look animated ;)
-        int started;    //just one more useful variable
+        Timer timer;
+        //Stopwatch stopwatch;
+        //Random random;
+        int xaxis;
+        int started;
 
         public Form1()
         {
@@ -378,11 +379,11 @@ namespace RFR_DAQ_Suite
 
         public void Play_Click(object sender, EventArgs e)
         {
-            if(started==0)          //creating a flag
+            if(started==0)
             {
 
 
-                var chart_1 = chart1.ChartAreas[0];         //creating plotting areas for plotting charts
+                var chart_1 = chart1.ChartAreas[0];
                 var chart_2 = chart2.ChartAreas[0];
                 var chart_3 = chart3.ChartAreas[0];
 
@@ -400,7 +401,7 @@ namespace RFR_DAQ_Suite
                 chart_3.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
 
 
-                chart_1.AxisX.LabelStyle.Format = "";           //hiding the original labels
+                chart_1.AxisX.LabelStyle.Format = "";
                 chart_1.AxisY.LabelStyle.Format = "";
                 chart_1.AxisX.LabelStyle.IsEndLabelVisible = true;
 
@@ -414,8 +415,8 @@ namespace RFR_DAQ_Suite
 
 
 
-                chart_1.AxisX.Interval = 200;                 //fixed x axis interval as 200 ms
-                chart_1.AxisY.Interval = 0.2;                 //fixed y axis interval as 0.2, but this will be dynamically changed in the later part of the code
+                chart_1.AxisX.Interval = 200;
+                chart_1.AxisY.Interval = 0.2;
 
                 chart_2.AxisX.Interval = 200;
                 chart_2.AxisY.Interval = 0.2;
@@ -427,12 +428,12 @@ namespace RFR_DAQ_Suite
                 chart1.Series[0].IsVisibleInLegend = false;
                 chart1.ChartAreas[0].InnerPlotPosition.Auto = true;
 
-                chart1.ChartAreas[0].AxisX.MajorGrid.LineColor = Color.FromArgb(50, 200, 200, 200);            //making the rows and columns easily visible
+                chart1.ChartAreas[0].AxisX.MajorGrid.LineColor = Color.FromArgb(50, 200, 200, 200);
                 chart1.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.FromArgb(50, 200, 200, 200);
 
-                chart1.Series.Add("File1");                 //adding a new series
-                chart1.Series["File1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;  //making a spline chart type- for smoothing purpose
-                chart1.Series["File1"].Color = Color.Blue;      //giving the spline blue color
+                chart1.Series.Add("File1");
+                chart1.Series["File1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+                chart1.Series["File1"].Color = Color.Blue;
 
                 chart1.Series.Add("File2");
                 chart1.Series["File2"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -472,7 +473,7 @@ namespace RFR_DAQ_Suite
             }
             else
             {
-                timer.Start();          //restarting the timer
+                timer.Start();
                 Play.Text = "Play";
             }
         }
@@ -507,7 +508,7 @@ namespace RFR_DAQ_Suite
 
                 if (chart1.Series["File1"].Points.Count <= 50)
                 {
-                    chart1.Series["File1"].Points.AddXY(first.t1[xaxis], first.x1[xaxis]);          //add X,Y points for first 50 points
+                    chart1.Series["File1"].Points.AddXY(first.t1[xaxis], first.x1[xaxis]);
                     chart1.Series["File2"].Points.AddXY(second.t1[xaxis], second.x1[xaxis]);
 
                     chart2.Series["File1"].Points.AddXY(first.t1[xaxis], first.y1[xaxis]);
@@ -519,7 +520,7 @@ namespace RFR_DAQ_Suite
 
                     for (int n = 0; n < xaxis; n++)
                     {
-                        chart1.Series["File1"].Points[n].MarkerStyle = MarkerStyle.Circle;         //making the natural marker not to be visible
+                        chart1.Series["File1"].Points[n].MarkerStyle = MarkerStyle.Circle;
                         chart1.Series["File1"].Points[n].MarkerSize = 1;
                         chart1.Series["File2"].Points[n].MarkerStyle = MarkerStyle.Circle;
                         chart1.Series["File2"].Points[n].MarkerSize = 1;
@@ -536,7 +537,7 @@ namespace RFR_DAQ_Suite
                     }
 
 
-                    chart1.Series["File1"].Points[xaxis].MarkerStyle = MarkerStyle.Cross;       //making the leading marker to be visible in "Cross" symbol with larger size
+                    chart1.Series["File1"].Points[xaxis].MarkerStyle = MarkerStyle.Cross;
                     chart1.Series["File1"].Points[xaxis].MarkerSize = 10;
                     chart1.Series["File2"].Points[xaxis].MarkerStyle = MarkerStyle.Cross;
                     chart1.Series["File2"].Points[xaxis].MarkerSize = 10;
@@ -561,7 +562,7 @@ namespace RFR_DAQ_Suite
                 else if (chart1.Series["File1"].Points.Count > 50)
                 {
 
-                    chart1.Series["File1"].Points.AddXY(first.t1[xaxis], first.x1[xaxis]);          //adding points after first 50 points 
+                    chart1.Series["File1"].Points.AddXY(first.t1[xaxis], first.x1[xaxis]);
                     chart1.Series["File2"].Points.AddXY(second.t1[xaxis++], second.x1[xaxis]);
 
                     chart2.Series["File1"].Points.AddXY(first.t1[xaxis], first.y1[xaxis]);
@@ -571,7 +572,7 @@ namespace RFR_DAQ_Suite
                     chart3.Series["File2"].Points.AddXY(second.t1[xaxis], second.z1[xaxis]);
 
 
-                    chart1.Series["File1"].Points[50].MarkerStyle = MarkerStyle.Cross;          //highlighting the dynamic 50th point
+                    chart1.Series["File1"].Points[50].MarkerStyle = MarkerStyle.Cross;
                     chart1.Series["File1"].Points[50].MarkerSize = 10;
                     chart1.Series["File2"].Points[50].MarkerStyle = MarkerStyle.Cross;
                     chart1.Series["File2"].Points[50].MarkerSize = 10;
@@ -590,7 +591,7 @@ namespace RFR_DAQ_Suite
 
                     for (int m = 0; m < 50; m++)
                     {
-                        chart1.Series["File1"].Points[m].MarkerStyle = MarkerStyle.Circle;          //changing the natural marker to be invisble
+                        chart1.Series["File1"].Points[m].MarkerStyle = MarkerStyle.Circle;
                         chart1.Series["File1"].Points[m].MarkerSize = 1;
                         chart1.Series["File2"].Points[m].MarkerStyle = MarkerStyle.Circle;
                         chart1.Series["File2"].Points[m].MarkerSize = 1;
@@ -608,8 +609,8 @@ namespace RFR_DAQ_Suite
 
 
 
-                    chart1.Series["File1"].Points.Remove(chart1.Series["File1"].Points[0]);         //removing the first point stored in the dynamic array
-                    chart1.Series["File2"].Points.Remove(chart1.Series["File2"].Points[0]);         //this will create a changing array whose values get shifted one value at time to a lower index in the array
+                    chart1.Series["File1"].Points.Remove(chart1.Series["File1"].Points[0]);
+                    chart1.Series["File2"].Points.Remove(chart1.Series["File2"].Points[0]);
 
                     chart2.Series["File1"].Points.Remove(chart2.Series["File1"].Points[0]);
                     chart2.Series["File2"].Points.Remove(chart2.Series["File2"].Points[0]);
@@ -618,11 +619,11 @@ namespace RFR_DAQ_Suite
                     chart3.Series["File2"].Points.Remove(chart3.Series["File2"].Points[0]);
 
 
-                    chart1.ChartAreas[0].AxisX.Minimum = chart1.Series["File1"].Points[0].XValue;       //setting the minimum and maximum of the X axis in order to create a dynamic moving effect
+                    chart1.ChartAreas[0].AxisX.Minimum = chart1.Series["File1"].Points[0].XValue;
                     chart2.ChartAreas[0].AxisX.Minimum = chart2.Series["File1"].Points[0].XValue;
                     chart3.ChartAreas[0].AxisX.Minimum = chart3.Series["File1"].Points[0].XValue;
 
-                    chart1.ChartAreas[0].AxisX.Maximum = first.t1[xaxis + 10];      //making the lead (that is marked with a 'cross' symbol) to be within theplotting region
+                    chart1.ChartAreas[0].AxisX.Maximum = first.t1[xaxis + 10];
                     chart2.ChartAreas[0].AxisX.Maximum = first.t1[xaxis + 10];
                     chart3.ChartAreas[0].AxisX.Maximum = first.t1[xaxis + 10];
 
@@ -630,7 +631,7 @@ namespace RFR_DAQ_Suite
             }
             catch
             {
-                timer.Stop();       //stopping the timer if some error is caught in the try statement: Happens when all the data stored in the array are used up aldready
+                timer.Stop();
                 MessageBox.Show("End of Data", "Done");
   
             }
@@ -641,7 +642,7 @@ namespace RFR_DAQ_Suite
         {
             timer.Stop();
             System.Threading.Thread.Sleep(1500); //waits for 1.5s before clearing the data after stopping
-            chart1.Series["File1"].Points.Clear();      //clears all the points in the plot
+            chart1.Series["File1"].Points.Clear();
             chart1.Series["File2"].Points.Clear();
 
             chart2.Series["File1"].Points.Clear();
@@ -658,19 +659,18 @@ namespace RFR_DAQ_Suite
 
         private void Pause_Click(object sender, EventArgs e)
         {
-            timer.Stop();       //stopping the timer on clicking pause button
+            timer.Stop();
             Play.Text = "Resume";
         }
 
         private void Slow_Click(object sender, EventArgs e)
         {
-            timer.Interval *= 2;        //doubling the interval inorder to slow down the graph by 2x times
+            timer.Interval *= 2;
         }
 
         private void fast_Click(object sender, EventArgs e)
         {
-            timer.Interval /= 2;        //making the timer interval to get halved in order to increase the speed by 2x times
-            //PS: DO NOT increase the speed too much!!!! Else, it will crash since the value stored in the timer.Interval will reach 0; 
+            timer.Interval /= 2;
         }
 
         // functions to load data to acceleration variables
