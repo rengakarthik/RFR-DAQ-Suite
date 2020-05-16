@@ -498,6 +498,13 @@ namespace RFR_DAQ_Suite
 
                 chart4.Invalidate(); // use this to plot and replot the points
 
+                // dynamically varying y axis of plot to ensure that data always stays within plot
+                chart1.ChartAreas[0].AxisY.Maximum = UpperLimit(first.x1, second.x1, xaxis) + 0.4;
+                chart1.ChartAreas[0].AxisY.Minimum = LowerLimit(first.x1, second.x1, xaxis) - 0.4;
+                chart2.ChartAreas[0].AxisY.Maximum = UpperLimit(first.y1, second.y1, xaxis) + 0.4;
+                chart2.ChartAreas[0].AxisY.Minimum = LowerLimit(first.y1, second.y1, xaxis) - 0.4;
+                chart3.ChartAreas[0].AxisY.Maximum = UpperLimit(first.z1, second.z1, xaxis) + 0.4;
+                chart3.ChartAreas[0].AxisY.Minimum = LowerLimit(first.z1, second.z1, xaxis) - 0.4;
 
                 if (chart1.Series["File1"].Points.Count <= 50)
                 {
@@ -674,11 +681,12 @@ namespace RFR_DAQ_Suite
 
 
             int j;
-            String str = "accelx";
+            String str = "Accelx";
 
-            for (j = 0; j < current.ncol - 1; j++)
+            for (j = 1; j < current.ncol - 1; j++)
             {
-                if (String.Compare(current.colnames[j], 1, str, 0, 6, true) == 0) // make sure that the col name is like "accelx"
+                
+                if (String.Compare(current.colnames[j], 1 , str, 0, 6, true) == 0) // make sure that the col name is like "accelx"
                 {
                     for (int i = 1; i < current.nrow - 1; i++)
                     {
@@ -696,10 +704,11 @@ namespace RFR_DAQ_Suite
             x = new double[current.nrow - 1];  // Because header row has been removed
 
             int j;
-            String str = "accely";
+            String str = "Accely";
         
-            for (j = 0; j < current.ncol - 1; j++)
+            for (j = 1; j < current.ncol - 1; j++)
             {
+               
                 if (String.Compare(current.colnames[j], 1, str, 0, 6, true) == 0)// make sure that the col name is like "accely"
                 {
                    
@@ -712,6 +721,31 @@ namespace RFR_DAQ_Suite
 
             }
             
+        }
+
+        public double UpperLimit(double[] px1, double[] px2, int xaxis) //function to find max y value currently in graph
+        {
+            int startPoint = (xaxis >= 50) ? (xaxis - 50) : 0;
+            double a = px1.Skip(startPoint).Take(50).Max();
+            double b = px2.Skip(startPoint).Take(50).Max();
+            if (a > b)
+                return a;
+            else
+            {
+                return b;
+            }
+        }
+        public double LowerLimit(double[] px1, double[] px2, int xaxis) //function to find min y value currently in graph
+        {
+            int startPoint = (xaxis >= 50) ? (xaxis - 50) : 0;
+            double a = px1.Skip(startPoint).Take(50).Min();
+            double b = px2.Skip(startPoint).Take(50).Min();
+            if (a < b)
+                return a;
+            else
+            {
+                return b;
+            }
         }
     }
 
