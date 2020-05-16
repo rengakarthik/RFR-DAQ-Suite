@@ -247,7 +247,7 @@ namespace RFR_DAQ_Suite
 
             OpenFileDialog open = new OpenFileDialog();                         // Opens dialogue box to ask for file to read.
             open.Title = "Open";
-            open.Filter = "Text Files (*.csv)|*.csv| All Files (*.*)|*.*";      // What type to read.
+            open.Filter = "Text Files (*.log)|*.log| All Files (*.*)|*.*";      // What type to read.
 
             if (open.ShowDialog() == DialogResult.OK)       //  Executes iff "OK" is pressed on the dialogue box. 
             {
@@ -290,8 +290,21 @@ namespace RFR_DAQ_Suite
                         }
                         else
                         {
+                            String temp = row[j];               // technical reasons
+                            if (temp.Length == 0)
+                            {
 
-                            current.elements[i - 1, j] = Convert.ToDouble(row[j]);      // Stores corresponding numerical data.
+                                current.elements[i - 1, j] = -9999.9999;                    // If a field iss empty, enter a preassigned value
+
+                            }
+                            else
+                            {
+
+                                current.elements[i - 1, j] = Convert.ToDouble(row[j]);      // Stores corresponding numerical data.
+
+                            }
+
+                            
 
                         }
 
