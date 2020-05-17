@@ -437,13 +437,13 @@ namespace RFR_DAQ_Suite
 
 
 
-                chart_1.AxisX.Interval = 200;
+                chart_1.AxisX.Interval = 1;
                 chart_1.AxisY.Interval = 0.2;
 
-                chart_2.AxisX.Interval = 200;
+                chart_2.AxisX.Interval = 1;
                 chart_2.AxisY.Interval = 0.2;
 
-                chart_3.AxisX.Interval = 200;
+                chart_3.AxisX.Interval = 1;
                 chart_3.AxisY.Interval = 0.2;
 
 
@@ -539,16 +539,16 @@ namespace RFR_DAQ_Suite
                 chart3.ChartAreas[0].AxisY.Maximum = UpperLimit(first.z1, second.z1, xaxis) + 0.4;
                 chart3.ChartAreas[0].AxisY.Minimum = LowerLimit(first.z1, second.z1, xaxis) - 0.4;
 
-                if (chart1.Series["File1"].Points.Count <= 50)
+                if (chart1.Series["File1"].Points.Count <= 20)
                 {
-                    chart1.Series["File1"].Points.AddXY(first.t1[xaxis], first.x1[xaxis]);
-                    chart1.Series["File2"].Points.AddXY(second.t1[xaxis], second.x1[xaxis]);
+                    chart1.Series["File1"].Points.AddXY(xaxis, first.x1[xaxis]);
+                    chart1.Series["File2"].Points.AddXY(xaxis, second.x1[xaxis]);
 
-                    chart2.Series["File1"].Points.AddXY(first.t1[xaxis], first.y1[xaxis]);
-                    chart2.Series["File2"].Points.AddXY(second.t1[xaxis], second.y1[xaxis]);
+                    chart2.Series["File1"].Points.AddXY(xaxis, first.y1[xaxis]);
+                    chart2.Series["File2"].Points.AddXY(xaxis, second.y1[xaxis]);
 
-                    chart3.Series["File1"].Points.AddXY(first.t1[xaxis], first.z1[xaxis]);
-                    chart3.Series["File2"].Points.AddXY(second.t1[xaxis], second.z1[xaxis]);
+                    chart3.Series["File1"].Points.AddXY(xaxis, first.z1[xaxis]);
+                    chart3.Series["File2"].Points.AddXY(xaxis, second.z1[xaxis]);
 
 
                     for (int n = 0; n < xaxis; n++)
@@ -587,42 +587,41 @@ namespace RFR_DAQ_Suite
 
 
                     xaxis += xaxis;
-                    //chart1.ChartAreas[0].AxisX.Maximum = first.t1[xaxis];
 
 
                 }
 
-                else if (chart1.Series["File1"].Points.Count > 50)
+                else if (chart1.Series["File1"].Points.Count > 20)
                 {
 
-                    chart1.Series["File1"].Points.AddXY(first.t1[xaxis], first.x1[xaxis]);
-                    chart1.Series["File2"].Points.AddXY(second.t1[xaxis++], second.x1[xaxis]);
+                    chart1.Series["File1"].Points.AddXY(xaxis, first.x1[xaxis]);
+                    chart1.Series["File2"].Points.AddXY(xaxis, second.x1[xaxis]);
 
-                    chart2.Series["File1"].Points.AddXY(first.t1[xaxis], first.y1[xaxis]);
-                    chart2.Series["File2"].Points.AddXY(second.t1[xaxis], second.y1[xaxis]);
+                    chart2.Series["File1"].Points.AddXY(xaxis, first.y1[xaxis]);
+                    chart2.Series["File2"].Points.AddXY(xaxis, second.y1[xaxis]);
 
-                    chart3.Series["File1"].Points.AddXY(first.t1[xaxis], first.z1[xaxis]);
-                    chart3.Series["File2"].Points.AddXY(second.t1[xaxis], second.z1[xaxis]);
-
-
-                    chart1.Series["File1"].Points[50].MarkerStyle = MarkerStyle.Cross;
-                    chart1.Series["File1"].Points[50].MarkerSize = 10;
-                    chart1.Series["File2"].Points[50].MarkerStyle = MarkerStyle.Cross;
-                    chart1.Series["File2"].Points[50].MarkerSize = 10;
-
-                    chart2.Series["File1"].Points[50].MarkerStyle = MarkerStyle.Cross;
-                    chart2.Series["File1"].Points[50].MarkerSize = 10;
-                    chart2.Series["File2"].Points[50].MarkerStyle = MarkerStyle.Cross;
-                    chart2.Series["File2"].Points[50].MarkerSize = 10;
-
-                    chart3.Series["File1"].Points[50].MarkerStyle = MarkerStyle.Cross;
-                    chart3.Series["File1"].Points[50].MarkerSize = 10;
-                    chart3.Series["File2"].Points[50].MarkerStyle = MarkerStyle.Cross;
-                    chart3.Series["File2"].Points[50].MarkerSize = 10;
+                    chart3.Series["File1"].Points.AddXY(xaxis, first.z1[xaxis]);
+                    chart3.Series["File2"].Points.AddXY(xaxis, second.z1[xaxis]);
 
 
+                    chart1.Series["File1"].Points[20].MarkerStyle = MarkerStyle.Cross;
+                    chart1.Series["File1"].Points[20].MarkerSize = 10;
+                    chart1.Series["File2"].Points[20].MarkerStyle = MarkerStyle.Cross;
+                    chart1.Series["File2"].Points[20].MarkerSize = 10;
 
-                    for (int m = 0; m < 50; m++)
+                    chart2.Series["File1"].Points[20].MarkerStyle = MarkerStyle.Cross;
+                    chart2.Series["File1"].Points[20].MarkerSize = 10;
+                    chart2.Series["File2"].Points[20].MarkerStyle = MarkerStyle.Cross;
+                    chart2.Series["File2"].Points[20].MarkerSize = 10;
+
+                    chart3.Series["File1"].Points[20].MarkerStyle = MarkerStyle.Cross;
+                    chart3.Series["File1"].Points[20].MarkerSize = 10;
+                    chart3.Series["File2"].Points[20].MarkerStyle = MarkerStyle.Cross;
+                    chart3.Series["File2"].Points[20].MarkerSize = 10;
+
+
+
+                    for (int m = 0; m < 20; m++)
                     {
                         chart1.Series["File1"].Points[m].MarkerStyle = MarkerStyle.Circle;
                         chart1.Series["File1"].Points[m].MarkerSize = 1;
@@ -656,9 +655,13 @@ namespace RFR_DAQ_Suite
                     chart2.ChartAreas[0].AxisX.Minimum = chart2.Series["File1"].Points[0].XValue;
                     chart3.ChartAreas[0].AxisX.Minimum = chart3.Series["File1"].Points[0].XValue;
 
-                    chart1.ChartAreas[0].AxisX.Maximum = first.t1[xaxis + 10];
-                    chart2.ChartAreas[0].AxisX.Maximum = first.t1[xaxis + 10];
-                    chart3.ChartAreas[0].AxisX.Maximum = first.t1[xaxis + 10];
+                    xaxis += xaxis;
+
+                    chart1.ChartAreas[0].AxisX.Maximum = xaxis + 1;
+                    chart2.ChartAreas[0].AxisX.Maximum = xaxis + 1;
+                    chart3.ChartAreas[0].AxisX.Maximum = xaxis + 1;
+
+                    
 
                 }
             }
@@ -764,9 +767,9 @@ namespace RFR_DAQ_Suite
 
         public double UpperLimit(double[] px1, double[] px2, int xaxis) //function to find max y value currently in graph
         {
-            int startPoint = (xaxis >= 50) ? (xaxis - 50) : 0;
-            double a = px1.Skip(startPoint).Take(50).Max();
-            double b = px2.Skip(startPoint).Take(50).Max();
+            int startPoint = (xaxis >= 20) ? (xaxis - 20) : 0;
+            double a = px1.Skip(startPoint).Take(20).Max();
+            double b = px2.Skip(startPoint).Take(20).Max();
             if (a > b)
                 return a;
             else
@@ -776,9 +779,9 @@ namespace RFR_DAQ_Suite
         }
         public double LowerLimit(double[] px1, double[] px2, int xaxis) //function to find min y value currently in graph
         {
-            int startPoint = (xaxis >= 50) ? (xaxis - 50) : 0;
-            double a = px1.Skip(startPoint).Take(50).Min();
-            double b = px2.Skip(startPoint).Take(50).Min();
+            int startPoint = (xaxis >= 20) ? (xaxis - 20) : 0;
+            double a = px1.Skip(startPoint).Take(20).Min();
+            double b = px2.Skip(startPoint).Take(20).Min();
             if (a < b)
                 return a;
             else
