@@ -412,7 +412,7 @@ namespace RFR_DAQ_Suite
                 }
 
                 timer = new Timer();
-                timer.Interval = 80;    //present playback speed is 0.25x
+                timer.Interval = 320;    //present playback speed is 0.0625x
                 timer.Tick += timer_Tick;
                 timer.Start();
 
@@ -437,13 +437,13 @@ namespace RFR_DAQ_Suite
 
 
 
-                chart_1.AxisX.Interval = 1;
+                chart_1.AxisX.Interval = 2;
                 chart_1.AxisY.Interval = 0.2;
 
-                chart_2.AxisX.Interval = 1;
+                chart_2.AxisX.Interval = 2;
                 chart_2.AxisY.Interval = 0.2;
 
-                chart_3.AxisX.Interval = 1;
+                chart_3.AxisX.Interval = 2;
                 chart_3.AxisY.Interval = 0.2;
 
 
@@ -586,7 +586,7 @@ namespace RFR_DAQ_Suite
                     chart3.Series["File2"].Points[xaxis].MarkerSize = 10;
 
 
-                    xaxis += xaxis;
+                    xaxis++;
 
 
                 }
@@ -601,7 +601,7 @@ namespace RFR_DAQ_Suite
                     chart2.Series["File2"].Points.AddXY(xaxis, second.y1[xaxis]);
 
                     chart3.Series["File1"].Points.AddXY(xaxis, first.z1[xaxis]);
-                    chart3.Series["File2"].Points.AddXY(xaxis, second.z1[xaxis]);
+                    chart3.Series["File2"].Points.AddXY(xaxis++, second.z1[xaxis]);
 
 
                     chart1.Series["File1"].Points[20].MarkerStyle = MarkerStyle.Cross;
@@ -655,11 +655,11 @@ namespace RFR_DAQ_Suite
                     chart2.ChartAreas[0].AxisX.Minimum = chart2.Series["File1"].Points[0].XValue;
                     chart3.ChartAreas[0].AxisX.Minimum = chart3.Series["File1"].Points[0].XValue;
 
-                    xaxis += xaxis;
+                    //xaxis += xaxis;
 
-                    chart1.ChartAreas[0].AxisX.Maximum = xaxis + 1;
-                    chart2.ChartAreas[0].AxisX.Maximum = xaxis + 1;
-                    chart3.ChartAreas[0].AxisX.Maximum = xaxis + 1;
+                    chart1.ChartAreas[0].AxisX.Maximum = xaxis + 2;
+                    chart2.ChartAreas[0].AxisX.Maximum = xaxis + 2;
+                    chart3.ChartAreas[0].AxisX.Maximum = xaxis + 2;
 
                     
 
@@ -683,7 +683,7 @@ namespace RFR_DAQ_Suite
             gauge1.ChangeValue();
             
 
-            System.Threading.Thread.Sleep(1500); //waits for 1.5s before clearing the data after stopping
+            //System.Threading.Thread.Sleep(1500); //waits for 1.5s before clearing the data after stopping
             chart1.Series["File1"].Points.Clear();
             chart1.Series["File2"].Points.Clear();
 
