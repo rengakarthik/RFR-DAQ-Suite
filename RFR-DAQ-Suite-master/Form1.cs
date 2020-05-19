@@ -492,11 +492,19 @@ namespace RFR_DAQ_Suite
                 chart3.Series["File2"].Color = Color.Green;
 
                 started = 1;
+                Play.Text = "Pause";
+            }
+            else if(started==1)
+            {
+                timer.Stop();
+                Play.Text = "Resume";
+                started = 2;
             }
             else
             {
                 timer.Start();
-                Play.Text = "Play";
+                Play.Text = "Pause";
+                started = 1;
             }
         }
         int firstCounter;
@@ -785,12 +793,6 @@ namespace RFR_DAQ_Suite
             chart4.Series["plot2"].Points.Clear();
 
             xaxis = 0;
-        }
-
-        private void Pause_Click(object sender, EventArgs e)
-        {
-            timer.Stop();
-            Play.Text = "Resume";
         }
 
         private void Slow_Click(object sender, EventArgs e)
