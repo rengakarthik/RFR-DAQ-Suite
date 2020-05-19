@@ -628,7 +628,8 @@ namespace RFR_DAQ_Suite
                     chart3.Series["File2"].Points[xaxis].MarkerStyle = MarkerStyle.Cross;
                     chart3.Series["File2"].Points[xaxis].MarkerSize = 10;
 
-
+                    chart1.ChartAreas[0].AxisY.Maximum = UpperLimit(first.x1, second.x1, xaxis) + 0.4;
+                    chart1.ChartAreas[0].AxisY.Minimum = LowerLimit(first.x1, second.x1, xaxis) - 0.4;
                     xaxis++;
 
 
@@ -735,6 +736,9 @@ namespace RFR_DAQ_Suite
                     chart1.ChartAreas[0].AxisX.Minimum = chart1.Series["File1"].Points[0].XValue;
                     chart2.ChartAreas[0].AxisX.Minimum = chart2.Series["File1"].Points[0].XValue;
                     chart3.ChartAreas[0].AxisX.Minimum = chart3.Series["File1"].Points[0].XValue;
+
+                    chart1.ChartAreas[0].AxisY.Maximum = UpperLimit(first.x1, second.x1, xaxis) + 0.4;
+                    chart1.ChartAreas[0].AxisY.Minimum = LowerLimit(first.x1, second.x1, xaxis) - 0.4;
 
                     //xaxis += xaxis;
 

@@ -132,3 +132,9 @@ C:\Users\HP\Source\Repos\RFR-DAQ-Suite-9\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ 
 C:\Users\HP\Source\Repos\RFR-DAQ-Suite-9\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csproj.CoreCompileInputs.cache
 C:\Users\HP\Source\Repos\RFR-DAQ-Suite-9\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.exe
 C:\Users\HP\Source\Repos\RFR-DAQ-Suite-9\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.pdb
+C:\Users\harih\Source\Repos\rengakarthik\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\Gauge.g.cs
+C:\Users\harih\Source\Repos\rengakarthik\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite_Content.g.cs
+C:\Users\harih\Source\Repos\rengakarthik\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite_MarkupCompile.cache
+C:\Users\harih\Source\Repos\rengakarthik\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite_MarkupCompile.lref
+C:\Users\harih\Source\Repos\rengakarthik\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\Gauge.baml
+C:\Users\harih\Source\Repos\rengakarthik\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.g.resources
