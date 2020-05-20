@@ -521,16 +521,6 @@ namespace RFR_DAQ_Suite
             try
             {
 
-
-                if (firstCounter < first.nrow - 1 && secondCounter < second.nrow - 1)
-                {
-                    firstCounter++; secondCounter++;
-                    gauge1.value1 = first.str[firstCounter] * 120 / 2.49 - 137.1084;
-                    gauge1.value2 = second.str[secondCounter] * 120 / 2.49 - 137.1084;
-                    gauge1.ChangeValue();
-
-                }
-
                 ax1.Clear(); // clearing each time to plot new points thereby the moving effect
                 ay1.Clear();
                 ax2.Clear();
@@ -894,6 +884,15 @@ namespace RFR_DAQ_Suite
                     chart3.ChartAreas[0].AxisX.Maximum = xaxis + 2;
 
 
+
+                }
+
+                if (firstCounter < first.nrow - 1 && secondCounter < second.nrow - 1)
+                {
+                    firstCounter++; secondCounter++;
+                    gauge1.value1 = first.str[firstCounter] * 120 / 2.49 - 137.1084;
+                    gauge1.value2 = second.str[secondCounter] * 120 / 2.49 - 137.1084;
+                    gauge1.ChangeValue();
 
                 }
 
