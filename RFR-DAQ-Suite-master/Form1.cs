@@ -901,8 +901,8 @@ namespace RFR_DAQ_Suite
 
             catch
             {
-                //timer.Stop();
-                //MessageBox.Show("End of Data", "Done");
+                timer.Stop();
+                MessageBox.Show("End of Data", "Done");
   
             }
 
