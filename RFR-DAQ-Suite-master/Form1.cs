@@ -40,35 +40,54 @@ namespace RFR_DAQ_Suite
 
             // customizing the plot for better visualization
 
-            chart4.ChartAreas[0].AxisX.Minimum = -1.5;
+            chart4.ChartAreas[0].AxisX.Minimum = -1.6;
 
-            chart4.ChartAreas[0].AxisX.Maximum = 1.5;
+            chart4.ChartAreas[0].AxisX.Maximum = 1.6;
 
             chart4.ChartAreas[0].AxisX.Interval = 0.1;
 
-            chart4.ChartAreas[0].AxisY.Minimum = -1.5;
+            chart4.ChartAreas[0].AxisY.Minimum = -1.6;
 
-            chart4.ChartAreas[0].AxisY.Maximum = 1.5;
+            chart4.ChartAreas[0].AxisY.Maximum = 1.6;
 
             chart4.ChartAreas[0].AxisY.Interval = 0.1;
 
             chart4.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = false;
             chart4.ChartAreas["ChartArea1"].AxisY.MajorGrid.Enabled = false;
 
+            chart4.ChartAreas["ChartArea1"].AxisX.MinorGrid.Enabled = false;
+            chart4.ChartAreas["ChartArea1"].AxisY.MinorGrid.Enabled = false;
+
             chart4.ChartAreas["ChartArea1"].AxisX.Crossing = 0;
             chart4.ChartAreas["ChartArea1"].AxisY.Crossing = 0;
 
-            chart4.ChartAreas["ChartArea1"].AxisX.Title = "Accely";
-            chart4.ChartAreas["ChartArea1"].AxisY.Title = "Accelx";
+            chart4.ChartAreas["ChartArea1"].AxisX.IsMarginVisible = false;
+            chart4.ChartAreas["ChartArea1"].AxisY.IsMarginVisible = false;
 
-            chart4.ChartAreas["ChartArea1"].AxisX.LabelAutoFitMaxFontSize = 5;
-            chart4.ChartAreas["ChartArea1"].AxisY.LabelAutoFitMaxFontSize = 5;
+            chart4.ChartAreas["ChartArea1"].AxisX.LabelAutoFitMaxFontSize = 1;
+            chart4.ChartAreas["ChartArea1"].AxisY.LabelAutoFitMaxFontSize = 1;
 
             chart4.Series["plot1"].MarkerSize = 5;
             chart4.Series["plot2"].MarkerSize = 5;
 
             chart4.Series["plot1"].Color = Color.Red;
             chart4.Series["plot2"].Color = Color.Blue;
+
+            //var chartBackImage = new Bitmap(1, 1); //some bmp
+            //chart4.Images.Add(new NamedImage("accel_circle", chartBackImage));
+            //chart4.ChartAreas[0].BackImage = Images[0].Name;
+            //chart4.ChartAreas[0].BackImageWrapMode = ChartImageWrapMode.Scaled; //extra
+
+            
+
+
+
+            //OpenFileDialog ofd = new OpenFileDialog();
+
+
+            //filename = ofd.FileName;
+
+            //this.chartControl1.ChartAreaBackImage = new Bitmap(filename);
         }
 
 
@@ -941,6 +960,11 @@ namespace RFR_DAQ_Suite
         private void fast_Click(object sender, EventArgs e)
         {
             timer.Interval /= 2;
+        }
+
+        private void chart4_Click(object sender, EventArgs e)
+        {
+
         }
 
         // functions to load data to acceleration variables
