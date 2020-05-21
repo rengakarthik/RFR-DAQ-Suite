@@ -61,11 +61,18 @@ namespace RFR_DAQ_Suite
             chart4.ChartAreas["ChartArea1"].AxisX.Crossing = 0;
             chart4.ChartAreas["ChartArea1"].AxisY.Crossing = 0;
 
+            chart4.ChartAreas["ChartArea1"].AxisX.LabelStyle.Enabled = false;
+            chart4.ChartAreas["ChartArea1"].AxisY.LabelStyle.Enabled = false;
+
+            chart4.ChartAreas["ChartArea1"].AxisX.ArrowStyle = 0;
+            chart4.ChartAreas["ChartArea1"].AxisY.ArrowStyle = 0;
+
+
             chart4.ChartAreas["ChartArea1"].AxisX.IsMarginVisible = false;
             chart4.ChartAreas["ChartArea1"].AxisY.IsMarginVisible = false;
 
-            chart4.ChartAreas["ChartArea1"].AxisX.LabelAutoFitMaxFontSize = 1;
-            chart4.ChartAreas["ChartArea1"].AxisY.LabelAutoFitMaxFontSize = 1;
+            chart4.ChartAreas["ChartArea1"].AxisX.LabelAutoFitMaxFontSize = 5;
+            chart4.ChartAreas["ChartArea1"].AxisY.LabelAutoFitMaxFontSize = 5;
 
             chart4.Series["plot1"].MarkerSize = 5;
             chart4.Series["plot2"].MarkerSize = 5;
