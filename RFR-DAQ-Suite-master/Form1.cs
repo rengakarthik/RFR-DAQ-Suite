@@ -74,27 +74,29 @@ namespace RFR_DAQ_Suite
             chart4.ChartAreas["ChartArea1"].AxisX.LabelAutoFitMaxFontSize = 5;
             chart4.ChartAreas["ChartArea1"].AxisY.LabelAutoFitMaxFontSize = 5;
 
+            ////chart4.ChartAreas["ChartArea1"].BackImage = Properties.Resources.accel_circle;
+            //chart4.ChartAreas["ChartArea1"].BackImage = Properties.Resources.accel_circle;
+            //List<Bitmap> lisimage = new List<Bitmap>();
+            //lisimage.Add(Properties.Resources.accel_circle);
+            //var indexbackimage = DateTime.Now.Second % lisimage.Count;
+            //chart4.ChartAreas["ChartArea1"].BackImage = lisimage[indexbackimage];
+
+            var backImage = new NamedImage("accel_circle",Properties.Resources.accel_circle);
+            chart4.Images.Add(backImage);
+            chart4.BackImage = "accel_circle";
+
+            chart4.ChartAreas["ChartArea1"].BackImageAlignment = ChartImageAlignmentStyle.Center;
+            chart4.ChartAreas["ChartArea1"].BackImageWrapMode =ChartImageWrapMode.Scaled;
+
+
+
             chart4.Series["plot1"].MarkerSize = 5;
             chart4.Series["plot2"].MarkerSize = 5;
 
             chart4.Series["plot1"].Color = Color.Red;
             chart4.Series["plot2"].Color = Color.Blue;
 
-            //var chartBackImage = new Bitmap(1, 1); //some bmp
-            //chart4.Images.Add(new NamedImage("accel_circle", chartBackImage));
-            //chart4.ChartAreas[0].BackImage = Images[0].Name;
-            //chart4.ChartAreas[0].BackImageWrapMode = ChartImageWrapMode.Scaled; //extra
-
             
-
-
-
-            //OpenFileDialog ofd = new OpenFileDialog();
-
-
-            //filename = ofd.FileName;
-
-            //this.chartControl1.ChartAreaBackImage = new Bitmap(filename);
         }
 
 
@@ -560,6 +562,16 @@ namespace RFR_DAQ_Suite
 
                 chart4.Series["plot1"].Points.DataBindXY(ax1, ay1); //plotting the data using the lists
                 chart4.Series["plot2"].Points.DataBindXY(ax2, ay2);
+
+                double a1 = Math.Sqrt(first.ax[xaxis] * first.ax[xaxis] + first.ay[xaxis] * first.ay[xaxis]);
+                double a2 = Math.Sqrt(second.ax[xaxis] * second.ax[xaxis] + second.ay[xaxis] * second.ay[xaxis]);
+
+                String s1 = a1.ToString();
+                String s2 = a2.ToString();
+
+                chart4.Series["plot1"].Label = s1;
+                chart4.Series["plot2"].Label = s2;
+
 
                 chart4.Invalidate(); // use this to plot and replot the points
 
