@@ -510,8 +510,6 @@
             // 
             chartArea4.AxisX.IsMarginVisible = false;
             chartArea4.AxisY.IsMarginVisible = false;
-            chartArea4.BackImage = "C:\\Users\\C.S.Hariharan\\source\\repos\\RFR-DAQ-Suiteanim\\RFR-DAQ-Suite-master\\accel_" +
-    "circle.png";
             chartArea4.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
             chartArea4.BackImageTransparentColor = System.Drawing.Color.Transparent;
             chartArea4.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;

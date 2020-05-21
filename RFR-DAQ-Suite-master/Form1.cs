@@ -83,7 +83,7 @@ namespace RFR_DAQ_Suite
 
             var backImage = new NamedImage("accel_circle",Properties.Resources.accel_circle);
             chart4.Images.Add(backImage);
-            chart4.BackImage = "accel_circle";
+            chart4.ChartAreas["ChartArea1"].BackImage = "accel_circle";
 
             chart4.ChartAreas["ChartArea1"].BackImageAlignment = ChartImageAlignmentStyle.Center;
             chart4.ChartAreas["ChartArea1"].BackImageWrapMode =ChartImageWrapMode.Scaled;
@@ -566,8 +566,16 @@ namespace RFR_DAQ_Suite
                 double a1 = Math.Sqrt(first.ax[xaxis] * first.ax[xaxis] + first.ay[xaxis] * first.ay[xaxis]);
                 double a2 = Math.Sqrt(second.ax[xaxis] * second.ax[xaxis] + second.ay[xaxis] * second.ay[xaxis]);
 
+                a1 = Math.Round(a1, 2);
+                a2 = Math.Round(a2, 2);
+
+
                 String s1 = a1.ToString();
                 String s2 = a2.ToString();
+
+                
+                chart4.Series["plot1"].LabelForeColor = Color.Red;
+                chart4.Series["plot2"].LabelForeColor = Color.Blue;
 
                 chart4.Series["plot1"].Label = s1;
                 chart4.Series["plot2"].Label = s2;
