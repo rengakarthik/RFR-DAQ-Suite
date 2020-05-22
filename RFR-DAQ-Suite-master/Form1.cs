@@ -292,7 +292,7 @@ namespace RFR_DAQ_Suite
 
                 current.nrow = lines.Length - 1;        // Last line is empty...
 
-                current.ncol = lines[1].Split(',').Length;      // Use commas to distinguish elemints
+                current.ncol = lines[1].Split(',').Length+1;      // Use commas to distinguish elemints
 
 
 
@@ -301,7 +301,7 @@ namespace RFR_DAQ_Suite
                 String[] row;           // Temporary storage for the row-data
                 row = new String[current.ncol];
                 current.colnames = new string[current.ncol];        // For headers
-
+                current.colnames[0] = "None";
                 for (int i = 0; i < current.nrow; i++)
                 {
 
@@ -312,13 +312,18 @@ namespace RFR_DAQ_Suite
                     {
                         if (i == 0)
                         {
-
-                            current.colnames[j] = row[j];       // Stores column names.
+                            if(j<current.ncol-1)
+                                current.colnames[j+1] = row[j];       // Stores column names.
 
                         }
                         else
                         {
-                            String temp = row[j];               // technical reasons
+                            if (j == 0)
+                            {
+                                current.elements[i - 1, j] = -9999.9999;
+                                continue;
+                            }
+                            String temp = row[j - 1];    // technical reasons
                             if (temp.Length == 0)
                             {
 
@@ -328,7 +333,7 @@ namespace RFR_DAQ_Suite
                             else
                             {
 
-                                current.elements[i - 1, j] = Convert.ToDouble(row[j]);      // Stores corresponding numerical data.
+                                current.elements[i - 1, j] = Convert.ToDouble(row[j-1]);      // Stores corresponding numerical data.
 
                             }
 
@@ -360,7 +365,7 @@ namespace RFR_DAQ_Suite
 
             }
 
-
+            dropdown.SelectedIndex = 0;
         }
 
         public void filldata(ref double[] x, ref workhorse current, int index)         // Fills data int the channels (one at a time) for further processing
