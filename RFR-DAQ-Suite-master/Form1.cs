@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Diagnostics;
-
+using System.Linq.Expressions;
 
 namespace RFR_DAQ_Suite
 {
@@ -928,10 +928,21 @@ namespace RFR_DAQ_Suite
                     chart3.Series["File1"].Points.Remove(chart3.Series["File1"].Points[0]);
                     chart3.Series["File2"].Points.Remove(chart3.Series["File2"].Points[0]);
                     */
-
-                    chart1.ChartAreas[0].AxisX.Minimum = chart1.Series["File1"].Points[0].XValue;
-                    chart2.ChartAreas[0].AxisX.Minimum = chart2.Series["File1"].Points[0].XValue;
-                    chart3.ChartAreas[0].AxisX.Minimum = chart3.Series["File1"].Points[0].XValue;
+                    try
+                    {
+                        chart1.ChartAreas[0].AxisX.Minimum = chart1.Series["File1"].Points[0].XValue;
+                    }
+                    catch { }
+                    try
+                    {
+                        chart2.ChartAreas[0].AxisX.Minimum = chart2.Series["File1"].Points[0].XValue;
+                    }
+                    catch { }
+                    try
+                    {
+                        chart3.ChartAreas[0].AxisX.Minimum = chart3.Series["File1"].Points[0].XValue;
+                    }
+                    catch { }
 
                    
                     //xaxis += xaxis;
@@ -1112,7 +1123,7 @@ namespace RFR_DAQ_Suite
             int startPoint = (xaxis >= 20) ? (xaxis - 20) : 0;
             double a = px1.Skip(startPoint).Take(20).Min();
             double b = px2.Skip(startPoint).Take(20).Min();
-            if (a < b)
+            if (a < b && a>-9000.0)
                 return a;
             else
             {
