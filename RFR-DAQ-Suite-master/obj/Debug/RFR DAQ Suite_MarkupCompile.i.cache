@@ -4,7 +4,7 @@
 winexe
 C#
 .cs
-C:\Users\HP\Source\Repos\RFR-DAQ-Suite-2\RFR-DAQ-Suite-master\obj\Debug\
+C:\Users\HP\Source\Repos\RFR-DAQ-Suite3\RFR-DAQ-Suite-master\obj\Debug\
 RFR_DAQ_Suite
 none
 false
@@ -13,8 +13,8 @@ DEBUG;TRACE
 1-204155779
 1-1622759568
 8-1185472827
-191012669824
+201024584572
 Gauge.xaml;
 
-False
+True
 

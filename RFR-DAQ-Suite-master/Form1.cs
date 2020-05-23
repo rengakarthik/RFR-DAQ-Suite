@@ -247,7 +247,7 @@ namespace RFR_DAQ_Suite
 
         private void chart3_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void chart1_Click(object sender, EventArgs e)

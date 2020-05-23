@@ -69,8 +69,6 @@
             this.label_z2 = new System.Windows.Forms.Label();
             this.label_y2 = new System.Windows.Forms.Label();
             this.label_x2 = new System.Windows.Forms.Label();
-            this.varStat1 = new System.Windows.Forms.Label();
-            this.varStat2 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.listBox2 = new System.Windows.Forms.ListBox();
@@ -81,15 +79,17 @@
             this.fast = new System.Windows.Forms.Button();
             this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
             this.gauge1 = new RFR_DAQ_Suite.Gauge();
+            this.varStat2 = new System.Windows.Forms.Label();
+            this.varStat1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
@@ -101,6 +101,13 @@
             // 
             // chart3
             // 
+            this.chart3.BackColor = System.Drawing.Color.Black;
+            this.chart3.BackImageTransparentColor = System.Drawing.Color.Black;
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.Lime;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.Lime;
+            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea1.BackColor = System.Drawing.Color.Black;
             chartArea1.Name = "ChartArea1";
             this.chart3.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
@@ -120,13 +127,20 @@
             // 
             // chart1
             // 
+            this.chart1.BackColor = System.Drawing.Color.Black;
+            this.chart1.BackImageTransparentColor = System.Drawing.Color.Black;
+            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.Lime;
+            chartArea2.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.Lime;
+            chartArea2.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea2.BackColor = System.Drawing.Color.Black;
             chartArea2.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(126, 92);
             this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series2.Legend = "Legend1";
@@ -138,6 +152,17 @@
             // 
             // chart2
             // 
+            this.chart2.BackColor = System.Drawing.Color.Black;
+            this.chart2.BackImageTransparentColor = System.Drawing.Color.Black;
+            this.chart2.BorderSkin.BackColor = System.Drawing.Color.Black;
+            this.chart2.BorderSkin.PageColor = System.Drawing.Color.Black;
+            chartArea3.AxisX.LabelStyle.ForeColor = System.Drawing.Color.Lime;
+            chartArea3.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea3.AxisY.LabelStyle.ForeColor = System.Drawing.Color.Lime;
+            chartArea3.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea3.BackColor = System.Drawing.Color.Black;
+            chartArea3.BackSecondaryColor = System.Drawing.Color.Lime;
+            chartArea3.IsSameFontSizeForAllAxes = true;
             chartArea3.Name = "ChartArea1";
             this.chart2.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
@@ -169,7 +194,7 @@
             this.Play.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Play.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Play.ForeColor = System.Drawing.Color.Lime;
-            this.Play.Location = new System.Drawing.Point(170, 636);
+            this.Play.Location = new System.Drawing.Point(153, 608);
             this.Play.Name = "Play";
             this.Play.Size = new System.Drawing.Size(100, 50);
             this.Play.TabIndex = 3;
@@ -186,7 +211,7 @@
             this.Stop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Stop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Stop.ForeColor = System.Drawing.Color.Lime;
-            this.Stop.Location = new System.Drawing.Point(270, 636);
+            this.Stop.Location = new System.Drawing.Point(253, 608);
             this.Stop.Name = "Stop";
             this.Stop.Size = new System.Drawing.Size(100, 50);
             this.Stop.TabIndex = 6;
@@ -395,7 +420,7 @@
             this.label_z2.Name = "label_z2";
             this.label_z2.Size = new System.Drawing.Size(97, 24);
             this.label_z2.TabIndex = 40;
-            this.label_z2.Text = "Channel c";
+            this.label_z2.Text = "Channel 3";
             // 
             // label_y2
             // 
@@ -407,7 +432,7 @@
             this.label_y2.Name = "label_y2";
             this.label_y2.Size = new System.Drawing.Size(98, 24);
             this.label_y2.TabIndex = 41;
-            this.label_y2.Text = "Channel b";
+            this.label_y2.Text = "Channel 2";
             // 
             // label_x2
             // 
@@ -419,31 +444,8 @@
             this.label_x2.Name = "label_x2";
             this.label_x2.Size = new System.Drawing.Size(97, 24);
             this.label_x2.TabIndex = 42;
-            this.label_x2.Text = "Channel a";
+            this.label_x2.Text = "Channel 1";
             this.label_x2.Click += new System.EventHandler(this.label_x2_Click);
-            // 
-            // varStat1
-            // 
-            this.varStat1.AutoEllipsis = true;
-            this.varStat1.AutoSize = true;
-            this.varStat1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.varStat1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.varStat1.Location = new System.Drawing.Point(1066, 294);
-            this.varStat1.Name = "varStat1";
-            this.varStat1.Size = new System.Drawing.Size(146, 24);
-            this.varStat1.TabIndex = 44;
-            this.varStat1.Text = "Variables Empty";
-            // 
-            // varStat2
-            // 
-            this.varStat2.AutoEllipsis = true;
-            this.varStat2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.varStat2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.varStat2.Location = new System.Drawing.Point(1068, 544);
-            this.varStat2.Name = "varStat2";
-            this.varStat2.Size = new System.Drawing.Size(147, 24);
-            this.varStat2.TabIndex = 45;
-            this.varStat2.Text = "Variables Empty";
             // 
             // listBox1
             // 
@@ -523,7 +525,7 @@
             this.Slow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Slow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Slow.ForeColor = System.Drawing.Color.Lime;
-            this.Slow.Location = new System.Drawing.Point(370, 636);
+            this.Slow.Location = new System.Drawing.Point(353, 608);
             this.Slow.Name = "Slow";
             this.Slow.Size = new System.Drawing.Size(100, 50);
             this.Slow.TabIndex = 52;
@@ -539,7 +541,7 @@
             this.fast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fast.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fast.ForeColor = System.Drawing.Color.Lime;
-            this.fast.Location = new System.Drawing.Point(470, 636);
+            this.fast.Location = new System.Drawing.Point(453, 608);
             this.fast.Name = "fast";
             this.fast.Size = new System.Drawing.Size(116, 50);
             this.fast.TabIndex = 53;
@@ -549,16 +551,24 @@
             // 
             // chart4
             // 
+            this.chart4.BackColor = System.Drawing.Color.Black;
+            this.chart4.BackImageTransparentColor = System.Drawing.Color.Black;
             chartArea4.AxisX.IsMarginVisible = false;
+            chartArea4.AxisX.LabelStyle.ForeColor = System.Drawing.Color.Lime;
+            chartArea4.AxisX.LineColor = System.Drawing.Color.White;
             chartArea4.AxisY.IsMarginVisible = false;
+            chartArea4.AxisY.LabelStyle.ForeColor = System.Drawing.Color.Lime;
+            chartArea4.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea4.BackColor = System.Drawing.Color.Black;
             chartArea4.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
             chartArea4.BackImageTransparentColor = System.Drawing.Color.Transparent;
             chartArea4.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
+            chartArea4.BackSecondaryColor = System.Drawing.Color.Black;
             chartArea4.Name = "ChartArea1";
             this.chart4.ChartAreas.Add(chartArea4);
             legend4.Name = "Legend1";
             this.chart4.Legends.Add(legend4);
-            this.chart4.Location = new System.Drawing.Point(600, 360);
+            this.chart4.Location = new System.Drawing.Point(626, 323);
             this.chart4.Margin = new System.Windows.Forms.Padding(2);
             this.chart4.Name = "chart4";
             series4.ChartArea = "ChartArea1";
@@ -572,7 +582,7 @@
             series5.Name = "plot2";
             this.chart4.Series.Add(series4);
             this.chart4.Series.Add(series5);
-            this.chart4.Size = new System.Drawing.Size(388, 228);
+            this.chart4.Size = new System.Drawing.Size(358, 311);
             this.chart4.TabIndex = 54;
             this.chart4.Text = "chart4";
             this.chart4.Click += new System.EventHandler(this.chart4_Click);
@@ -594,6 +604,16 @@
             this.panel1.TabIndex = 56;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 105);
+            this.pictureBox1.TabIndex = 58;
+            this.pictureBox1.TabStop = false;
+            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -601,13 +621,13 @@
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumBlue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Lime;
             this.button5.Location = new System.Drawing.Point(0, 338);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(120, 60);
             this.button5.TabIndex = 3;
-            this.button5.Text = "E P";
+            this.button5.Text = "EP";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -618,7 +638,7 @@
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumBlue;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Lime;
             this.button4.Location = new System.Drawing.Point(0, 398);
             this.button4.Name = "button4";
@@ -635,13 +655,13 @@
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Lime;
             this.button3.Location = new System.Drawing.Point(0, 278);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(120, 60);
             this.button3.TabIndex = 1;
-            this.button3.Text = "V D";
+            this.button3.Text = "VD";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -653,13 +673,13 @@
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumBlue;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Lime;
             this.button2.Location = new System.Drawing.Point(0, 218);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(120, 60);
             this.button2.TabIndex = 0;
-            this.button2.Text = "P T";
+            this.button2.Text = "PT";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -672,24 +692,37 @@
             this.panel2.TabIndex = 57;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 105);
-            this.pictureBox1.TabIndex = 58;
-            this.pictureBox1.TabStop = false;
-            // 
             // elementHost1
             // 
-            this.elementHost1.Location = new System.Drawing.Point(590, 124);
+            this.elementHost1.Location = new System.Drawing.Point(650, 90);
             this.elementHost1.Name = "elementHost1";
             this.elementHost1.Size = new System.Drawing.Size(231, 228);
             this.elementHost1.TabIndex = 55;
             this.elementHost1.Text = "elementHost1";
             this.elementHost1.Child = this.gauge1;
+            // 
+            // varStat2
+            // 
+            this.varStat2.AutoEllipsis = true;
+            this.varStat2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.varStat2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.varStat2.Location = new System.Drawing.Point(1068, 544);
+            this.varStat2.Name = "varStat2";
+            this.varStat2.Size = new System.Drawing.Size(147, 24);
+            this.varStat2.TabIndex = 45;
+            this.varStat2.Text = "Variables Empty";
+            // 
+            // varStat1
+            // 
+            this.varStat1.AutoEllipsis = true;
+            this.varStat1.AutoSize = true;
+            this.varStat1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.varStat1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.varStat1.Location = new System.Drawing.Point(1066, 294);
+            this.varStat1.Name = "varStat1";
+            this.varStat1.Size = new System.Drawing.Size(146, 24);
+            this.varStat1.TabIndex = 44;
+            this.varStat1.Text = "Variables Empty";
             // 
             // Form1
             // 
@@ -781,8 +814,6 @@
         private System.Windows.Forms.Label label_z2;
         private System.Windows.Forms.Label label_y2;
         private System.Windows.Forms.Label label_x2;
-        private System.Windows.Forms.Label varStat1;
-        private System.Windows.Forms.Label varStat2;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBox2;
@@ -801,6 +832,8 @@
         private Gauge gauge1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label varStat2;
+        private System.Windows.Forms.Label varStat1;
     }
 }
 
