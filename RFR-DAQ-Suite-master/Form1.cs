@@ -170,8 +170,8 @@ namespace RFR_DAQ_Suite
             fillaccelxdata(ref first.ax, ref first); // loading the acceleration data into the variables 
             fillaccelydata(ref first.ay, ref first);
             //varStat1.Text = "Variables Loaded";
-            string message = " Variables Loaded";
-            MessageBox.Show(message);
+            
+            MessageBox.Show("Variables Loaded", "Notification", MessageBoxButtons.OK);
 
 
 
@@ -189,8 +189,8 @@ namespace RFR_DAQ_Suite
             fillaccelxdata(ref second.ax, ref second);
             fillaccelydata(ref second.ay, ref second);
             //varStat2.Text = "Variables Loaded";
-            string message = " Variables Loaded";
-            MessageBox.Show(message);
+            //string message = " Variables Loaded";
+            MessageBox.Show("Variables Loaded", "Notification" , MessageBoxButtons.OK);
 
 
 
@@ -209,7 +209,8 @@ namespace RFR_DAQ_Suite
             first.x1 = null;
             first.y1 = null;
             first.z1 = null;
-            varStat1.Text = "Variables Emptied !";
+            //varStat1.Text = "Variables Emptied !";
+            MessageBox.Show("Variables Emptied !!", "Notification", MessageBoxButtons.OK);
 
         }
 
@@ -225,7 +226,8 @@ namespace RFR_DAQ_Suite
             second.x1 = null;
             second.y1 = null;
             second.z1 = null;
-            varStat2.Text = "Variables Emptied !!";
+            //varStat2.Text = "Variables Emptied !!";
+            MessageBox.Show("Variables Emptied !!", "Notification", MessageBoxButtons.OK);
         }
 
 
