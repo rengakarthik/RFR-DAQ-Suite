@@ -169,7 +169,9 @@ namespace RFR_DAQ_Suite
             filldata(ref first.t1, ref first, 0);
             fillaccelxdata(ref first.ax, ref first); // loading the acceleration data into the variables 
             fillaccelydata(ref first.ay, ref first);
-            varStat1.Text = "Variables Loaded";
+            //varStat1.Text = "Variables Loaded";
+            string message = " Variables Loaded";
+            MessageBox.Show(message);
 
 
 
@@ -186,7 +188,9 @@ namespace RFR_DAQ_Suite
             filldata(ref second.t1, ref second, 0);
             fillaccelxdata(ref second.ax, ref second);
             fillaccelydata(ref second.ay, ref second);
-            varStat2.Text = "Variables Loaded";
+            //varStat2.Text = "Variables Loaded";
+            string message = " Variables Loaded";
+            MessageBox.Show(message);
 
 
 
@@ -1030,6 +1034,11 @@ namespace RFR_DAQ_Suite
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void varStat1_Click(object sender, EventArgs e)
         {
 
         }
