@@ -28,7 +28,7 @@ namespace RFR_DAQ_Suite
         //Random random;
         int xaxis;
         int started;
-        double strMax = 0;
+        double str1Max = 0;
         double strCP = 0;
 
 
@@ -448,7 +448,7 @@ namespace RFR_DAQ_Suite
                 for (str1Count = 0; str1Count< first.ncol; str1Count++)
                 {
                     name = first.colnames[str1Count];
-                    if (name[0] == 'S' && name[1] == 'T' && name[2] == 'R')
+                    if (name[0] == '"' && name[1] == 'S' && name[2] == 'T' && name[3] == 'R') 
                     {
                         break;
                     }
@@ -458,18 +458,19 @@ namespace RFR_DAQ_Suite
                 for (str2Count = 0; str2Count < second.ncol; str2Count++)
                 {
                     name = second.colnames[str2Count];
-                    if (name[0] == 'S' && name[1] == 'T' && name[2] == 'R')
+                    if (name[0] == '"' && name[1] == 'S' && name[2] == 'T' && name[3] == 'R')
                     {
                         break;
                     }
                 }
                 for (int i = 0; i < first.nrow - 1; i++)
                 {
-                    if (first.elements[i, 16] > strMax)
+                    if (first.elements[i, str1Count] > str1Max)
                     {
-                        strMax = first.elements[i, 16];
+                        str1Max = first.elements[i, str1Count];
                     }
                 }
+
                 double strSum = 0;
 
                 for (int i = 0; i < first.nrow - 1; i++)
@@ -478,12 +479,14 @@ namespace RFR_DAQ_Suite
                 }
 
                 strCP = strSum / (first.nrow - 1);
+             
+
 
 
                 if (str1Filled == 1 && str2Filled == 1)
                 {
-                    filldata(ref first.str, ref first, 16);
-                    filldata(ref second.str, ref second, 16);
+                    filldata(ref first.str, ref first, str1Count);
+                    filldata(ref second.str, ref second, str2Count);
                 }
 
                 timer = new Timer();
@@ -994,8 +997,8 @@ namespace RFR_DAQ_Suite
                 if (firstCounter < first.nrow - 1 && secondCounter < second.nrow - 1)
                 {
                     firstCounter++; secondCounter++;
-                    gauge1.value1 = first.str[firstCounter] * 60 / (strMax - strCP)  - strMax * 60 / (strMax - strCP) + 60;
-                    gauge1.value2 = second.str[secondCounter] * 60 / (strMax - strCP) - strMax * 60 / (strMax - strCP) + 60;
+                    gauge1.value1 = first.str[firstCounter] * 60 / (str1Max - 2.89) - str1Max * 60 / (str1Max - 2.89) + 60;
+                    gauge1.value2 = second.str[secondCounter] * 60 / (str1Max - 2.89) - str1Max * 60 / (str1Max - 2.89) + 60;
                     gauge1.ChangeValue();
 
                 }
@@ -1019,6 +1022,7 @@ namespace RFR_DAQ_Suite
             firstCounter = 0; secondCounter = 0;
             gauge1.value1 = 0; gauge1.value2 = 0;
             gauge1.ChangeValue();
+
             
 
             //System.Threading.Thread.Sleep(1500); //waits for 1.5s before clearing the data after stopping
