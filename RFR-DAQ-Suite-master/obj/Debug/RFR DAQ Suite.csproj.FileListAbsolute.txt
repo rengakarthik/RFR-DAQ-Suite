@@ -240,3 +240,20 @@ C:\Users\Sac\Desktop\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ
 C:\Users\Sac\Desktop\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csproj.CoreCompileInputs.cache
 C:\Users\Sac\Desktop\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.exe
 C:\Users\Sac\Desktop\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.pdb
+C:\Users\HP\Source\Repos\RFR-DAQ-Suite4\RFR-DAQ-Suite-master\bin\Debug\accel_circle.png
+C:\Users\HP\Source\Repos\RFR-DAQ-Suite4\RFR-DAQ-Suite-master\bin\Debug\RFR DAQ Suite.exe.config
+C:\Users\HP\Source\Repos\RFR-DAQ-Suite4\RFR-DAQ-Suite-master\bin\Debug\RFR DAQ Suite.exe
+C:\Users\HP\Source\Repos\RFR-DAQ-Suite4\RFR-DAQ-Suite-master\bin\Debug\RFR DAQ Suite.pdb
+C:\Users\HP\Source\Repos\RFR-DAQ-Suite4\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csprojAssemblyReference.cache
+C:\Users\HP\Source\Repos\RFR-DAQ-Suite4\RFR-DAQ-Suite-master\obj\Debug\Gauge.g.cs
+C:\Users\HP\Source\Repos\RFR-DAQ-Suite4\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite_Content.g.cs
+C:\Users\HP\Source\Repos\RFR-DAQ-Suite4\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite_MarkupCompile.cache
+C:\Users\HP\Source\Repos\RFR-DAQ-Suite4\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite_MarkupCompile.lref
+C:\Users\HP\Source\Repos\RFR-DAQ-Suite4\RFR-DAQ-Suite-master\obj\Debug\Gauge.baml
+C:\Users\HP\Source\Repos\RFR-DAQ-Suite4\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.g.resources
+C:\Users\HP\Source\Repos\RFR-DAQ-Suite4\RFR-DAQ-Suite-master\obj\Debug\RFR_DAQ_Suite.Form1.resources
+C:\Users\HP\Source\Repos\RFR-DAQ-Suite4\RFR-DAQ-Suite-master\obj\Debug\RFR_DAQ_Suite.Properties.Resources.resources
+C:\Users\HP\Source\Repos\RFR-DAQ-Suite4\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csproj.GenerateResource.cache
+C:\Users\HP\Source\Repos\RFR-DAQ-Suite4\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csproj.CoreCompileInputs.cache
+C:\Users\HP\Source\Repos\RFR-DAQ-Suite4\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.exe
+C:\Users\HP\Source\Repos\RFR-DAQ-Suite4\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.pdb
