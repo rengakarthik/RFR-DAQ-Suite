@@ -43,15 +43,15 @@ namespace RFR_DAQ_Suite
 
             // customizing the plot for better visualization
 
-            chart4.ChartAreas[0].AxisX.Minimum = -1.6;
+            chart4.ChartAreas[0].AxisX.Minimum = -1.5;
 
-            chart4.ChartAreas[0].AxisX.Maximum = 1.6;
+            chart4.ChartAreas[0].AxisX.Maximum = 1.5;
 
             chart4.ChartAreas[0].AxisX.Interval = 0.1;
 
-            chart4.ChartAreas[0].AxisY.Minimum = -1.6;
+            chart4.ChartAreas[0].AxisY.Minimum = -1.5;
 
-            chart4.ChartAreas[0].AxisY.Maximum = 1.6;
+            chart4.ChartAreas[0].AxisY.Maximum = 1.5;
 
             chart4.ChartAreas[0].AxisY.Interval = 0.1;
 
@@ -77,16 +77,10 @@ namespace RFR_DAQ_Suite
             chart4.ChartAreas["ChartArea1"].AxisX.LabelAutoFitMaxFontSize = 5;
             chart4.ChartAreas["ChartArea1"].AxisY.LabelAutoFitMaxFontSize = 5;
 
-            ////chart4.ChartAreas["ChartArea1"].BackImage = Properties.Resources.accel_circle;
-            //chart4.ChartAreas["ChartArea1"].BackImage = Properties.Resources.accel_circle;
-            //List<Bitmap> lisimage = new List<Bitmap>();
-            //lisimage.Add(Properties.Resources.accel_circle);
-            //var indexbackimage = DateTime.Now.Second % lisimage.Count;
-            //chart4.ChartAreas["ChartArea1"].BackImage = lisimage[indexbackimage];
 
-            var backImage = new NamedImage("accel_circle",Properties.Resources.accel_circle);
+            var backImage = new NamedImage("acceleration_circle",Properties.Resources.acceleration_circle);
             chart4.Images.Add(backImage);
-            chart4.ChartAreas["ChartArea1"].BackImage = "accel_circle";
+            chart4.ChartAreas["ChartArea1"].BackImage = "acceleration_circle";
 
             chart4.ChartAreas["ChartArea1"].BackImageAlignment = ChartImageAlignmentStyle.Center;
             chart4.ChartAreas["ChartArea1"].BackImageWrapMode =ChartImageWrapMode.Scaled;

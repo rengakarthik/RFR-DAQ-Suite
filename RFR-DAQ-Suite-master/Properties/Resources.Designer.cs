@@ -63,9 +63,9 @@ namespace RFR_DAQ_Suite.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap accel_circle {
+        public static System.Drawing.Bitmap acceleration_circle {
             get {
-                object obj = ResourceManager.GetObject("accel_circle", resourceCulture);
+                object obj = ResourceManager.GetObject("acceleration_circle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
