@@ -91,7 +91,7 @@ namespace RFR_DAQ_Suite
             chart4.Series["plot2"].MarkerSize = 5;
 
             chart4.Series["plot1"].Color = Color.Red;
-            chart4.Series["plot2"].Color = Color.Blue;
+            chart4.Series["plot2"].Color = Color.Green;
 
             
         }
@@ -625,7 +625,7 @@ namespace RFR_DAQ_Suite
 
                 
                 chart4.Series["plot1"].LabelForeColor = Color.Red;
-                chart4.Series["plot2"].LabelForeColor = Color.Blue;
+                chart4.Series["plot2"].LabelForeColor = Color.Green;
 
                 chart4.Series["plot1"].Label = s1;
                 chart4.Series["plot2"].Label = s2;

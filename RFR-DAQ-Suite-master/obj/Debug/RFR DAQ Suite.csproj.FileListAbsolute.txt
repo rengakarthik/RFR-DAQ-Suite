@@ -273,3 +273,19 @@ C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfr\RFR-DAQ-Suite-master\obj\De
 C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfr\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csproj.CoreCompileInputs.cache
 C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfr\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.exe
 C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfr\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.pdb
+C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\bin\Debug\RFR DAQ Suite.exe.config
+C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\bin\Debug\RFR DAQ Suite.exe
+C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\bin\Debug\RFR DAQ Suite.pdb
+C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csprojAssemblyReference.cache
+C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj\Debug\Gauge.g.cs
+C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite_Content.g.cs
+C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite_MarkupCompile.cache
+C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite_MarkupCompile.lref
+C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj\Debug\Gauge.baml
+C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.g.resources
+C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj\Debug\RFR_DAQ_Suite.Form1.resources
+C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj\Debug\RFR_DAQ_Suite.Properties.Resources.resources
+C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csproj.GenerateResource.cache
+C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csproj.CoreCompileInputs.cache
+C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.exe
+C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.pdb
