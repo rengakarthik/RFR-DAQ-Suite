@@ -28,6 +28,9 @@ namespace RFR_DAQ_Suite
         //Random random;
         int xaxis;
         int started;
+        double strMax = 0;
+        double strCP = 0;
+
 
         public Form1()
         {
@@ -444,10 +447,49 @@ namespace RFR_DAQ_Suite
                 var chart_2 = chart2.ChartAreas[0];
                 var chart_3 = chart3.ChartAreas[0];
 
+                string name = null;
+                int str1Count;
+                int str2Count;
+                
+                for (str1Count = 0; str1Count< first.ncol; str1Count++)
+                {
+                    name = first.colnames[str1Count];
+                    if (name[0] == 'S' && name[1] == 'T' && name[2] == 'R')
+                    {
+                        break;
+                    }
+                }
+               
+
+                for (str2Count = 0; str2Count < second.ncol; str2Count++)
+                {
+                    name = second.colnames[str2Count];
+                    if (name[0] == 'S' && name[1] == 'T' && name[2] == 'R')
+                    {
+                        break;
+                    }
+                }
+                for (int i = 0; i < first.nrow - 1; i++)
+                {
+                    if (first.elements[i, 16] > strMax)
+                    {
+                        strMax = first.elements[i, 16];
+                    }
+                }
+                double strSum = 0;
+
+                for (int i = 0; i < first.nrow - 1; i++)
+                {
+                    strSum = strSum + first.elements[i, 16];
+                }
+
+                strCP = strSum / (first.nrow - 1);
+
+
                 if (str1Filled == 1 && str2Filled == 1)
                 {
-                    filldata(ref first.str, ref first, 15);
-                    filldata(ref second.str, ref second, 15);
+                    filldata(ref first.str, ref first, 16);
+                    filldata(ref second.str, ref second, 16);
                 }
 
                 timer = new Timer();
@@ -958,8 +1000,8 @@ namespace RFR_DAQ_Suite
                 if (firstCounter < first.nrow - 1 && secondCounter < second.nrow - 1)
                 {
                     firstCounter++; secondCounter++;
-                    gauge1.value1 = first.str[firstCounter] * 120 / 2.49 - 137.1084;
-                    gauge1.value2 = second.str[secondCounter] * 120 / 2.49 - 137.1084;
+                    gauge1.value1 = first.str[firstCounter] * 60 / (strMax - strCP)  - strMax * 60 / (strMax - strCP) + 60;
+                    gauge1.value2 = second.str[secondCounter] * 60 / (strMax - strCP) - strMax * 60 / (strMax - strCP) + 60;
                     gauge1.ChangeValue();
 
                 }
@@ -1052,6 +1094,11 @@ namespace RFR_DAQ_Suite
         }
 
         private void varStat1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

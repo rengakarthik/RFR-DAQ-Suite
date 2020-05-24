@@ -240,3 +240,4 @@ C:\Users\Sac\Desktop\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ
 C:\Users\Sac\Desktop\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csproj.CoreCompileInputs.cache
 C:\Users\Sac\Desktop\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.exe
 C:\Users\Sac\Desktop\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.pdb
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\RFR-DAQ-Suite-master\bin\Debug\accel_circle.png
