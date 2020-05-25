@@ -8,16 +8,29 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Viewbox>
         <Grid>
-            <Ellipse HorizontalAlignment="Left" Height="350" Stroke="Black" VerticalAlignment="Top" Width="350" Margin="-2,0,0,0">
-                <Ellipse.Fill>
-                    <RadialGradientBrush>
-                        <GradientStop Color="Black" Offset="1"/>
-                        <GradientStop Color="#FF114EF1"/>
-                    </RadialGradientBrush>
-                </Ellipse.Fill>
-            </Ellipse>
-            <Rectangle x:Name="Arrow2" Fill="#FFEA170D" HorizontalAlignment="Left" Height="127" Stroke="Black" VerticalAlignment="Top" Width="4" Margin="171,48,0,0" RenderTransformOrigin="0.5,1"/>
-            <Rectangle x:Name="Arrow1" Fill="#FF3FEA0D" HorizontalAlignment="Left" Height="127" Stroke="Black" VerticalAlignment="Top" Width="4" Margin="171,48,0,0" RenderTransformOrigin="0.5,1"/>
+            <Rectangle x:Name="Spoke1" Fill="#FF3FEA0D" HorizontalAlignment="Left" Height="177" Stroke="Black" VerticalAlignment="Top" Width="24" Margin="160,10,0,0" RenderTransformOrigin="0.5,0.927"/>
+            <Rectangle x:Name="Spoke2" Fill="#FF3FEA0D" HorizontalAlignment="Left" Height="177" Stroke="Black" VerticalAlignment="Top" Width="24" Margin="160,10,0,0" RenderTransformOrigin="0.5,0.927">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="240"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle x:Name="Spoke3" Fill="#FF3FEA0D" HorizontalAlignment="Left" Height="177" Stroke="Black" VerticalAlignment="Top" Width="24" Margin="160,10,0,0" RenderTransformOrigin="0.5,0.927">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="120"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Ellipse HorizontalAlignment="Left" Height="350" VerticalAlignment="Top" Width="350" Margin="-2,0,0,0" StrokeThickness="40" Stroke="#FF3FEA0D"/>
+            <Ellipse HorizontalAlignment="Left" Height="49" Margin="150,150,0,0" Stroke="#FF3FEA0D" VerticalAlignment="Top" Width="45" Fill="#FF3FEA0D"/>
 
         </Grid>
     </Viewbox>
