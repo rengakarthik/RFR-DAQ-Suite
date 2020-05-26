@@ -123,15 +123,21 @@ namespace RFR_DAQ_Suite
 
             // Reads the file loaded in first channel 
 
-            readit(file1, ref first);
+            int p = readit(file1, ref first);
 
-            populate(comboBox1, ref first);        // Populates the dropdown menus.
+            if (p == 1) 
+            {
 
-            populate(comboBox2, ref first);
+                populate(comboBox1, ref first);        // Populates the dropdown menus.
 
-            populate(comboBox3, ref first);
+                populate(comboBox2, ref first);
 
-            str1Filled = 1;
+                populate(comboBox3, ref first);
+
+                str1Filled = 1;
+
+            }
+
 
         }
 
@@ -140,15 +146,22 @@ namespace RFR_DAQ_Suite
 
             // Same as above, but for channel 2
 
-            readit(file2, ref second);
+            int p = readit(file2, ref second);
 
-            populate(comboBox4, ref second);
+            if (p == 1) 
+            {
 
-            populate(comboBox5, ref second);
+                populate(comboBox4, ref second);
 
-            populate(comboBox6, ref second);
+                populate(comboBox5, ref second);
 
-            str2Filled = 1;
+                populate(comboBox6, ref second);
+
+                str2Filled = 1;
+
+            }
+
+            
 
         }
 
@@ -273,15 +286,18 @@ namespace RFR_DAQ_Suite
         // The next few are functions I have defined to read and load the data...
 
 
-        public void readit(Label file, ref workhorse current)           // Reads the data and extracts it's contents as a matrix
+        public int readit(Label file, ref workhorse current)           // Reads the data and extracts it's contents as a matrix
         {
 
             OpenFileDialog open = new OpenFileDialog();                         // Opens dialogue box to ask for file to read.
             open.Title = "Open";
             open.Filter = "Text Files (*.log)|*.log| All Files (*.*)|*.*";      // What type to read.
+            int s = 0;
 
             if (open.ShowDialog() == DialogResult.OK)       //  Executes iff "OK" is pressed on the dialogue box. 
             {
+
+                s = 1;
 
                 StreamReader read = new StreamReader(File.OpenRead(open.FileName));         // good luck with PTSD.
                 String fileName = open.FileName;
@@ -340,18 +356,22 @@ namespace RFR_DAQ_Suite
 
                             }
 
-                            
+
 
                         }
 
                     }
+                 
 
 
 
                     read.Dispose();         // Destroy !!
 
                 }
+                
             }
+
+            return s;
 
         }
 
