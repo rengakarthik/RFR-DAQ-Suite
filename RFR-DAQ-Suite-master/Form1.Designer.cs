@@ -92,6 +92,8 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
             this.gauge1 = new RFR_DAQ_Suite.Gauge();
+            this.elementHost2 = new System.Windows.Forms.Integration.ElementHost();
+            this.gauge11 = new RFR_DAQ_Suite.Gauge1();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
@@ -791,12 +793,21 @@
             // elementHost1
             // 
             this.elementHost1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.elementHost1.Location = new System.Drawing.Point(650, 90);
+            this.elementHost1.Location = new System.Drawing.Point(592, 80);
             this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(231, 228);
+            this.elementHost1.Size = new System.Drawing.Size(201, 193);
             this.elementHost1.TabIndex = 55;
             this.elementHost1.Text = "elementHost1";
             this.elementHost1.Child = this.gauge1;
+            // 
+            // elementHost2
+            // 
+            this.elementHost2.Location = new System.Drawing.Point(827, 82);
+            this.elementHost2.Name = "elementHost2";
+            this.elementHost2.Size = new System.Drawing.Size(189, 190);
+            this.elementHost2.TabIndex = 58;
+            this.elementHost2.Text = "elementHost2";
+            this.elementHost2.Child = this.gauge11;
             // 
             // Form1
             // 
@@ -804,6 +815,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1299, 672);
+            this.Controls.Add(this.elementHost2);
             this.Controls.Add(this.chart4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.elementHost1);
@@ -907,6 +919,8 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Integration.ElementHost elementHost2;
+        private Gauge1 gauge11;
     }
 }
 

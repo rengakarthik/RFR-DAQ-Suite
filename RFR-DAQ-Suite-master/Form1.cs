@@ -29,7 +29,8 @@ namespace RFR_DAQ_Suite
         int xaxis;
         int started;
         double str1Max = 0;
-        double strCP = 0;
+        double str2Max = 0;
+        //double strCP = 0;
 
 
         public Form1()
@@ -463,6 +464,7 @@ namespace RFR_DAQ_Suite
                         break;
                     }
                 }
+
                 for (int i = 0; i < first.nrow - 1; i++)
                 {
                     if (first.elements[i, str1Count] > str1Max)
@@ -471,15 +473,23 @@ namespace RFR_DAQ_Suite
                     }
                 }
 
-                double strSum = 0;
+                for (int i = 0; i < second.nrow - 1; i++)
+                {
+                    if (second.elements[i, str2Count] > str2Max)
+                    {
+                        str2Max = second.elements[i, str2Count];
+                    }
+                }
+
+                /*double strSum = 0;
 
                 for (int i = 0; i < first.nrow - 1; i++)
                 {
                     strSum = strSum + first.elements[i, 16];
                 }
 
-                strCP = strSum / (first.nrow - 1);
-             
+                strCP = strSum / (first.nrow - 1);*/
+
 
 
 
@@ -997,9 +1007,9 @@ namespace RFR_DAQ_Suite
                 if (firstCounter < first.nrow - 1 && secondCounter < second.nrow - 1)
                 {
                     firstCounter++; secondCounter++;
-                    gauge1.value1 = first.str[firstCounter] * 60 / (str1Max - 2.89) - str1Max * 60 / (str1Max - 2.89) + 60;
-                    gauge1.value2 = second.str[secondCounter] * 60 / (str1Max - 2.89) - str1Max * 60 / (str1Max - 2.89) + 60;
-                    gauge1.ChangeValue();
+                    gauge1.value = first.str[firstCounter] * 60 / (str1Max - 2.89) - str1Max * 60 / (str1Max - 2.89) + 60;
+                    gauge11.value = second.str[secondCounter] * 60 / (str2Max - 2.89) - str2Max * 60 / (str2Max - 2.89) + 60;
+                    gauge1.ChangeValue(); gauge11.ChangeValue();
 
                 }
 
@@ -1020,8 +1030,9 @@ namespace RFR_DAQ_Suite
             timer.Stop();
 
             firstCounter = 0; secondCounter = 0;
-            gauge1.value1 = 0; gauge1.value2 = 0;
+            gauge1.value = 0; gauge11.value = 0;
             gauge1.ChangeValue();
+            gauge11.ChangeValue();
 
             
 

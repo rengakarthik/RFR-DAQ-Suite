@@ -289,3 +289,5 @@ C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj
 C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csproj.CoreCompileInputs.cache
 C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.exe
 C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.pdb
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\Gauge1.g.cs
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\Gauge1.baml

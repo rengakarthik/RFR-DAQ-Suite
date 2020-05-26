@@ -25,16 +25,15 @@ namespace RFR_DAQ_Suite
         {
             InitializeComponent();
         }
-        public double value1;   //Stores the str value
-        public double value2;
+        public double value;   //Stores the str value
 
         public void ChangeValue() 
         {
-            RotateTransform rotateStr1Spoke1 = new RotateTransform(value1);  //str value is changed into rotation in degrees
+            RotateTransform rotateStr1Spoke1 = new RotateTransform(value);  //str value is changed into rotation in degrees
             Spoke1.RenderTransform = rotateStr1Spoke1; //arrow is rotated
-            RotateTransform rotateStr1Spoke2 = new RotateTransform(value1 + 120);  //str value is changed into rotation in degrees
+            RotateTransform rotateStr1Spoke2 = new RotateTransform(value + 240);  //str value is changed into rotation in degrees
             Spoke2.RenderTransform = rotateStr1Spoke2;
-            RotateTransform rotateStr1Spoke3 = new RotateTransform(value1 + 240);  //str value is changed into rotation in degrees
+            RotateTransform rotateStr1Spoke3 = new RotateTransform(value + 120);  //str value is changed into rotation in degrees
             Spoke3.RenderTransform = rotateStr1Spoke3;
         }
     }
