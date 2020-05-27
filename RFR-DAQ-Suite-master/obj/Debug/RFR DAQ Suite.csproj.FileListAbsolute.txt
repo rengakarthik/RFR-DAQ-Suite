@@ -289,5 +289,19 @@ C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj
 C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csproj.CoreCompileInputs.cache
 C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.exe
 C:\Users\C.S.Hariharan\Source\Repos\RFR-DAQ-Suiterfrdaq\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.pdb
-C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\Gauge1.g.cs
-C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\RFR-DAQ-Suite-master\obj\Debug\Gauge1.baml
+C:\Users\Sac\Downloads\Compressed\RFR-DAQ-Suite-master_2\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\bin\Debug\RFR DAQ Suite.exe.config
+C:\Users\Sac\Downloads\Compressed\RFR-DAQ-Suite-master_2\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\bin\Debug\RFR DAQ Suite.exe
+C:\Users\Sac\Downloads\Compressed\RFR-DAQ-Suite-master_2\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\bin\Debug\RFR DAQ Suite.pdb
+C:\Users\Sac\Downloads\Compressed\RFR-DAQ-Suite-master_2\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csprojAssemblyReference.cache
+C:\Users\Sac\Downloads\Compressed\RFR-DAQ-Suite-master_2\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\Gauge.g.cs
+C:\Users\Sac\Downloads\Compressed\RFR-DAQ-Suite-master_2\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite_Content.g.cs
+C:\Users\Sac\Downloads\Compressed\RFR-DAQ-Suite-master_2\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite_MarkupCompile.cache
+C:\Users\Sac\Downloads\Compressed\RFR-DAQ-Suite-master_2\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite_MarkupCompile.lref
+C:\Users\Sac\Downloads\Compressed\RFR-DAQ-Suite-master_2\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\Gauge.baml
+C:\Users\Sac\Downloads\Compressed\RFR-DAQ-Suite-master_2\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.g.resources
+C:\Users\Sac\Downloads\Compressed\RFR-DAQ-Suite-master_2\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\RFR_DAQ_Suite.Form1.resources
+C:\Users\Sac\Downloads\Compressed\RFR-DAQ-Suite-master_2\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\RFR_DAQ_Suite.Properties.Resources.resources
+C:\Users\Sac\Downloads\Compressed\RFR-DAQ-Suite-master_2\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csproj.GenerateResource.cache
+C:\Users\Sac\Downloads\Compressed\RFR-DAQ-Suite-master_2\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.csproj.CoreCompileInputs.cache
+C:\Users\Sac\Downloads\Compressed\RFR-DAQ-Suite-master_2\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.exe
+C:\Users\Sac\Downloads\Compressed\RFR-DAQ-Suite-master_2\RFR-DAQ-Suite-master\RFR-DAQ-Suite-master\obj\Debug\RFR DAQ Suite.pdb
