@@ -207,7 +207,7 @@ namespace RFR_DAQ_Suite
             first.y1 = null;
             first.z1 = null;
             //varStat1.Text = "Variables Emptied !";
-            MessageBox.Show("Variables Emptied !!", "Notification", MessageBoxButtons.OK);
+            MessageBox.Show("Variables Deleted !!", "Notification", MessageBoxButtons.OK); //MINOR CHANGE
 
         }
 
