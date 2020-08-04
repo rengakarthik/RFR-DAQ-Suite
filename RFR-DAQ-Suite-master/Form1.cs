@@ -17,7 +17,6 @@ namespace RFR_DAQ_Suite
     // Change from B2
     // Change from B2 -2
     //
-    //
     public partial class Form1 : Form
     {
         List<Double> ax1 = new List<double>();// list declaration to enable easier addition and removal of data
