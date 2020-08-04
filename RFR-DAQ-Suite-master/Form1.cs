@@ -33,6 +33,8 @@ namespace RFR_DAQ_Suite
         double str1Max = 0;
         double strCP = 0;
 
+        //STEP STEP
+
 
         public Form1()
         {
