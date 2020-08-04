@@ -14,7 +14,9 @@ using System.Linq.Expressions;
 
 namespace RFR_DAQ_Suite
 {
-    // Branch-1 Change Made
+    // Change from B2
+    // Change from B2 -2
+    //
     public partial class Form1 : Form
     {
         List<Double> ax1 = new List<double>();// list declaration to enable easier addition and removal of data
@@ -26,10 +28,14 @@ namespace RFR_DAQ_Suite
         Timer timer;
         //Stopwatch stopwatch;
         //Random random;
+
+        int xyz;
         int xaxis;
         int started;
         double str1Max = 0;
         double strCP = 0;
+
+        //STEP STEP
 
 
         public Form1()
