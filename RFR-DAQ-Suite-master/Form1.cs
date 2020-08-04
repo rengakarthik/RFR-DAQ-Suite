@@ -28,6 +28,8 @@ namespace RFR_DAQ_Suite
         Timer timer;
         //Stopwatch stopwatch;
         //Random random;
+
+        int xyz;
         int xaxis;
         int started;
         double str1Max = 0;
