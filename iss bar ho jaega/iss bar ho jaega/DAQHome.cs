@@ -337,20 +337,6 @@ namespace iss_bar_ho_jaega
                     }
                 }
 
-                /*double strSum = 0;
-
-                for (int i = 0; i < first.nrow - 1; i++)
-                {
-                    strSum = strSum + first.elements[i, 16];
-                }
-
-                strCP = strSum / (first.nrow - 1);*/
-
-
-
-
-
-
                 filldata(ref first.str, ref first, str1Count);
                 filldata(ref second.str, ref second, str2Count);
 
@@ -508,50 +494,6 @@ namespace iss_bar_ho_jaega
                         AddToInitially(chart3, 1, 2, "File2");
                     }
 
-                    /*
-                    chart2.Series["File1"].Points.AddXY(xaxis, first.y1[xaxis]);
-                    chart2.Series["File2"].Points.AddXY(xaxis, second.y1[xaxis]);
-
-                    chart3.Series["File1"].Points.AddXY(xaxis, first.z1[xaxis]);
-                    chart3.Series["File2"].Points.AddXY(xaxis, second.z1[xaxis]);
-                    */
-
-                    /*
-                    for (int n = 0; n < xaxis; n++)
-                    {
-                        chart1.Series["File1"].Points[n].MarkerStyle = MarkerStyle.Circle;
-                        chart1.Series["File1"].Points[n].MarkerSize = 1;
-                        chart1.Series["File2"].Points[n].MarkerStyle = MarkerStyle.Circle;
-                        chart1.Series["File2"].Points[n].MarkerSize = 1;
-
-                        chart2.Series["File1"].Points[n].MarkerStyle = MarkerStyle.Circle;
-                        chart2.Series["File1"].Points[n].MarkerSize = 1;
-                        chart2.Series["File2"].Points[n].MarkerStyle = MarkerStyle.Circle;
-                        chart2.Series["File2"].Points[n].MarkerSize = 1;
-
-                        chart3.Series["File1"].Points[n].MarkerStyle = MarkerStyle.Circle;
-                        chart3.Series["File1"].Points[n].MarkerSize = 1;
-                        chart3.Series["File2"].Points[n].MarkerStyle = MarkerStyle.Circle;
-                        chart3.Series["File2"].Points[n].MarkerSize = 1;
-                    }
-                    */
-
-                    /*
-                    chart1.Series["File1"].Points[xaxis].MarkerStyle = MarkerStyle.Cross;
-                    chart1.Series["File1"].Points[xaxis].MarkerSize = 10;
-                    chart1.Series["File2"].Points[xaxis].MarkerStyle = MarkerStyle.Cross;
-                    chart1.Series["File2"].Points[xaxis].MarkerSize = 10;
-
-                    chart2.Series["File1"].Points[xaxis].MarkerStyle = MarkerStyle.Cross;
-                    chart2.Series["File1"].Points[xaxis].MarkerSize = 10;
-                    chart2.Series["File2"].Points[xaxis].MarkerStyle = MarkerStyle.Cross;
-                    chart2.Series["File2"].Points[xaxis].MarkerSize = 10;
-
-                    chart3.Series["File1"].Points[xaxis].MarkerStyle = MarkerStyle.Cross;
-                    chart3.Series["File1"].Points[xaxis].MarkerSize = 10;
-                    chart3.Series["File2"].Points[xaxis].MarkerStyle = MarkerStyle.Cross;
-                    chart3.Series["File2"].Points[xaxis].MarkerSize = 10;
-                    */
                     xaxis++;
 
 
@@ -615,61 +557,10 @@ namespace iss_bar_ho_jaega
                         //int b2 = chart3.Series["File2"].Points.Count;
                         AddTo(chart3, 1, 2, "File2");
                     }
-                    /*
-                    chart2.Series["File1"].Points.AddXY(xaxis, first.y1[xaxis]);
-                    chart2.Series["File2"].Points.AddXY(xaxis, second.y1[xaxis]);
 
-                    chart3.Series["File1"].Points.AddXY(xaxis, first.z1[xaxis]);
-                    chart3.Series["File2"].Points.AddXY(xaxis++, second.z1[xaxis]);
-                    */
 
-                    /*
-                    chart1.Series["File1"].Points[20].MarkerStyle = MarkerStyle.Cross;
-                    chart1.Series["File1"].Points[20].MarkerSize = 10;
-                    chart1.Series["File2"].Points[20].MarkerStyle = MarkerStyle.Cross;
-                    chart1.Series["File2"].Points[20].MarkerSize = 10;
 
-                    chart2.Series["File1"].Points[20].MarkerStyle = MarkerStyle.Cross;
-                    chart2.Series["File1"].Points[20].MarkerSize = 10;
-                    chart2.Series["File2"].Points[20].MarkerStyle = MarkerStyle.Cross;
-                    chart2.Series["File2"].Points[20].MarkerSize = 10;
 
-                    chart3.Series["File1"].Points[20].MarkerStyle = MarkerStyle.Cross;
-                    chart3.Series["File1"].Points[20].MarkerSize = 10;
-                    chart3.Series["File2"].Points[20].MarkerStyle = MarkerStyle.Cross;
-                    chart3.Series["File2"].Points[20].MarkerSize = 10;
-                    */
-
-                    /*
-                    for (int m = 0; m < 20; m++)
-                    {
-                        chart1.Series["File1"].Points[m].MarkerStyle = MarkerStyle.Circle;
-                        chart1.Series["File1"].Points[m].MarkerSize = 1;
-                        chart1.Series["File2"].Points[m].MarkerStyle = MarkerStyle.Circle;
-                        chart1.Series["File2"].Points[m].MarkerSize = 1;
-
-                        chart2.Series["File1"].Points[m].MarkerStyle = MarkerStyle.Circle;
-                        chart2.Series["File1"].Points[m].MarkerSize = 1;
-                        chart2.Series["File2"].Points[m].MarkerStyle = MarkerStyle.Circle;
-                        chart2.Series["File2"].Points[m].MarkerSize = 1;
-
-                        chart3.Series["File1"].Points[m].MarkerStyle = MarkerStyle.Circle;
-                        chart3.Series["File1"].Points[m].MarkerSize = 1;
-                        chart3.Series["File2"].Points[m].MarkerStyle = MarkerStyle.Circle;
-                        chart3.Series["File2"].Points[m].MarkerSize = 1;
-                    }
-                    */
-
-                    /*
-                    chart1.Series["File1"].Points.Remove(chart1.Series["File1"].Points[0]);
-                    chart1.Series["File2"].Points.Remove(chart1.Series["File2"].Points[0]);
-
-                    chart2.Series["File1"].Points.Remove(chart2.Series["File1"].Points[0]);
-                    chart2.Series["File2"].Points.Remove(chart2.Series["File2"].Points[0]);
-
-                    chart3.Series["File1"].Points.Remove(chart3.Series["File1"].Points[0]);
-                    chart3.Series["File2"].Points.Remove(chart3.Series["File2"].Points[0]);
-                    */
                     try
                     {
                         chart1.ChartAreas[0].AxisX.Minimum = chart1.Series["File1"].Points[0].XValue;
