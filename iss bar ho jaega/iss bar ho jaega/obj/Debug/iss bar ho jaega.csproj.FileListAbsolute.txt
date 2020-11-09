@@ -370,3 +370,33 @@ C:\Users\hp\Source\Repos\rengakarthik\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho 
 C:\Users\hp\Source\Repos\rengakarthik\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss bar ho jaega.csproj.CopyComplete
 C:\Users\hp\Source\Repos\rengakarthik\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss bar ho jaega.exe
 C:\Users\hp\Source\Repos\rengakarthik\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss bar ho jaega.pdb
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\bin\Debug\iss bar ho jaega.exe.config
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\bin\Debug\iss bar ho jaega.exe
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\bin\Debug\iss bar ho jaega.pdb
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss bar ho jaega.csprojAssemblyReference.cache
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\bps.g.cs
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\bps1.g.cs
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\Gauge.g.cs
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\Gauge1.g.cs
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\tps.g.cs
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\tps1.g.cs
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss bar ho jaega_MarkupCompile.cache
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss bar ho jaega_MarkupCompile.lref
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\bps.baml
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\bps1.baml
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\Gauge.baml
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\Gauge1.baml
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\tps.baml
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\tps1.baml
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss bar ho jaega.g.resources
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss_bar_ho_jaega.DAQHome.resources
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss_bar_ho_jaega.DD.resources
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss_bar_ho_jaega.Form1.resources
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss_bar_ho_jaega.Properties.Resources.resources
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss_bar_ho_jaega.Resource1.resources
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss bar ho jaega.csproj.GenerateResource.cache
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss bar ho jaega.csproj.CoreCompileInputs.cache
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss bar ho jaega.csproj.CopyComplete
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss bar ho jaega.exe
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss bar ho jaega.pdb

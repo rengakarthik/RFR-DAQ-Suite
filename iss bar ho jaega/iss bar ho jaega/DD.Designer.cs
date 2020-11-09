@@ -41,27 +41,40 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DD));
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.elementHost6 = new System.Windows.Forms.Integration.ElementHost();
-            this.bps11 = new iss_bar_ho_jaega.bps1();
-            this.elementHost5 = new System.Windows.Forms.Integration.ElementHost();
-            this.bps1 = new iss_bar_ho_jaega.bps();
-            this.elementHost4 = new System.Windows.Forms.Integration.ElementHost();
-            this.tps12 = new iss_bar_ho_jaega.tps1();
-            this.elementHost3 = new System.Windows.Forms.Integration.ElementHost();
-            this.tps2 = new iss_bar_ho_jaega.tps();
+            this.tps1full = new System.Windows.Forms.PictureBox();
+            this.tps1empty = new System.Windows.Forms.PictureBox();
+            this.bps1full = new System.Windows.Forms.PictureBox();
+            this.bps1empty = new System.Windows.Forms.PictureBox();
+            this.tps2full = new System.Windows.Forms.PictureBox();
+            this.tps2empty = new System.Windows.Forms.PictureBox();
+            this.bps2full = new System.Windows.Forms.PictureBox();
+            this.bps2empty = new System.Windows.Forms.PictureBox();
             this.elementHost2 = new System.Windows.Forms.Integration.ElementHost();
             this.gauge12 = new iss_bar_ho_jaega.Gauge1();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
             this.gauge2 = new iss_bar_ho_jaega.Gauge();
+            this.tps1text = new System.Windows.Forms.TextBox();
+            this.bps1text = new System.Windows.Forms.TextBox();
+            this.tps2text = new System.Windows.Forms.TextBox();
+            this.bps2text = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tps1full)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tps1empty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bps1full)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bps1empty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tps2full)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tps2empty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bps2full)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bps2empty)).BeginInit();
             this.SuspendLayout();
             // 
             // chart1
@@ -151,7 +164,7 @@
             legend3.ForeColor = System.Drawing.Color.Lime;
             legend3.Name = "Legend1";
             this.chart4.Legends.Add(legend3);
-            this.chart4.Location = new System.Drawing.Point(834, 158);
+            this.chart4.Location = new System.Drawing.Point(466, 341);
             this.chart4.Margin = new System.Windows.Forms.Padding(2);
             this.chart4.Name = "chart4";
             series3.ChartArea = "ChartArea1";
@@ -165,7 +178,7 @@
             series4.Name = "plot2";
             this.chart4.Series.Add(series3);
             this.chart4.Series.Add(series4);
-            this.chart4.Size = new System.Drawing.Size(182, 190);
+            this.chart4.Size = new System.Drawing.Size(253, 190);
             this.chart4.TabIndex = 81;
             this.chart4.Text = "chart4";
             // 
@@ -209,41 +222,79 @@
             this.chart3.TabIndex = 85;
             this.chart3.Text = "chart3";
             // 
-            // elementHost6
+            // tps1full
             // 
-            this.elementHost6.Location = new System.Drawing.Point(635, 365);
-            this.elementHost6.Name = "elementHost6";
-            this.elementHost6.Size = new System.Drawing.Size(160, 165);
-            this.elementHost6.TabIndex = 89;
-            this.elementHost6.Text = "elementHost6";
-            this.elementHost6.Child = this.bps11;
+            this.tps1full.Image = ((System.Drawing.Image)(resources.GetObject("tps1full.Image")));
+            this.tps1full.Location = new System.Drawing.Point(466, 178);
+            this.tps1full.Name = "tps1full";
+            this.tps1full.Size = new System.Drawing.Size(30, 152);
+            this.tps1full.TabIndex = 90;
+            this.tps1full.TabStop = false;
             // 
-            // elementHost5
+            // tps1empty
             // 
-            this.elementHost5.Location = new System.Drawing.Point(466, 365);
-            this.elementHost5.Name = "elementHost5";
-            this.elementHost5.Size = new System.Drawing.Size(160, 165);
-            this.elementHost5.TabIndex = 88;
-            this.elementHost5.Text = "elementHost5";
-            this.elementHost5.Child = this.bps1;
+            this.tps1empty.Image = ((System.Drawing.Image)(resources.GetObject("tps1empty.Image")));
+            this.tps1empty.Location = new System.Drawing.Point(466, 178);
+            this.tps1empty.Name = "tps1empty";
+            this.tps1empty.Size = new System.Drawing.Size(30, 152);
+            this.tps1empty.TabIndex = 91;
+            this.tps1empty.TabStop = false;
+            this.tps1empty.Click += new System.EventHandler(this.tps1empty_Click);
             // 
-            // elementHost4
+            // bps1full
             // 
-            this.elementHost4.Location = new System.Drawing.Point(644, 183);
-            this.elementHost4.Name = "elementHost4";
-            this.elementHost4.Size = new System.Drawing.Size(151, 165);
-            this.elementHost4.TabIndex = 87;
-            this.elementHost4.Text = "elementHost4";
-            this.elementHost4.Child = this.tps12;
+            this.bps1full.Image = ((System.Drawing.Image)(resources.GetObject("bps1full.Image")));
+            this.bps1full.Location = new System.Drawing.Point(550, 178);
+            this.bps1full.Name = "bps1full";
+            this.bps1full.Size = new System.Drawing.Size(30, 152);
+            this.bps1full.TabIndex = 97;
+            this.bps1full.TabStop = false;
             // 
-            // elementHost3
+            // bps1empty
             // 
-            this.elementHost3.Location = new System.Drawing.Point(466, 184);
-            this.elementHost3.Name = "elementHost3";
-            this.elementHost3.Size = new System.Drawing.Size(160, 159);
-            this.elementHost3.TabIndex = 86;
-            this.elementHost3.Text = "elementHost3";
-            this.elementHost3.Child = this.tps2;
+            this.bps1empty.Image = ((System.Drawing.Image)(resources.GetObject("bps1empty.Image")));
+            this.bps1empty.Location = new System.Drawing.Point(550, 178);
+            this.bps1empty.Name = "bps1empty";
+            this.bps1empty.Size = new System.Drawing.Size(30, 152);
+            this.bps1empty.TabIndex = 98;
+            this.bps1empty.TabStop = false;
+            // 
+            // tps2full
+            // 
+            this.tps2full.Image = ((System.Drawing.Image)(resources.GetObject("tps2full.Image")));
+            this.tps2full.Location = new System.Drawing.Point(644, 181);
+            this.tps2full.Name = "tps2full";
+            this.tps2full.Size = new System.Drawing.Size(30, 152);
+            this.tps2full.TabIndex = 99;
+            this.tps2full.TabStop = false;
+            this.tps2full.Click += new System.EventHandler(this.tps2full_Click);
+            // 
+            // tps2empty
+            // 
+            this.tps2empty.Image = ((System.Drawing.Image)(resources.GetObject("tps2empty.Image")));
+            this.tps2empty.Location = new System.Drawing.Point(644, 181);
+            this.tps2empty.Name = "tps2empty";
+            this.tps2empty.Size = new System.Drawing.Size(30, 152);
+            this.tps2empty.TabIndex = 100;
+            this.tps2empty.TabStop = false;
+            // 
+            // bps2full
+            // 
+            this.bps2full.Image = ((System.Drawing.Image)(resources.GetObject("bps2full.Image")));
+            this.bps2full.Location = new System.Drawing.Point(729, 178);
+            this.bps2full.Name = "bps2full";
+            this.bps2full.Size = new System.Drawing.Size(30, 152);
+            this.bps2full.TabIndex = 101;
+            this.bps2full.TabStop = false;
+            // 
+            // bps2empty
+            // 
+            this.bps2empty.Image = ((System.Drawing.Image)(resources.GetObject("bps2empty.Image")));
+            this.bps2empty.Location = new System.Drawing.Point(729, 178);
+            this.bps2empty.Name = "bps2empty";
+            this.bps2empty.Size = new System.Drawing.Size(30, 152);
+            this.bps2empty.TabIndex = 102;
+            this.bps2empty.TabStop = false;
             // 
             // elementHost2
             // 
@@ -265,16 +316,64 @@
             this.elementHost1.Text = "elementHost1";
             this.elementHost1.Child = this.gauge2;
             // 
+            // tps1text
+            // 
+            this.tps1text.BackColor = System.Drawing.SystemColors.WindowText;
+            this.tps1text.ForeColor = System.Drawing.Color.Lime;
+            this.tps1text.Location = new System.Drawing.Point(502, 178);
+            this.tps1text.Name = "tps1text";
+            this.tps1text.Size = new System.Drawing.Size(26, 20);
+            this.tps1text.TabIndex = 103;
+            this.tps1text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // bps1text
+            // 
+            this.bps1text.BackColor = System.Drawing.SystemColors.WindowText;
+            this.bps1text.ForeColor = System.Drawing.Color.Lime;
+            this.bps1text.Location = new System.Drawing.Point(586, 178);
+            this.bps1text.Name = "bps1text";
+            this.bps1text.Size = new System.Drawing.Size(26, 20);
+            this.bps1text.TabIndex = 104;
+            this.bps1text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tps2text
+            // 
+            this.tps2text.BackColor = System.Drawing.SystemColors.WindowText;
+            this.tps2text.ForeColor = System.Drawing.Color.Red;
+            this.tps2text.Location = new System.Drawing.Point(680, 181);
+            this.tps2text.Name = "tps2text";
+            this.tps2text.Size = new System.Drawing.Size(26, 20);
+            this.tps2text.TabIndex = 105;
+            this.tps2text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // bps2text
+            // 
+            this.bps2text.BackColor = System.Drawing.SystemColors.WindowText;
+            this.bps2text.ForeColor = System.Drawing.Color.Red;
+            this.bps2text.Location = new System.Drawing.Point(765, 178);
+            this.bps2text.Name = "bps2text";
+            this.bps2text.Size = new System.Drawing.Size(26, 20);
+            this.bps2text.TabIndex = 106;
+            this.bps2text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // DD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1048, 542);
-            this.Controls.Add(this.elementHost6);
-            this.Controls.Add(this.elementHost5);
-            this.Controls.Add(this.elementHost4);
-            this.Controls.Add(this.elementHost3);
+            this.Controls.Add(this.bps2text);
+            this.Controls.Add(this.tps2text);
+            this.Controls.Add(this.bps1text);
+            this.Controls.Add(this.tps1text);
+            this.Controls.Add(this.bps2empty);
+            this.Controls.Add(this.bps2full);
+            this.Controls.Add(this.tps2empty);
+            this.Controls.Add(this.tps2full);
+            this.Controls.Add(this.bps1empty);
+            this.Controls.Add(this.bps1full);
+            this.Controls.Add(this.tps1empty);
+            this.Controls.Add(this.tps1full);
             this.Controls.Add(this.chart3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.elementHost2);
@@ -285,10 +384,19 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DD";
             this.Text = "DD";
+            this.Load += new System.EventHandler(this.DD_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tps1full)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tps1empty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bps1full)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bps1empty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tps2full)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tps2empty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bps2full)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bps2empty)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,13 +415,17 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
         private Gauge1 gauge12;
         private Gauge gauge2;
-        private System.Windows.Forms.Integration.ElementHost elementHost3;
-        private System.Windows.Forms.Integration.ElementHost elementHost4;
-        private System.Windows.Forms.Integration.ElementHost elementHost5;
-        private System.Windows.Forms.Integration.ElementHost elementHost6;
-        private bps1 bps11;
-        private bps bps1;
-        private tps1 tps12;
-        private tps tps2;
+        private System.Windows.Forms.PictureBox tps1full;
+        private System.Windows.Forms.PictureBox tps1empty;
+        private System.Windows.Forms.PictureBox bps1full;
+        private System.Windows.Forms.PictureBox bps1empty;
+        private System.Windows.Forms.PictureBox tps2full;
+        private System.Windows.Forms.PictureBox tps2empty;
+        private System.Windows.Forms.PictureBox bps2full;
+        private System.Windows.Forms.PictureBox bps2empty;
+        private System.Windows.Forms.TextBox tps1text;
+        private System.Windows.Forms.TextBox bps1text;
+        private System.Windows.Forms.TextBox tps2text;
+        private System.Windows.Forms.TextBox bps2text;
     }
 }

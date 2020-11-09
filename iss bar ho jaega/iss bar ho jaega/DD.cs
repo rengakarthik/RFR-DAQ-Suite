@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -640,6 +641,14 @@ namespace iss_bar_ho_jaega
                     gauge1.ChangeValue(); gauge11.ChangeValue();
 
                 }
+                tps1empty.Height = 152 - (int)(first.TPS[firstCounter] * 38);
+                tps1text.Text = first.TPS[firstCounter].ToString();
+                bps1empty.Height = 152 - (int)(first.BPS[firstCounter] * 38);
+                bps1text.Text = first.BPS[firstCounter].ToString();
+                tps2empty.Height = 152 - (int)(second.TPS[secondCounter] * 38);
+                tps2text.Text = second.TPS[secondCounter].ToString();
+                bps2empty.Height = 152 - (int)(second.BPS[secondCounter] * 38);
+                bps2text.Text = second.BPS[secondCounter].ToString();
 
             }
 
@@ -659,8 +668,14 @@ namespace iss_bar_ho_jaega
             gauge1.value = 0; gauge11.value = 0;
             gauge1.ChangeValue();
             gauge11.ChangeValue();
-
-
+            tps1empty.Height = 152;
+            bps1empty.Height = 152;
+            tps2empty.Height = 152;
+            bps2empty.Height = 152;
+            tps1text.Text = 0.ToString();
+            bps1text.Text = 0.ToString();
+            tps2text.Text = 0.ToString();
+            bps2text.Text = 0.ToString();
 
             //System.Threading.Thread.Sleep(1500); //waits for 1.5s before clearing the data after stopping
             chart1.Series["File1"].Points.Clear();
@@ -765,6 +780,19 @@ namespace iss_bar_ho_jaega
             }
         }
 
+        private void DD_Load(object sender, EventArgs e)
+        {
 
+        }
+
+        private void tps1empty_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tps2full_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
