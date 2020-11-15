@@ -34,6 +34,7 @@
             this.HomeButton = new FontAwesome.Sharp.IconButton();
             this.RFRlogo = new System.Windows.Forms.PictureBox();
             this.topbar = new System.Windows.Forms.Panel();
+            this.Pause = new FontAwesome.Sharp.IconButton();
             this.S = new FontAwesome.Sharp.IconButton();
             this.Slow = new FontAwesome.Sharp.IconButton();
             this.PS = new FontAwesome.Sharp.IconButton();
@@ -43,7 +44,6 @@
             this.Load2 = new FontAwesome.Sharp.IconButton();
             this.Load1 = new FontAwesome.Sharp.IconButton();
             this.mainArea = new System.Windows.Forms.Panel();
-            this.Pause = new FontAwesome.Sharp.IconButton();
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RFRlogo)).BeginInit();
             this.topbar.SuspendLayout();
@@ -59,7 +59,7 @@
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.Margin = new System.Windows.Forms.Padding(0);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(200, 681);
+            this.sidebar.Size = new System.Drawing.Size(200, 711);
             this.sidebar.TabIndex = 0;
             // 
             // DriverData
@@ -140,6 +140,25 @@
             this.topbar.Name = "topbar";
             this.topbar.Size = new System.Drawing.Size(1064, 100);
             this.topbar.TabIndex = 1;
+            // 
+            // Pause
+            // 
+            this.Pause.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Pause.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrchid;
+            this.Pause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.Pause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Pause.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.Pause.ForeColor = System.Drawing.Color.Lime;
+            this.Pause.IconChar = FontAwesome.Sharp.IconChar.Pause;
+            this.Pause.IconColor = System.Drawing.Color.Lime;
+            this.Pause.IconSize = 16;
+            this.Pause.Location = new System.Drawing.Point(364, 25);
+            this.Pause.Name = "Pause";
+            this.Pause.Rotation = 0D;
+            this.Pause.Size = new System.Drawing.Size(50, 50);
+            this.Pause.TabIndex = 5;
+            this.Pause.UseVisualStyleBackColor = true;
+            this.Pause.Click += new System.EventHandler(this.Pause_Click);
             // 
             // S
             // 
@@ -289,33 +308,14 @@
             this.mainArea.Location = new System.Drawing.Point(200, 100);
             this.mainArea.Margin = new System.Windows.Forms.Padding(0);
             this.mainArea.Name = "mainArea";
-            this.mainArea.Size = new System.Drawing.Size(1064, 581);
+            this.mainArea.Size = new System.Drawing.Size(1064, 611);
             this.mainArea.TabIndex = 2;
-            // 
-            // Pause
-            // 
-            this.Pause.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Pause.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrchid;
-            this.Pause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.Pause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Pause.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.Pause.ForeColor = System.Drawing.Color.Lime;
-            this.Pause.IconChar = FontAwesome.Sharp.IconChar.Pause;
-            this.Pause.IconColor = System.Drawing.Color.Lime;
-            this.Pause.IconSize = 16;
-            this.Pause.Location = new System.Drawing.Point(364, 25);
-            this.Pause.Name = "Pause";
-            this.Pause.Rotation = 0D;
-            this.Pause.Size = new System.Drawing.Size(50, 50);
-            this.Pause.TabIndex = 5;
-            this.Pause.UseVisualStyleBackColor = true;
-            this.Pause.Click += new System.EventHandler(this.Pause_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1264, 711);
             this.Controls.Add(this.mainArea);
             this.Controls.Add(this.topbar);
             this.Controls.Add(this.sidebar);

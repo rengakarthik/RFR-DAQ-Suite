@@ -95,7 +95,7 @@
             legend1.ForeColor = System.Drawing.Color.Lime;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(12, 12);
+            this.chart1.Location = new System.Drawing.Point(12, 41);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
             series1.ChartArea = "ChartArea1";
@@ -129,7 +129,7 @@
             legend2.ForeColor = System.Drawing.Color.Lime;
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(12, 183);
+            this.chart2.Location = new System.Drawing.Point(12, 212);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             series2.ChartArea = "ChartArea1";
@@ -164,7 +164,7 @@
             legend3.ForeColor = System.Drawing.Color.Lime;
             legend3.Name = "Legend1";
             this.chart4.Legends.Add(legend3);
-            this.chart4.Location = new System.Drawing.Point(466, 341);
+            this.chart4.Location = new System.Drawing.Point(467, 341);
             this.chart4.Margin = new System.Windows.Forms.Padding(2);
             this.chart4.Name = "chart4";
             series3.ChartArea = "ChartArea1";
@@ -210,7 +210,7 @@
             legend4.ForeColor = System.Drawing.Color.Lime;
             legend4.Name = "Legend1";
             this.chart3.Legends.Add(legend4);
-            this.chart3.Location = new System.Drawing.Point(12, 370);
+            this.chart3.Location = new System.Drawing.Point(12, 399);
             this.chart3.Name = "chart3";
             this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
             series5.ChartArea = "ChartArea1";
@@ -236,7 +236,7 @@
             this.tps1empty.Image = ((System.Drawing.Image)(resources.GetObject("tps1empty.Image")));
             this.tps1empty.Location = new System.Drawing.Point(466, 178);
             this.tps1empty.Name = "tps1empty";
-            this.tps1empty.Size = new System.Drawing.Size(30, 152);
+            this.tps1empty.Size = new System.Drawing.Size(29, 152);
             this.tps1empty.TabIndex = 91;
             this.tps1empty.TabStop = false;
             this.tps1empty.Click += new System.EventHandler(this.tps1empty_Click);
@@ -299,7 +299,7 @@
             // elementHost2
             // 
             this.elementHost2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.elementHost2.Location = new System.Drawing.Point(644, 7);
+            this.elementHost2.Location = new System.Drawing.Point(645, 7);
             this.elementHost2.Name = "elementHost2";
             this.elementHost2.Size = new System.Drawing.Size(151, 168);
             this.elementHost2.TabIndex = 83;
@@ -309,7 +309,7 @@
             // elementHost1
             // 
             this.elementHost1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.elementHost1.Location = new System.Drawing.Point(466, 7);
+            this.elementHost1.Location = new System.Drawing.Point(467, 7);
             this.elementHost1.Name = "elementHost1";
             this.elementHost1.Size = new System.Drawing.Size(160, 165);
             this.elementHost1.TabIndex = 82;
@@ -361,7 +361,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1048, 542);
+            this.ClientSize = new System.Drawing.Size(1050, 601);
             this.Controls.Add(this.bps2text);
             this.Controls.Add(this.tps2text);
             this.Controls.Add(this.bps1text);

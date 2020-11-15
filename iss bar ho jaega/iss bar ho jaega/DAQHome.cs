@@ -45,7 +45,7 @@ namespace iss_bar_ho_jaega
             public double[,] elements;      // To store the numerical data
             public string[] colnames;       // To store the headers
             public string filename;        //  To store name of the log file
-            public double[] x1, y1, z1, t1, ax, ay, str;     // For Data Analysis
+            public double[] x1, y1, z1, t1, ax, ay, str, TPS, BPS;     // For Data Analysis
             // The extracted data is stord in the above
             // You need not worry on how they got there
 
@@ -301,6 +301,7 @@ namespace iss_bar_ho_jaega
                 string name = null;
                 int str1Count;
                 int str2Count;
+                int tps1Count; int tps2Count; int bps1Count; int bps2Count;
 
                 for (str1Count = 0; str1Count < first.ncol; str1Count++)
                 {
@@ -316,6 +317,42 @@ namespace iss_bar_ho_jaega
                 {
                     name = second.colnames[str2Count];
                     if (name[0] == '"' && name[1] == 'S' && name[2] == 'T' && name[3] == 'R')
+                    {
+                        break;
+                    }
+                }
+
+                for (tps1Count = 0; tps1Count < first.ncol; tps1Count++)
+                {
+                    name = first.colnames[tps1Count];
+                    if (name[0] == '"' && name[1] == 'T' && name[2] == 'P' && name[3] == 'S')
+                    {
+                        break;
+                    }
+                }
+
+                for (tps2Count = 0; tps2Count < second.ncol; tps2Count++)
+                {
+                    name = second.colnames[tps2Count];
+                    if (name[0] == '"' && name[1] == 'T' && name[2] == 'P' && name[3] == 'S')
+                    {
+                        break;
+                    }
+                }
+
+                for (bps1Count = 0; bps1Count < first.ncol; bps1Count++)
+                {
+                    name = first.colnames[bps1Count];
+                    if (name[0] == '"' && name[1] == 'F' && name[2] == 'B' && name[3] == 'P')
+                    {
+                        break;
+                    }
+                }
+
+                for (bps2Count = 0; bps2Count < second.ncol; bps2Count++)
+                {
+                    name = second.colnames[bps2Count];
+                    if (name[0] == '"' && name[1] == 'F' && name[2] == 'B' && name[3] == 'P')
                     {
                         break;
                     }
@@ -339,7 +376,10 @@ namespace iss_bar_ho_jaega
 
                 filldata(ref first.str, ref first, str1Count);
                 filldata(ref second.str, ref second, str2Count);
-
+                filldata(ref first.TPS, ref first, tps1Count);
+                filldata(ref second.TPS, ref second, tps2Count);
+                filldata(ref first.BPS, ref first, bps1Count);
+                filldata(ref second.BPS, ref second, bps2Count);
 
                 timer = new Timer();
                 timer.Interval = 320;    //present playback speed is 0.0625x
@@ -596,6 +636,15 @@ namespace iss_bar_ho_jaega
                     gauge1.ChangeValue(); gauge11.ChangeValue();
 
                 }
+                tps1empty.Height = 152 - (int)(first.TPS[firstCounter] * 38);
+                tps1text.Text = first.TPS[firstCounter].ToString();
+                bps1empty.Height = 152 - (int)(first.BPS[firstCounter] * 38);
+                bps1text.Text = first.BPS[firstCounter].ToString();
+                tps2empty.Height = 152 - (int)(second.TPS[secondCounter] * 38);
+                tps2text.Text = second.TPS[secondCounter].ToString();
+                bps2empty.Height = 152 - (int)(second.BPS[secondCounter] * 38);
+                bps2text.Text = second.BPS[secondCounter].ToString();
+
 
             }
 
@@ -615,6 +664,14 @@ namespace iss_bar_ho_jaega
             gauge1.value = 0; gauge11.value = 0;
             gauge1.ChangeValue();
             gauge11.ChangeValue();
+            tps1empty.Height = 152;
+            bps1empty.Height = 152;
+            tps2empty.Height = 152;
+            bps2empty.Height = 152;
+            tps1text.Text = 0.ToString();
+            bps1text.Text = 0.ToString();
+            tps2text.Text = 0.ToString();
+            bps2text.Text = 0.ToString();
 
 
 
@@ -722,6 +779,9 @@ namespace iss_bar_ho_jaega
             }
         }
 
+        private void chart4_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
