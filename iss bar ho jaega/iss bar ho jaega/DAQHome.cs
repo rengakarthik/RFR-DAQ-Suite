@@ -394,9 +394,17 @@ namespace iss_bar_ho_jaega
 
                 started = 1;
             }
-            else if (started==1)
+
+            else if (started == 1)
+            {
+                timer.Stop();
+                started = 2;
+            }
+
+            else
             {
                 timer.Start();
+                started = 1;
             }
         }
         public void Pauseit()
@@ -780,6 +788,21 @@ namespace iss_bar_ho_jaega
         }
 
         private void chart4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bps1full_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bps1empty_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void elementHost2_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
         {
 
         }
