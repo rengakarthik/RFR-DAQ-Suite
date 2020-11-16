@@ -85,11 +85,11 @@ namespace iss_bar_ho_jaega
 
 
 
-            chart4.Series["plot1"].MarkerSize = 5;
-            chart4.Series["plot2"].MarkerSize = 5;
+            chart4.Series["plot1"].MarkerSize = 10;
+            chart4.Series["plot2"].MarkerSize = 10;
 
-            chart4.Series["plot1"].Color = Color.Red;
-            chart4.Series["plot2"].Color = Color.Green;
+            chart4.Series["plot1"].Color = Color.Yellow;
+            chart4.Series["plot2"].Color = Color.Yellow;
 
         }
 
@@ -791,6 +791,11 @@ namespace iss_bar_ho_jaega
         }
 
         private void tps2full_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart4_Click(object sender, EventArgs e)
         {
 
         }
