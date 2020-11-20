@@ -58,7 +58,7 @@
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.Margin = new System.Windows.Forms.Padding(0);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(267, 875);
+            this.sidebar.Size = new System.Drawing.Size(204, 875);
             this.sidebar.TabIndex = 0;
             // 
             // DriverData
@@ -78,7 +78,7 @@
             this.DriverData.Margin = new System.Windows.Forms.Padding(0);
             this.DriverData.Name = "DriverData";
             this.DriverData.Rotation = 0D;
-            this.DriverData.Size = new System.Drawing.Size(267, 123);
+            this.DriverData.Size = new System.Drawing.Size(204, 123);
             this.DriverData.TabIndex = 2;
             this.DriverData.Text = "Driver Data";
             this.DriverData.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -102,7 +102,7 @@
             this.HomeButton.Margin = new System.Windows.Forms.Padding(0);
             this.HomeButton.Name = "HomeButton";
             this.HomeButton.Rotation = 0D;
-            this.HomeButton.Size = new System.Drawing.Size(267, 123);
+            this.HomeButton.Size = new System.Drawing.Size(204, 123);
             this.HomeButton.TabIndex = 1;
             this.HomeButton.Text = "Home";
             this.HomeButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -133,10 +133,10 @@
             this.topbar.Controls.Add(this.Load2);
             this.topbar.Controls.Add(this.Load1);
             this.topbar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topbar.Location = new System.Drawing.Point(267, 0);
+            this.topbar.Location = new System.Drawing.Point(204, 0);
             this.topbar.Margin = new System.Windows.Forms.Padding(0);
             this.topbar.Name = "topbar";
-            this.topbar.Size = new System.Drawing.Size(1418, 123);
+            this.topbar.Size = new System.Drawing.Size(1481, 123);
             this.topbar.TabIndex = 1;
             // 
             // S
@@ -150,8 +150,8 @@
             this.S.IconChar = FontAwesome.Sharp.IconChar.Stop;
             this.S.IconColor = System.Drawing.Color.Lime;
             this.S.IconSize = 16;
-            this.S.Location = new System.Drawing.Point(755, 31);
-            this.S.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.S.Location = new System.Drawing.Point(761, 28);
+            this.S.Margin = new System.Windows.Forms.Padding(4);
             this.S.Name = "S";
             this.S.Rotation = 0D;
             this.S.Size = new System.Drawing.Size(67, 62);
@@ -170,8 +170,8 @@
             this.Slow.IconChar = FontAwesome.Sharp.IconChar.FastBackward;
             this.Slow.IconColor = System.Drawing.Color.Lime;
             this.Slow.IconSize = 16;
-            this.Slow.Location = new System.Drawing.Point(573, 31);
-            this.Slow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Slow.Location = new System.Drawing.Point(579, 28);
+            this.Slow.Margin = new System.Windows.Forms.Padding(4);
             this.Slow.Name = "Slow";
             this.Slow.Rotation = 0D;
             this.Slow.Size = new System.Drawing.Size(53, 62);
@@ -190,8 +190,8 @@
             this.PS.IconChar = FontAwesome.Sharp.IconChar.Play;
             this.PS.IconColor = System.Drawing.Color.Lime;
             this.PS.IconSize = 16;
-            this.PS.Location = new System.Drawing.Point(657, 31);
-            this.PS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PS.Location = new System.Drawing.Point(663, 28);
+            this.PS.Margin = new System.Windows.Forms.Padding(4);
             this.PS.Name = "PS";
             this.PS.Rotation = 0D;
             this.PS.Size = new System.Drawing.Size(67, 62);
@@ -210,8 +210,8 @@
             this.Fast.IconChar = FontAwesome.Sharp.IconChar.FastForward;
             this.Fast.IconColor = System.Drawing.Color.Lime;
             this.Fast.IconSize = 16;
-            this.Fast.Location = new System.Drawing.Point(853, 31);
-            this.Fast.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Fast.Location = new System.Drawing.Point(859, 28);
+            this.Fast.Margin = new System.Windows.Forms.Padding(4);
             this.Fast.Name = "Fast";
             this.Fast.Rotation = 0D;
             this.Fast.Size = new System.Drawing.Size(53, 62);
@@ -226,7 +226,7 @@
             this.FileName2.BackColor = System.Drawing.Color.Transparent;
             this.FileName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FileName2.ForeColor = System.Drawing.Color.Lime;
-            this.FileName2.Location = new System.Drawing.Point(1066, 43);
+            this.FileName2.Location = new System.Drawing.Point(1073, 45);
             this.FileName2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FileName2.Name = "FileName2";
             this.FileName2.Size = new System.Drawing.Size(200, 31);
@@ -240,7 +240,7 @@
             this.FileName1.BackColor = System.Drawing.Color.Transparent;
             this.FileName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FileName1.ForeColor = System.Drawing.Color.Lime;
-            this.FileName1.Location = new System.Drawing.Point(40, 43);
+            this.FileName1.Location = new System.Drawing.Point(17, 45);
             this.FileName1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FileName1.Name = "FileName1";
             this.FileName1.Size = new System.Drawing.Size(200, 31);
@@ -259,8 +259,8 @@
             this.Load2.IconChar = FontAwesome.Sharp.IconChar.None;
             this.Load2.IconColor = System.Drawing.Color.Black;
             this.Load2.IconSize = 16;
-            this.Load2.Location = new System.Drawing.Point(1291, 41);
-            this.Load2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Load2.Location = new System.Drawing.Point(1298, 43);
+            this.Load2.Margin = new System.Windows.Forms.Padding(4);
             this.Load2.Name = "Load2";
             this.Load2.Rotation = 0D;
             this.Load2.Size = new System.Drawing.Size(111, 33);
@@ -279,8 +279,8 @@
             this.Load1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.Load1.IconColor = System.Drawing.Color.Black;
             this.Load1.IconSize = 16;
-            this.Load1.Location = new System.Drawing.Point(271, 41);
-            this.Load1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Load1.Location = new System.Drawing.Point(248, 43);
+            this.Load1.Margin = new System.Windows.Forms.Padding(4);
             this.Load1.Name = "Load1";
             this.Load1.Rotation = 0D;
             this.Load1.Size = new System.Drawing.Size(111, 33);
@@ -292,10 +292,10 @@
             // mainArea
             // 
             this.mainArea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainArea.Location = new System.Drawing.Point(267, 123);
+            this.mainArea.Location = new System.Drawing.Point(204, 123);
             this.mainArea.Margin = new System.Windows.Forms.Padding(0);
             this.mainArea.Name = "mainArea";
-            this.mainArea.Size = new System.Drawing.Size(1418, 752);
+            this.mainArea.Size = new System.Drawing.Size(1481, 752);
             this.mainArea.TabIndex = 2;
             // 
             // Form1
@@ -306,7 +306,7 @@
             this.Controls.Add(this.mainArea);
             this.Controls.Add(this.topbar);
             this.Controls.Add(this.sidebar);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
