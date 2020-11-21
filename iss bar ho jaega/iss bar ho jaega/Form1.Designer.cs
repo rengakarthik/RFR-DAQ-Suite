@@ -226,10 +226,10 @@
             this.FileName2.BackColor = System.Drawing.Color.Transparent;
             this.FileName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FileName2.ForeColor = System.Drawing.Color.Lime;
-            this.FileName2.Location = new System.Drawing.Point(1073, 45);
+            this.FileName2.Location = new System.Drawing.Point(951, 39);
             this.FileName2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FileName2.Name = "FileName2";
-            this.FileName2.Size = new System.Drawing.Size(200, 31);
+            this.FileName2.Size = new System.Drawing.Size(318, 31);
             this.FileName2.TabIndex = 3;
             this.FileName2.Text = "File 2";
             this.FileName2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -243,7 +243,7 @@
             this.FileName1.Location = new System.Drawing.Point(17, 45);
             this.FileName1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FileName1.Name = "FileName1";
-            this.FileName1.Size = new System.Drawing.Size(200, 31);
+            this.FileName1.Size = new System.Drawing.Size(318, 31);
             this.FileName1.TabIndex = 2;
             this.FileName1.Text = "File 1";
             this.FileName1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -279,7 +279,7 @@
             this.Load1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.Load1.IconColor = System.Drawing.Color.Black;
             this.Load1.IconSize = 16;
-            this.Load1.Location = new System.Drawing.Point(248, 43);
+            this.Load1.Location = new System.Drawing.Point(343, 43);
             this.Load1.Margin = new System.Windows.Forms.Padding(4);
             this.Load1.Name = "Load1";
             this.Load1.Rotation = 0D;

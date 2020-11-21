@@ -268,6 +268,8 @@ namespace iss_bar_ho_jaega
         }
 
         //writing my own function to initiate the 3 graphs
+        int max = 0;
+
         public void Chart_initiate(Chart chartx)
         {
             chartx.ChartAreas[0].AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
@@ -449,8 +451,8 @@ namespace iss_bar_ho_jaega
         void timer_Tick(object sender, EventArgs e)
         {
 
-            try
-            {
+            //try
+            //{
 
                 ax1.Clear(); // clearing each time to plot new points thereby the moving effect
                 ay1.Clear();
@@ -487,12 +489,37 @@ namespace iss_bar_ho_jaega
                 chart4.Invalidate(); // use this to plot and replot the points
 
                 // dynamically varying y axis of plot to ensure that data always stays within plot
-                chart1.ChartAreas[0].AxisY.Maximum = UpperLimit(first.x1, second.x1, xaxis) + 0.4;
-                chart1.ChartAreas[0].AxisY.Minimum = LowerLimit(first.x1, second.x1, xaxis) - 0.4;
-                chart2.ChartAreas[0].AxisY.Maximum = UpperLimit(first.y1, second.y1, xaxis) + 0.4;
-                chart2.ChartAreas[0].AxisY.Minimum = LowerLimit(first.y1, second.y1, xaxis) - 0.4;
-                chart3.ChartAreas[0].AxisY.Maximum = UpperLimit(first.z1, second.z1, xaxis) + 0.4;
-                chart3.ChartAreas[0].AxisY.Minimum = LowerLimit(first.z1, second.z1, xaxis) - 0.4;
+                
+                /*float m1 = (float) (UpperLimit(first.x1, second.x1, xaxis) - LowerLimit(first.x1, second.x1, xaxis)) / 5;
+                int m2 = (int) UpperLimit(first.x1, second.x1, xaxis);
+                int m3 = (int) ((UpperLimit(first.x1, second.x1, xaxis) - m2)/m1 + 1);
+
+                int m4 = (int) LowerLimit(first.x1, second.x1, xaxis);
+                int m5 = (int) ((m4 - LowerLimit(first.x1, second.x1, xaxis))/m1 + 1);
+                */
+
+                int m1 = (int) Math.Ceiling(UpperLimit(first.x1, second.x1, xaxis)+ 0.4);
+                int m2 = (int) Math.Floor(LowerLimit(first.x1, second.x1, xaxis) - 0.4);
+                    
+                chart1.ChartAreas[0].AxisY.Interval = (m1-m2)/5;
+                chart1.ChartAreas[0].AxisY.Maximum = m1;
+                chart1.ChartAreas[0].AxisY.Minimum = m2;
+
+
+                int n1 = (int)Math.Ceiling(UpperLimit(first.y1, second.y1, xaxis) + 0.4);
+                int n2 = (int)Math.Floor(LowerLimit(first.y1, second.y1, xaxis) - 0.4);
+
+                chart2.ChartAreas[0].AxisY.Interval = (n1-n2)/5;
+                chart2.ChartAreas[0].AxisY.Maximum = n1;
+                chart2.ChartAreas[0].AxisY.Minimum = n2;
+
+
+                int o1 = (int)Math.Ceiling(UpperLimit(first.z1, second.z1, xaxis) + 0.4);
+                int o2 = (int)Math.Floor(LowerLimit(first.z1, second.z1, xaxis) - 0.4);
+
+                chart3.ChartAreas[0].AxisY.Interval = (o1-o2)/5;
+                chart3.ChartAreas[0].AxisY.Maximum = o1;
+                chart3.ChartAreas[0].AxisY.Minimum = o2;
 
 
 
@@ -654,14 +681,14 @@ namespace iss_bar_ho_jaega
                 bps2text.Text = second.BPS[secondCounter].ToString();
 
 
-            }
+            /*}
 
             catch
             {
                 timer.Stop();
                 MessageBox.Show("End of Data", "Done");
 
-            }
+            }*/
         }
 
         public void Stopit()
@@ -803,6 +830,11 @@ namespace iss_bar_ho_jaega
         }
 
         private void elementHost2_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
+        {
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
         {
 
         }

@@ -31,12 +31,15 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -109,7 +112,7 @@
             this.Purge1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Purge1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Purge1.ForeColor = System.Drawing.Color.Lime;
-            this.Purge1.Location = new System.Drawing.Point(219, 283);
+            this.Purge1.Location = new System.Drawing.Point(1364, 284);
             this.Purge1.Margin = new System.Windows.Forms.Padding(4);
             this.Purge1.Name = "Purge1";
             this.Purge1.Size = new System.Drawing.Size(100, 37);
@@ -126,7 +129,7 @@
             this.label_x1.BackColor = System.Drawing.Color.Transparent;
             this.label_x1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_x1.ForeColor = System.Drawing.Color.Lime;
-            this.label_x1.Location = new System.Drawing.Point(44, 123);
+            this.label_x1.Location = new System.Drawing.Point(1189, 124);
             this.label_x1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_x1.Name = "label_x1";
             this.label_x1.Size = new System.Drawing.Size(128, 30);
@@ -140,7 +143,7 @@
             this.label_y1.BackColor = System.Drawing.Color.Transparent;
             this.label_y1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_y1.ForeColor = System.Drawing.Color.Lime;
-            this.label_y1.Location = new System.Drawing.Point(44, 164);
+            this.label_y1.Location = new System.Drawing.Point(1189, 165);
             this.label_y1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_y1.Name = "label_y1";
             this.label_y1.Size = new System.Drawing.Size(128, 30);
@@ -154,7 +157,7 @@
             this.label_z1.BackColor = System.Drawing.Color.Transparent;
             this.label_z1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_z1.ForeColor = System.Drawing.Color.Lime;
-            this.label_z1.Location = new System.Drawing.Point(44, 206);
+            this.label_z1.Location = new System.Drawing.Point(1189, 207);
             this.label_z1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_z1.Name = "label_z1";
             this.label_z1.Size = new System.Drawing.Size(128, 30);
@@ -165,7 +168,7 @@
             // 
             this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(192, 212);
+            this.comboBox3.Location = new System.Drawing.Point(1337, 213);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(132, 24);
@@ -175,7 +178,7 @@
             // 
             this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(192, 170);
+            this.comboBox2.Location = new System.Drawing.Point(1337, 171);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(132, 24);
@@ -185,7 +188,7 @@
             // 
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(192, 129);
+            this.comboBox1.Location = new System.Drawing.Point(1337, 130);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(132, 24);
@@ -200,7 +203,7 @@
             this.Load_file1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Load_file1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Load_file1.ForeColor = System.Drawing.Color.Lime;
-            this.Load_file1.Location = new System.Drawing.Point(49, 283);
+            this.Load_file1.Location = new System.Drawing.Point(1194, 284);
             this.Load_file1.Margin = new System.Windows.Forms.Padding(4);
             this.Load_file1.Name = "Load_file1";
             this.Load_file1.Size = new System.Drawing.Size(100, 37);
@@ -219,7 +222,7 @@
             this.Purge2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Purge2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Purge2.ForeColor = System.Drawing.Color.Lime;
-            this.Purge2.Location = new System.Drawing.Point(217, 583);
+            this.Purge2.Location = new System.Drawing.Point(1362, 584);
             this.Purge2.Margin = new System.Windows.Forms.Padding(4);
             this.Purge2.Name = "Purge2";
             this.Purge2.Size = new System.Drawing.Size(101, 37);
@@ -236,7 +239,7 @@
             this.label_x2.BackColor = System.Drawing.Color.Transparent;
             this.label_x2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_x2.ForeColor = System.Drawing.Color.Lime;
-            this.label_x2.Location = new System.Drawing.Point(48, 430);
+            this.label_x2.Location = new System.Drawing.Point(1193, 431);
             this.label_x2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_x2.Name = "label_x2";
             this.label_x2.Size = new System.Drawing.Size(129, 30);
@@ -250,7 +253,7 @@
             this.label_y2.BackColor = System.Drawing.Color.Transparent;
             this.label_y2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_y2.ForeColor = System.Drawing.Color.Lime;
-            this.label_y2.Location = new System.Drawing.Point(47, 473);
+            this.label_y2.Location = new System.Drawing.Point(1192, 474);
             this.label_y2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_y2.Name = "label_y2";
             this.label_y2.Size = new System.Drawing.Size(131, 30);
@@ -264,7 +267,7 @@
             this.label_z2.BackColor = System.Drawing.Color.Transparent;
             this.label_z2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_z2.ForeColor = System.Drawing.Color.Lime;
-            this.label_z2.Location = new System.Drawing.Point(48, 514);
+            this.label_z2.Location = new System.Drawing.Point(1193, 515);
             this.label_z2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_z2.Name = "label_z2";
             this.label_z2.Size = new System.Drawing.Size(129, 30);
@@ -275,7 +278,7 @@
             // 
             this.comboBox6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(192, 518);
+            this.comboBox6.Location = new System.Drawing.Point(1337, 519);
             this.comboBox6.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(133, 24);
@@ -285,7 +288,7 @@
             // 
             this.comboBox5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(192, 479);
+            this.comboBox5.Location = new System.Drawing.Point(1337, 480);
             this.comboBox5.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(133, 24);
@@ -295,7 +298,7 @@
             // 
             this.comboBox4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(192, 434);
+            this.comboBox4.Location = new System.Drawing.Point(1337, 435);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(133, 24);
@@ -310,7 +313,7 @@
             this.Load_file2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Load_file2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Load_file2.ForeColor = System.Drawing.Color.Lime;
-            this.Load_file2.Location = new System.Drawing.Point(53, 583);
+            this.Load_file2.Location = new System.Drawing.Point(1198, 584);
             this.Load_file2.Margin = new System.Windows.Forms.Padding(4);
             this.Load_file2.Name = "Load_file2";
             this.Load_file2.Size = new System.Drawing.Size(101, 37);
@@ -327,7 +330,7 @@
             this.file2.BackColor = System.Drawing.Color.Transparent;
             this.file2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.file2.ForeColor = System.Drawing.Color.Lime;
-            this.file2.Location = new System.Drawing.Point(55, 382);
+            this.file2.Location = new System.Drawing.Point(1200, 383);
             this.file2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.file2.Name = "file2";
             this.file2.Size = new System.Drawing.Size(270, 31);
@@ -343,7 +346,7 @@
             this.file1.BackColor = System.Drawing.Color.Transparent;
             this.file1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.file1.ForeColor = System.Drawing.Color.Lime;
-            this.file1.Location = new System.Drawing.Point(49, 61);
+            this.file1.Location = new System.Drawing.Point(1194, 62);
             this.file1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.file1.Name = "file1";
             this.file1.Size = new System.Drawing.Size(276, 31);
@@ -353,7 +356,6 @@
             // 
             // chart2
             // 
-            this.chart2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.chart2.BackColor = System.Drawing.Color.Black;
             this.chart2.BackImageTransparentColor = System.Drawing.Color.Black;
             this.chart2.BorderSkin.BackColor = System.Drawing.Color.Black;
@@ -370,10 +372,11 @@
             legend1.BackColor = System.Drawing.Color.Black;
             legend1.BorderColor = System.Drawing.Color.Yellow;
             legend1.BorderWidth = 0;
+            legend1.Enabled = false;
             legend1.ForeColor = System.Drawing.Color.Lime;
             legend1.Name = "Legend1";
             this.chart2.Legends.Add(legend1);
-            this.chart2.Location = new System.Drawing.Point(355, 239);
+            this.chart2.Location = new System.Drawing.Point(1, 254);
             this.chart2.Margin = new System.Windows.Forms.Padding(4);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
@@ -382,13 +385,17 @@
             series1.Legend = "Legend1";
             series1.Name = "Channel 2";
             this.chart2.Series.Add(series1);
-            this.chart2.Size = new System.Drawing.Size(602, 219);
+            this.chart2.Size = new System.Drawing.Size(602, 243);
             this.chart2.TabIndex = 72;
             this.chart2.Text = "chart2";
+            title1.Alignment = System.Drawing.ContentAlignment.TopRight;
+            title1.ForeColor = System.Drawing.Color.Yellow;
+            title1.Name = "Title1";
+            title1.Text = "Channel 2";
+            this.chart2.Titles.Add(title1);
             // 
             // chart1
             // 
-            this.chart1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.chart1.BackColor = System.Drawing.Color.Black;
             this.chart1.BackImageTransparentColor = System.Drawing.Color.Black;
             chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.Lime;
@@ -401,10 +408,11 @@
             legend2.BackColor = System.Drawing.Color.Black;
             legend2.BorderColor = System.Drawing.Color.Yellow;
             legend2.BorderWidth = 0;
+            legend2.Enabled = false;
             legend2.ForeColor = System.Drawing.Color.Lime;
             legend2.Name = "Legend1";
             this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(355, 8);
+            this.chart1.Location = new System.Drawing.Point(1, 3);
             this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
@@ -413,13 +421,18 @@
             series2.Legend = "Legend1";
             series2.Name = "Channel 1";
             this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(602, 223);
+            this.chart1.Size = new System.Drawing.Size(602, 243);
             this.chart1.TabIndex = 73;
             this.chart1.Text = "chart1";
+            title2.Alignment = System.Drawing.ContentAlignment.TopRight;
+            title2.ForeColor = System.Drawing.Color.Yellow;
+            title2.Name = "Title1";
+            title2.Text = "Channel 1";
+            this.chart1.Titles.Add(title2);
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // chart3
             // 
-            this.chart3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.chart3.BackColor = System.Drawing.Color.Black;
             this.chart3.BackImageTransparentColor = System.Drawing.Color.Black;
             chartArea3.AxisX.LabelStyle.ForeColor = System.Drawing.Color.Lime;
@@ -432,10 +445,11 @@
             legend3.BackColor = System.Drawing.Color.Black;
             legend3.BorderColor = System.Drawing.Color.Yellow;
             legend3.BorderWidth = 0;
+            legend3.Enabled = false;
             legend3.ForeColor = System.Drawing.Color.Lime;
             legend3.Name = "Legend1";
             this.chart3.Legends.Add(legend3);
-            this.chart3.Location = new System.Drawing.Point(355, 466);
+            this.chart3.Location = new System.Drawing.Point(1, 512);
             this.chart3.Margin = new System.Windows.Forms.Padding(4);
             this.chart3.Name = "chart3";
             this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
@@ -444,13 +458,18 @@
             series3.Legend = "Legend1";
             series3.Name = "Channel 3";
             this.chart3.Series.Add(series3);
-            this.chart3.Size = new System.Drawing.Size(602, 260);
+            this.chart3.Size = new System.Drawing.Size(602, 243);
             this.chart3.TabIndex = 74;
             this.chart3.Text = "chart3";
+            title3.Alignment = System.Drawing.ContentAlignment.TopRight;
+            title3.ForeColor = System.Drawing.Color.Yellow;
+            title3.Name = "Title1";
+            title3.Text = "Channel 3";
+            this.chart3.Titles.Add(title3);
             // 
             // chart4
             // 
-            this.chart4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.chart4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chart4.BackColor = System.Drawing.Color.Black;
             this.chart4.BackImageTransparentColor = System.Drawing.Color.Black;
             chartArea4.AxisX.IsMarginVisible = false;
@@ -471,7 +490,7 @@
             legend4.ForeColor = System.Drawing.Color.Lime;
             legend4.Name = "Legend1";
             this.chart4.Legends.Add(legend4);
-            this.chart4.Location = new System.Drawing.Point(1021, 222);
+            this.chart4.Location = new System.Drawing.Point(667, 227);
             this.chart4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart4.Name = "chart4";
             series4.ChartArea = "ChartArea1";
@@ -492,9 +511,10 @@
             // 
             // bps2text
             // 
+            this.bps2text.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bps2text.BackColor = System.Drawing.SystemColors.WindowText;
             this.bps2text.ForeColor = System.Drawing.Color.Red;
-            this.bps2text.Location = new System.Drawing.Point(1439, 574);
+            this.bps2text.Location = new System.Drawing.Point(1085, 579);
             this.bps2text.Margin = new System.Windows.Forms.Padding(4);
             this.bps2text.Name = "bps2text";
             this.bps2text.Size = new System.Drawing.Size(33, 22);
@@ -503,9 +523,10 @@
             // 
             // tps2text
             // 
+            this.tps2text.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tps2text.BackColor = System.Drawing.SystemColors.WindowText;
             this.tps2text.ForeColor = System.Drawing.Color.Red;
-            this.tps2text.Location = new System.Drawing.Point(1179, 574);
+            this.tps2text.Location = new System.Drawing.Point(825, 579);
             this.tps2text.Margin = new System.Windows.Forms.Padding(4);
             this.tps2text.Name = "tps2text";
             this.tps2text.Size = new System.Drawing.Size(33, 22);
@@ -514,9 +535,10 @@
             // 
             // bps1text
             // 
+            this.bps1text.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bps1text.BackColor = System.Drawing.SystemColors.WindowText;
             this.bps1text.ForeColor = System.Drawing.Color.Lime;
-            this.bps1text.Location = new System.Drawing.Point(1327, 574);
+            this.bps1text.Location = new System.Drawing.Point(973, 579);
             this.bps1text.Margin = new System.Windows.Forms.Padding(4);
             this.bps1text.Name = "bps1text";
             this.bps1text.Size = new System.Drawing.Size(33, 22);
@@ -525,9 +547,10 @@
             // 
             // tps1text
             // 
+            this.tps1text.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tps1text.BackColor = System.Drawing.SystemColors.WindowText;
             this.tps1text.ForeColor = System.Drawing.Color.Lime;
-            this.tps1text.Location = new System.Drawing.Point(1059, 574);
+            this.tps1text.Location = new System.Drawing.Point(705, 579);
             this.tps1text.Margin = new System.Windows.Forms.Padding(4);
             this.tps1text.Name = "tps1text";
             this.tps1text.Size = new System.Drawing.Size(33, 22);
@@ -536,8 +559,9 @@
             // 
             // bps2empty
             // 
+            this.bps2empty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bps2empty.Image = ((System.Drawing.Image)(resources.GetObject("bps2empty.Image")));
-            this.bps2empty.Location = new System.Drawing.Point(1391, 539);
+            this.bps2empty.Location = new System.Drawing.Point(1037, 544);
             this.bps2empty.Margin = new System.Windows.Forms.Padding(4);
             this.bps2empty.Name = "bps2empty";
             this.bps2empty.Size = new System.Drawing.Size(40, 187);
@@ -546,8 +570,9 @@
             // 
             // bps2full
             // 
+            this.bps2full.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bps2full.Image = ((System.Drawing.Image)(resources.GetObject("bps2full.Image")));
-            this.bps2full.Location = new System.Drawing.Point(1391, 539);
+            this.bps2full.Location = new System.Drawing.Point(1037, 544);
             this.bps2full.Margin = new System.Windows.Forms.Padding(4);
             this.bps2full.Name = "bps2full";
             this.bps2full.Size = new System.Drawing.Size(40, 187);
@@ -556,8 +581,9 @@
             // 
             // tps2empty
             // 
+            this.tps2empty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tps2empty.Image = ((System.Drawing.Image)(resources.GetObject("tps2empty.Image")));
-            this.tps2empty.Location = new System.Drawing.Point(1131, 540);
+            this.tps2empty.Location = new System.Drawing.Point(777, 545);
             this.tps2empty.Margin = new System.Windows.Forms.Padding(4);
             this.tps2empty.Name = "tps2empty";
             this.tps2empty.Size = new System.Drawing.Size(40, 187);
@@ -566,8 +592,9 @@
             // 
             // tps2full
             // 
+            this.tps2full.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tps2full.Image = ((System.Drawing.Image)(resources.GetObject("tps2full.Image")));
-            this.tps2full.Location = new System.Drawing.Point(1131, 540);
+            this.tps2full.Location = new System.Drawing.Point(777, 545);
             this.tps2full.Margin = new System.Windows.Forms.Padding(4);
             this.tps2full.Name = "tps2full";
             this.tps2full.Size = new System.Drawing.Size(40, 187);
@@ -576,8 +603,9 @@
             // 
             // bps1empty
             // 
+            this.bps1empty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bps1empty.Image = ((System.Drawing.Image)(resources.GetObject("bps1empty.Image")));
-            this.bps1empty.Location = new System.Drawing.Point(1279, 539);
+            this.bps1empty.Location = new System.Drawing.Point(925, 544);
             this.bps1empty.Margin = new System.Windows.Forms.Padding(4);
             this.bps1empty.Name = "bps1empty";
             this.bps1empty.Size = new System.Drawing.Size(40, 187);
@@ -587,8 +615,9 @@
             // 
             // bps1full
             // 
+            this.bps1full.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bps1full.Image = ((System.Drawing.Image)(resources.GetObject("bps1full.Image")));
-            this.bps1full.Location = new System.Drawing.Point(1279, 539);
+            this.bps1full.Location = new System.Drawing.Point(925, 544);
             this.bps1full.Margin = new System.Windows.Forms.Padding(4);
             this.bps1full.Name = "bps1full";
             this.bps1full.Size = new System.Drawing.Size(40, 187);
@@ -598,8 +627,9 @@
             // 
             // tps1empty
             // 
+            this.tps1empty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tps1empty.Image = ((System.Drawing.Image)(resources.GetObject("tps1empty.Image")));
-            this.tps1empty.Location = new System.Drawing.Point(1011, 540);
+            this.tps1empty.Location = new System.Drawing.Point(657, 545);
             this.tps1empty.Margin = new System.Windows.Forms.Padding(4);
             this.tps1empty.Name = "tps1empty";
             this.tps1empty.Size = new System.Drawing.Size(40, 187);
@@ -608,8 +638,9 @@
             // 
             // tps1full
             // 
+            this.tps1full.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tps1full.Image = ((System.Drawing.Image)(resources.GetObject("tps1full.Image")));
-            this.tps1full.Location = new System.Drawing.Point(1011, 540);
+            this.tps1full.Location = new System.Drawing.Point(657, 545);
             this.tps1full.Margin = new System.Windows.Forms.Padding(4);
             this.tps1full.Name = "tps1full";
             this.tps1full.Size = new System.Drawing.Size(40, 187);
@@ -618,9 +649,10 @@
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BackColor = System.Drawing.SystemColors.WindowText;
             this.textBox1.ForeColor = System.Drawing.Color.Lime;
-            this.textBox1.Location = new System.Drawing.Point(1059, 542);
+            this.textBox1.Location = new System.Drawing.Point(705, 547);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(33, 22);
@@ -630,9 +662,10 @@
             // 
             // textBox2
             // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.BackColor = System.Drawing.SystemColors.WindowText;
             this.textBox2.ForeColor = System.Drawing.Color.Lime;
-            this.textBox2.Location = new System.Drawing.Point(1327, 539);
+            this.textBox2.Location = new System.Drawing.Point(973, 544);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(33, 22);
@@ -642,9 +675,10 @@
             // 
             // textBox3
             // 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.BackColor = System.Drawing.SystemColors.WindowText;
             this.textBox3.ForeColor = System.Drawing.Color.Red;
-            this.textBox3.Location = new System.Drawing.Point(1179, 539);
+            this.textBox3.Location = new System.Drawing.Point(825, 544);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(33, 22);
@@ -654,9 +688,10 @@
             // 
             // textBox4
             // 
+            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox4.BackColor = System.Drawing.SystemColors.WindowText;
             this.textBox4.ForeColor = System.Drawing.Color.Red;
-            this.textBox4.Location = new System.Drawing.Point(1439, 539);
+            this.textBox4.Location = new System.Drawing.Point(1085, 544);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(33, 22);
@@ -666,8 +701,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1279, 539);
+            this.pictureBox1.Location = new System.Drawing.Point(925, 544);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 187);
@@ -676,8 +712,8 @@
             // 
             // elementHost2
             // 
-            this.elementHost2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.elementHost2.Location = new System.Drawing.Point(1270, 13);
+            this.elementHost2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.elementHost2.Location = new System.Drawing.Point(916, 18);
             this.elementHost2.Margin = new System.Windows.Forms.Padding(4);
             this.elementHost2.Name = "elementHost2";
             this.elementHost2.Size = new System.Drawing.Size(200, 203);
@@ -688,8 +724,8 @@
             // 
             // elementHost1
             // 
-            this.elementHost1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.elementHost1.Location = new System.Drawing.Point(1009, 13);
+            this.elementHost1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.elementHost1.Location = new System.Drawing.Point(655, 18);
             this.elementHost1.Margin = new System.Windows.Forms.Padding(4);
             this.elementHost1.Name = "elementHost1";
             this.elementHost1.Size = new System.Drawing.Size(213, 203);
@@ -723,9 +759,6 @@
             this.Controls.Add(this.elementHost2);
             this.Controls.Add(this.elementHost1);
             this.Controls.Add(this.chart4);
-            this.Controls.Add(this.chart3);
-            this.Controls.Add(this.chart1);
-            this.Controls.Add(this.chart2);
             this.Controls.Add(this.Purge2);
             this.Controls.Add(this.label_x2);
             this.Controls.Add(this.label_y2);
@@ -744,6 +777,9 @@
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Load_file1);
+            this.Controls.Add(this.chart3);
+            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.chart2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DAQHome";
