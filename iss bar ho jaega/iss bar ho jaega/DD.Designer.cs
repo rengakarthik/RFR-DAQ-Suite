@@ -95,7 +95,8 @@
             legend1.ForeColor = System.Drawing.Color.Lime;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(12, 41);
+            this.chart1.Location = new System.Drawing.Point(16, 50);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
             series1.ChartArea = "ChartArea1";
@@ -103,7 +104,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Channel 1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(428, 160);
+            this.chart1.Size = new System.Drawing.Size(571, 197);
             this.chart1.TabIndex = 74;
             this.chart1.Text = "chart1";
             // 
@@ -129,7 +130,8 @@
             legend2.ForeColor = System.Drawing.Color.Lime;
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(12, 212);
+            this.chart2.Location = new System.Drawing.Point(16, 261);
+            this.chart2.Margin = new System.Windows.Forms.Padding(4);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             series2.ChartArea = "ChartArea1";
@@ -137,7 +139,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Channel 2";
             this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(428, 160);
+            this.chart2.Size = new System.Drawing.Size(571, 197);
             this.chart2.TabIndex = 75;
             this.chart2.Text = "chart2";
             // 
@@ -164,8 +166,8 @@
             legend3.ForeColor = System.Drawing.Color.Lime;
             legend3.Name = "Legend1";
             this.chart4.Legends.Add(legend3);
-            this.chart4.Location = new System.Drawing.Point(467, 341);
-            this.chart4.Margin = new System.Windows.Forms.Padding(2);
+            this.chart4.Location = new System.Drawing.Point(623, 420);
+            this.chart4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart4.Name = "chart4";
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
@@ -178,17 +180,19 @@
             series4.Name = "plot2";
             this.chart4.Series.Add(series3);
             this.chart4.Series.Add(series4);
-            this.chart4.Size = new System.Drawing.Size(253, 190);
+            this.chart4.Size = new System.Drawing.Size(364, 268);
             this.chart4.TabIndex = 81;
             this.chart4.Text = "chart4";
+            this.chart4.Click += new System.EventHandler(this.chart4_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(981, 484);
+            this.label1.Location = new System.Drawing.Point(1308, 596);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(46, 17);
             this.label1.TabIndex = 84;
             this.label1.Text = "label1";
             // 
@@ -210,7 +214,8 @@
             legend4.ForeColor = System.Drawing.Color.Lime;
             legend4.Name = "Legend1";
             this.chart3.Legends.Add(legend4);
-            this.chart3.Location = new System.Drawing.Point(12, 399);
+            this.chart3.Location = new System.Drawing.Point(16, 491);
+            this.chart3.Margin = new System.Windows.Forms.Padding(4);
             this.chart3.Name = "chart3";
             this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
             series5.ChartArea = "ChartArea1";
@@ -218,25 +223,27 @@
             series5.Legend = "Legend1";
             series5.Name = "Channel 3";
             this.chart3.Series.Add(series5);
-            this.chart3.Size = new System.Drawing.Size(428, 160);
+            this.chart3.Size = new System.Drawing.Size(571, 197);
             this.chart3.TabIndex = 85;
             this.chart3.Text = "chart3";
             // 
             // tps1full
             // 
             this.tps1full.Image = ((System.Drawing.Image)(resources.GetObject("tps1full.Image")));
-            this.tps1full.Location = new System.Drawing.Point(466, 178);
+            this.tps1full.Location = new System.Drawing.Point(621, 219);
+            this.tps1full.Margin = new System.Windows.Forms.Padding(4);
             this.tps1full.Name = "tps1full";
-            this.tps1full.Size = new System.Drawing.Size(30, 152);
+            this.tps1full.Size = new System.Drawing.Size(40, 187);
             this.tps1full.TabIndex = 90;
             this.tps1full.TabStop = false;
             // 
             // tps1empty
             // 
             this.tps1empty.Image = ((System.Drawing.Image)(resources.GetObject("tps1empty.Image")));
-            this.tps1empty.Location = new System.Drawing.Point(466, 178);
+            this.tps1empty.Location = new System.Drawing.Point(621, 219);
+            this.tps1empty.Margin = new System.Windows.Forms.Padding(4);
             this.tps1empty.Name = "tps1empty";
-            this.tps1empty.Size = new System.Drawing.Size(29, 152);
+            this.tps1empty.Size = new System.Drawing.Size(39, 187);
             this.tps1empty.TabIndex = 91;
             this.tps1empty.TabStop = false;
             this.tps1empty.Click += new System.EventHandler(this.tps1empty_Click);
@@ -244,27 +251,30 @@
             // bps1full
             // 
             this.bps1full.Image = ((System.Drawing.Image)(resources.GetObject("bps1full.Image")));
-            this.bps1full.Location = new System.Drawing.Point(550, 178);
+            this.bps1full.Location = new System.Drawing.Point(733, 219);
+            this.bps1full.Margin = new System.Windows.Forms.Padding(4);
             this.bps1full.Name = "bps1full";
-            this.bps1full.Size = new System.Drawing.Size(30, 152);
+            this.bps1full.Size = new System.Drawing.Size(40, 187);
             this.bps1full.TabIndex = 97;
             this.bps1full.TabStop = false;
             // 
             // bps1empty
             // 
             this.bps1empty.Image = ((System.Drawing.Image)(resources.GetObject("bps1empty.Image")));
-            this.bps1empty.Location = new System.Drawing.Point(550, 178);
+            this.bps1empty.Location = new System.Drawing.Point(733, 219);
+            this.bps1empty.Margin = new System.Windows.Forms.Padding(4);
             this.bps1empty.Name = "bps1empty";
-            this.bps1empty.Size = new System.Drawing.Size(30, 152);
+            this.bps1empty.Size = new System.Drawing.Size(40, 187);
             this.bps1empty.TabIndex = 98;
             this.bps1empty.TabStop = false;
             // 
             // tps2full
             // 
             this.tps2full.Image = ((System.Drawing.Image)(resources.GetObject("tps2full.Image")));
-            this.tps2full.Location = new System.Drawing.Point(644, 181);
+            this.tps2full.Location = new System.Drawing.Point(859, 223);
+            this.tps2full.Margin = new System.Windows.Forms.Padding(4);
             this.tps2full.Name = "tps2full";
-            this.tps2full.Size = new System.Drawing.Size(30, 152);
+            this.tps2full.Size = new System.Drawing.Size(40, 187);
             this.tps2full.TabIndex = 99;
             this.tps2full.TabStop = false;
             this.tps2full.Click += new System.EventHandler(this.tps2full_Click);
@@ -272,36 +282,40 @@
             // tps2empty
             // 
             this.tps2empty.Image = ((System.Drawing.Image)(resources.GetObject("tps2empty.Image")));
-            this.tps2empty.Location = new System.Drawing.Point(644, 181);
+            this.tps2empty.Location = new System.Drawing.Point(859, 223);
+            this.tps2empty.Margin = new System.Windows.Forms.Padding(4);
             this.tps2empty.Name = "tps2empty";
-            this.tps2empty.Size = new System.Drawing.Size(30, 152);
+            this.tps2empty.Size = new System.Drawing.Size(40, 187);
             this.tps2empty.TabIndex = 100;
             this.tps2empty.TabStop = false;
             // 
             // bps2full
             // 
             this.bps2full.Image = ((System.Drawing.Image)(resources.GetObject("bps2full.Image")));
-            this.bps2full.Location = new System.Drawing.Point(729, 178);
+            this.bps2full.Location = new System.Drawing.Point(972, 219);
+            this.bps2full.Margin = new System.Windows.Forms.Padding(4);
             this.bps2full.Name = "bps2full";
-            this.bps2full.Size = new System.Drawing.Size(30, 152);
+            this.bps2full.Size = new System.Drawing.Size(40, 187);
             this.bps2full.TabIndex = 101;
             this.bps2full.TabStop = false;
             // 
             // bps2empty
             // 
             this.bps2empty.Image = ((System.Drawing.Image)(resources.GetObject("bps2empty.Image")));
-            this.bps2empty.Location = new System.Drawing.Point(729, 178);
+            this.bps2empty.Location = new System.Drawing.Point(972, 219);
+            this.bps2empty.Margin = new System.Windows.Forms.Padding(4);
             this.bps2empty.Name = "bps2empty";
-            this.bps2empty.Size = new System.Drawing.Size(30, 152);
+            this.bps2empty.Size = new System.Drawing.Size(40, 187);
             this.bps2empty.TabIndex = 102;
             this.bps2empty.TabStop = false;
             // 
             // elementHost2
             // 
             this.elementHost2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.elementHost2.Location = new System.Drawing.Point(645, 7);
+            this.elementHost2.Location = new System.Drawing.Point(860, 9);
+            this.elementHost2.Margin = new System.Windows.Forms.Padding(4);
             this.elementHost2.Name = "elementHost2";
-            this.elementHost2.Size = new System.Drawing.Size(151, 168);
+            this.elementHost2.Size = new System.Drawing.Size(201, 207);
             this.elementHost2.TabIndex = 83;
             this.elementHost2.Text = "elementHost2";
             this.elementHost2.Child = this.gauge12;
@@ -309,9 +323,10 @@
             // elementHost1
             // 
             this.elementHost1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.elementHost1.Location = new System.Drawing.Point(467, 7);
+            this.elementHost1.Location = new System.Drawing.Point(623, 9);
+            this.elementHost1.Margin = new System.Windows.Forms.Padding(4);
             this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(160, 165);
+            this.elementHost1.Size = new System.Drawing.Size(213, 203);
             this.elementHost1.TabIndex = 82;
             this.elementHost1.Text = "elementHost1";
             this.elementHost1.Child = this.gauge2;
@@ -320,9 +335,10 @@
             // 
             this.tps1text.BackColor = System.Drawing.SystemColors.WindowText;
             this.tps1text.ForeColor = System.Drawing.Color.Lime;
-            this.tps1text.Location = new System.Drawing.Point(502, 178);
+            this.tps1text.Location = new System.Drawing.Point(669, 219);
+            this.tps1text.Margin = new System.Windows.Forms.Padding(4);
             this.tps1text.Name = "tps1text";
-            this.tps1text.Size = new System.Drawing.Size(26, 20);
+            this.tps1text.Size = new System.Drawing.Size(33, 22);
             this.tps1text.TabIndex = 103;
             this.tps1text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -330,9 +346,10 @@
             // 
             this.bps1text.BackColor = System.Drawing.SystemColors.WindowText;
             this.bps1text.ForeColor = System.Drawing.Color.Lime;
-            this.bps1text.Location = new System.Drawing.Point(586, 178);
+            this.bps1text.Location = new System.Drawing.Point(781, 219);
+            this.bps1text.Margin = new System.Windows.Forms.Padding(4);
             this.bps1text.Name = "bps1text";
-            this.bps1text.Size = new System.Drawing.Size(26, 20);
+            this.bps1text.Size = new System.Drawing.Size(33, 22);
             this.bps1text.TabIndex = 104;
             this.bps1text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -340,9 +357,10 @@
             // 
             this.tps2text.BackColor = System.Drawing.SystemColors.WindowText;
             this.tps2text.ForeColor = System.Drawing.Color.Red;
-            this.tps2text.Location = new System.Drawing.Point(680, 181);
+            this.tps2text.Location = new System.Drawing.Point(907, 223);
+            this.tps2text.Margin = new System.Windows.Forms.Padding(4);
             this.tps2text.Name = "tps2text";
-            this.tps2text.Size = new System.Drawing.Size(26, 20);
+            this.tps2text.Size = new System.Drawing.Size(33, 22);
             this.tps2text.TabIndex = 105;
             this.tps2text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -350,18 +368,19 @@
             // 
             this.bps2text.BackColor = System.Drawing.SystemColors.WindowText;
             this.bps2text.ForeColor = System.Drawing.Color.Red;
-            this.bps2text.Location = new System.Drawing.Point(765, 178);
+            this.bps2text.Location = new System.Drawing.Point(1020, 219);
+            this.bps2text.Margin = new System.Windows.Forms.Padding(4);
             this.bps2text.Name = "bps2text";
-            this.bps2text.Size = new System.Drawing.Size(26, 20);
+            this.bps2text.Size = new System.Drawing.Size(33, 22);
             this.bps2text.TabIndex = 106;
             this.bps2text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // DD
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1050, 601);
+            this.ClientSize = new System.Drawing.Size(1400, 740);
             this.Controls.Add(this.bps2text);
             this.Controls.Add(this.tps2text);
             this.Controls.Add(this.bps1text);
@@ -382,6 +401,7 @@
             this.Controls.Add(this.chart2);
             this.Controls.Add(this.chart1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DD";
             this.Text = "DD";
             this.Load += new System.EventHandler(this.DD_Load);

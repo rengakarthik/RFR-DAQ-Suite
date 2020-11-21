@@ -232,18 +232,36 @@ namespace iss_bar_ho_jaega
 
         }
 
-        
+
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        
+
         // The following funtions may appeaar incoherent for the lack of a dedicated pause function
-        
+        int counter = 0;
         private void PS_Click(object sender, EventArgs e)
         {
 
-            if (currentFormNumber == 0)
-                a.Playit();                 // The Playit() function pauses the graphs if called more than once.
+            if (counter == 0)
+            {
+                if (currentFormNumber == 0)
+                    a.Playit();                 // The Playit() function pauses the graphs if called more than once.
+                else
+                    b.Playit();
+                counter = 1;
+                this.PS.IconChar = FontAwesome.Sharp.IconChar.Pause;
+
+            }
             else
-                b.Playit();
+            {
+
+                if (currentFormNumber == 0)
+                    a.Playit();
+                else
+                    b.Playit();
+                counter = 0;
+                this.PS.IconChar = FontAwesome.Sharp.IconChar.Play;
+
+            }
+
         }
 
         private void Slow_Click(object sender, EventArgs e)
@@ -271,12 +289,5 @@ namespace iss_bar_ho_jaega
                 b.Stopit();
         }
 
-        private void Pause_Click(object sender, EventArgs e)
-        {
-            if (currentFormNumber == 0)
-                a.Pauseit();
-            else
-                b.Pauseit();
-        }
     }
 }
