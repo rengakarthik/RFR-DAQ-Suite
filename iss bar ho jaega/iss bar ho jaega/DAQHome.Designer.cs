@@ -327,10 +327,10 @@
             this.file2.BackColor = System.Drawing.Color.Transparent;
             this.file2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.file2.ForeColor = System.Drawing.Color.Lime;
-            this.file2.Location = new System.Drawing.Point(132, 382);
+            this.file2.Location = new System.Drawing.Point(55, 382);
             this.file2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.file2.Name = "file2";
-            this.file2.Size = new System.Drawing.Size(133, 31);
+            this.file2.Size = new System.Drawing.Size(270, 31);
             this.file2.TabIndex = 66;
             this.file2.Text = "File2";
             this.file2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -343,10 +343,10 @@
             this.file1.BackColor = System.Drawing.Color.Transparent;
             this.file1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.file1.ForeColor = System.Drawing.Color.Lime;
-            this.file1.Location = new System.Drawing.Point(131, 69);
+            this.file1.Location = new System.Drawing.Point(49, 61);
             this.file1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.file1.Name = "file1";
-            this.file1.Size = new System.Drawing.Size(133, 31);
+            this.file1.Size = new System.Drawing.Size(276, 31);
             this.file1.TabIndex = 56;
             this.file1.Text = "File1";
             this.file1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
