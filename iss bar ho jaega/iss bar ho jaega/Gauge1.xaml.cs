@@ -29,11 +29,11 @@ namespace iss_bar_ho_jaega
 
         public void ChangeValue()
         {
-            RotateTransform rotateStr2Spoke1 = new RotateTransform(value);
+            RotateTransform rotateStr2Spoke1 = new RotateTransform(value + 180);
             Spoke1.RenderTransform = rotateStr2Spoke1;
-            RotateTransform rotateStr2Spoke2 = new RotateTransform(value + 240);
+            RotateTransform rotateStr2Spoke2 = new RotateTransform(value + 270);
             Spoke2.RenderTransform = rotateStr2Spoke2;
-            RotateTransform rotateStr2Spoke3 = new RotateTransform(value + 120);
+            RotateTransform rotateStr2Spoke3 = new RotateTransform(value + 90);
             Spoke3.RenderTransform = rotateStr2Spoke3;
         } 
     }

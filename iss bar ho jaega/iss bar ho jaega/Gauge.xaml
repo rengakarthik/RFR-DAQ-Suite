@@ -8,13 +8,22 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Viewbox>
         <Grid>
-            <Rectangle x:Name="Spoke1" Fill="#FF3FEA0D" HorizontalAlignment="Left" Height="177" Stroke="Black" VerticalAlignment="Top" Width="24" Margin="160,10,0,0" RenderTransformOrigin="0.5,0.927"/>
+            <Rectangle x:Name="Spoke1" Fill="#FF3FEA0D" HorizontalAlignment="Left" Height="177" Stroke="Black" VerticalAlignment="Top" Width="24" Margin="160,10,0,0" RenderTransformOrigin="0.5,0.927">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
             <Rectangle x:Name="Spoke2" Fill="#FF3FEA0D" HorizontalAlignment="Left" Height="177" Stroke="Black" VerticalAlignment="Top" Width="24" Margin="160,10,0,0" RenderTransformOrigin="0.5,0.927">
                 <Rectangle.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
                         <SkewTransform/>
-                        <RotateTransform Angle="240"/>
+                        <RotateTransform Angle="270"/>
                         <TranslateTransform/>
                     </TransformGroup>
                 </Rectangle.RenderTransform>
@@ -24,7 +33,7 @@
                     <TransformGroup>
                         <ScaleTransform/>
                         <SkewTransform/>
-                        <RotateTransform Angle="120"/>
+                        <RotateTransform Angle="90"/>
                         <TranslateTransform/>
                     </TransformGroup>
                 </Rectangle.RenderTransform>
