@@ -142,11 +142,11 @@ namespace iss_bar_ho_jaega
 
 
 
-            chart4.Series["plot1"].MarkerSize = 10;
-            chart4.Series["plot2"].MarkerSize = 10;
+            chart4.Series["plot1"].MarkerSize = 15;
+            chart4.Series["plot2"].MarkerSize = 15;
 
-            chart4.Series["plot1"].Color = Color.Yellow;
-            chart4.Series["plot2"].Color = Color.Yellow;
+            chart4.Series["plot1"].Color = Color.Blue;
+            chart4.Series["plot2"].Color = Color.Orange;
 
         }
         
@@ -453,37 +453,46 @@ namespace iss_bar_ho_jaega
 
             //try
             //{
+                
+                int axis1 = xaxis;
 
                 ax1.Clear(); // clearing each time to plot new points thereby the moving effect
                 ay1.Clear();
                 ax2.Clear();
                 ay2.Clear();
+       
+            
+                for (int q = 0; q < 20; q++)
+                {
+                    ax1.Add(first.ax[axis1++]); // loading data from workhorse to lists
+                    ay1.Add(first.ay[axis1++]);
 
-                ax1.Add(first.ax[xaxis]); // loading data from workhorse to lists
-                ay1.Add(first.ay[xaxis]);
-
-                ax2.Add(second.ax[xaxis]);
-                ay2.Add(second.ay[xaxis]);
+                    ax2.Add(second.ax[axis1++]);
+                    ay2.Add(second.ay[axis1++]);
+                }
+               
+                
 
                 chart4.Series["plot1"].Points.DataBindXY(ax1, ay1); //plotting the data using the lists
                 chart4.Series["plot2"].Points.DataBindXY(ax2, ay2);
 
-                double a1 = Math.Sqrt(first.ax[xaxis] * first.ax[xaxis] + first.ay[xaxis] * first.ay[xaxis]);
-                double a2 = Math.Sqrt(second.ax[xaxis] * second.ax[xaxis] + second.ay[xaxis] * second.ay[xaxis]);
+                //double a1 = Math.Sqrt(first.ax[xaxis] * first.ax[xaxis] + first.ay[xaxis] * first.ay[xaxis]);
+                //double a2 = Math.Sqrt(second.ax[xaxis] * second.ax[xaxis] + second.ay[xaxis] * second.ay[xaxis]);
+               
 
-                a1 = Math.Round(a1, 2);
-                a2 = Math.Round(a2, 2);
-
-
-                String s1 = a1.ToString();
-                String s2 = a2.ToString();
+                //a1 = Math.Round(a1, 2);
+               // a2 = Math.Round(a2, 2);
 
 
-                chart4.Series["plot1"].LabelForeColor = Color.Red;
-                chart4.Series["plot2"].LabelForeColor = Color.Green;
+                //String s1 = a1.ToString();
+                //String s2 = a2.ToString();
 
-                chart4.Series["plot1"].Label = s1;
-                chart4.Series["plot2"].Label = s2;
+
+                chart4.Series["plot1"].LabelForeColor = Color.Blue;
+                chart4.Series["plot2"].LabelForeColor = Color.Orange;
+
+                //chart4.Series["plot1"].Label = s1;
+                //chart4.Series["plot2"].Label = s2;
 
 
                 chart4.Invalidate(); // use this to plot and replot the points
@@ -762,6 +771,19 @@ namespace iss_bar_ho_jaega
 
 
             }
+            for(int k=1;k<current.nrow-1;k++)
+            {
+                if (k>10)
+                {
+                    double summ = 0;
+                    for (int l=k; l > k - 10; l--)
+                    {
+                        summ = summ + x[l];
+                    }
+                    summ = summ / 10;
+                    x[k] = summ;
+                }
+            }
 
         }
         public void fillaccelydata(ref double[] x, ref workhorse current)         // Fills data int the channels (one at a time) for further processing
@@ -785,6 +807,19 @@ namespace iss_bar_ho_jaega
                 }
 
 
+            }
+            for (int k = 1; k < current.nrow - 1; k++)
+            {
+                if (k > 10)
+                {
+                    double summ = 0;
+                    for (int l = k; l > k - 10; l--)
+                    {
+                        summ = summ + x[l];
+                    }
+                    summ = summ / 10;
+                    x[k] = summ;
+                }
             }
 
         }
