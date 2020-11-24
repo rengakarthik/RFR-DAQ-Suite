@@ -384,7 +384,7 @@ namespace iss_bar_ho_jaega
                 filldata(ref second.BPS, ref second, bps2Count);
 
                 timer = new Timer();
-                timer.Interval = 320;    //present playback speed is 0.0625x
+                timer.Interval = 40;    //present playback speed is 0.0625x
                 timer.Tick += timer_Tick;
                 timer.Start();
 

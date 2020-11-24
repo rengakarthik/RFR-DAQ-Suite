@@ -237,9 +237,10 @@ namespace iss_bar_ho_jaega
 
         // The following funtions may appeaar incoherent for the lack of a dedicated pause function
         int counter = 0;
+        float speed = 1;
         private void PS_Click(object sender, EventArgs e)
         {
-
+            playSpeed.Text = speed.ToString() + "x";
             if (counter == 0)
             {
                 if (currentFormNumber == 0)
@@ -266,6 +267,8 @@ namespace iss_bar_ho_jaega
 
         private void Slow_Click(object sender, EventArgs e)
         {
+            speed /= 2;
+            playSpeed.Text = speed.ToString() + "x";
             if (currentFormNumber == 0)
                 a.Slowit();
             else
@@ -275,6 +278,8 @@ namespace iss_bar_ho_jaega
 
         private void Fast_Click(object sender, EventArgs e)
         {
+            speed *= 2;
+            playSpeed.Text = speed.ToString() + "x";
             if (currentFormNumber == 0)
                 a.Speedit();
             else
@@ -283,11 +288,17 @@ namespace iss_bar_ho_jaega
 
         private void S_Click(object sender, EventArgs e)
         {
+            speed = 0;
+            playSpeed.Text = null;
             if (currentFormNumber == 0)
                 a.Stopit();
             else
                 b.Stopit();
         }
 
+        private void topbar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

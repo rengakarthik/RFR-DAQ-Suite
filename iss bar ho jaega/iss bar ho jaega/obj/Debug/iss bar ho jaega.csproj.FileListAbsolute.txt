@@ -551,3 +551,4 @@ C:\Users\C.S.Hariharan\source\repos\RFR-DAQ-Suite-new\iss bar ho jaega\iss bar h
 C:\Users\C.S.Hariharan\source\repos\RFR-DAQ-Suite-new\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss bar ho jaega.csproj.CopyComplete
 C:\Users\C.S.Hariharan\source\repos\RFR-DAQ-Suite-new\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss bar ho jaega.exe
 C:\Users\C.S.Hariharan\source\repos\RFR-DAQ-Suite-new\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss bar ho jaega.pdb
+C:\Users\kesha\Source\Repos\RFR-DAQ-Suite\iss bar ho jaega\iss bar ho jaega\obj\Debug\iss bar ho jaega_Content.g.cs
