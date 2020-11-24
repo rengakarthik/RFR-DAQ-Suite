@@ -162,7 +162,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\acceleration_circle.png" />
+    <Content Include="Resources\acceleration_circle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

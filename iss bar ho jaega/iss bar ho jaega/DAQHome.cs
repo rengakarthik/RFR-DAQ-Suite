@@ -142,11 +142,11 @@ namespace iss_bar_ho_jaega
 
 
 
-            chart4.Series["plot1"].MarkerSize = 10;
-            chart4.Series["plot2"].MarkerSize = 10;
+            chart4.Series["plot1"].MarkerSize = 15;
+            chart4.Series["plot2"].MarkerSize = 15;
 
-            chart4.Series["plot1"].Color = Color.Yellow;
-            chart4.Series["plot2"].Color = Color.Yellow;
+            chart4.Series["plot1"].Color = Color.Blue;
+            chart4.Series["plot2"].Color = Color.Orange;
 
         }
         
@@ -268,6 +268,8 @@ namespace iss_bar_ho_jaega
         }
 
         //writing my own function to initiate the 3 graphs
+        int max = 0;
+
         public void Chart_initiate(Chart chartx)
         {
             chartx.ChartAreas[0].AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
@@ -449,50 +451,84 @@ namespace iss_bar_ho_jaega
         void timer_Tick(object sender, EventArgs e)
         {
 
-            try
-            {
+            //try
+            //{
+                
+                int axis1 = xaxis;
 
                 ax1.Clear(); // clearing each time to plot new points thereby the moving effect
                 ay1.Clear();
                 ax2.Clear();
                 ay2.Clear();
+       
+            
+                for (int q = 0; q < 20; q++)
+                {
+                    ax1.Add(first.ax[axis1++]); // loading data from workhorse to lists
+                    ay1.Add(first.ay[axis1++]);
 
-                ax1.Add(first.ax[xaxis]); // loading data from workhorse to lists
-                ay1.Add(first.ay[xaxis]);
-
-                ax2.Add(second.ax[xaxis]);
-                ay2.Add(second.ay[xaxis]);
+                    ax2.Add(second.ax[axis1++]);
+                    ay2.Add(second.ay[axis1++]);
+                }
+               
+                
 
                 chart4.Series["plot1"].Points.DataBindXY(ax1, ay1); //plotting the data using the lists
                 chart4.Series["plot2"].Points.DataBindXY(ax2, ay2);
 
-                double a1 = Math.Sqrt(first.ax[xaxis] * first.ax[xaxis] + first.ay[xaxis] * first.ay[xaxis]);
-                double a2 = Math.Sqrt(second.ax[xaxis] * second.ax[xaxis] + second.ay[xaxis] * second.ay[xaxis]);
+                //double a1 = Math.Sqrt(first.ax[xaxis] * first.ax[xaxis] + first.ay[xaxis] * first.ay[xaxis]);
+                //double a2 = Math.Sqrt(second.ax[xaxis] * second.ax[xaxis] + second.ay[xaxis] * second.ay[xaxis]);
+               
 
-                a1 = Math.Round(a1, 2);
-                a2 = Math.Round(a2, 2);
-
-
-                String s1 = a1.ToString();
-                String s2 = a2.ToString();
+                //a1 = Math.Round(a1, 2);
+               // a2 = Math.Round(a2, 2);
 
 
-                chart4.Series["plot1"].LabelForeColor = Color.Red;
-                chart4.Series["plot2"].LabelForeColor = Color.Green;
+                //String s1 = a1.ToString();
+                //String s2 = a2.ToString();
 
-                chart4.Series["plot1"].Label = s1;
-                chart4.Series["plot2"].Label = s2;
+
+                chart4.Series["plot1"].LabelForeColor = Color.Blue;
+                chart4.Series["plot2"].LabelForeColor = Color.Orange;
+
+                //chart4.Series["plot1"].Label = s1;
+                //chart4.Series["plot2"].Label = s2;
 
 
                 chart4.Invalidate(); // use this to plot and replot the points
 
                 // dynamically varying y axis of plot to ensure that data always stays within plot
-                chart1.ChartAreas[0].AxisY.Maximum = UpperLimit(first.x1, second.x1, xaxis) + 0.4;
-                chart1.ChartAreas[0].AxisY.Minimum = LowerLimit(first.x1, second.x1, xaxis) - 0.4;
-                chart2.ChartAreas[0].AxisY.Maximum = UpperLimit(first.y1, second.y1, xaxis) + 0.4;
-                chart2.ChartAreas[0].AxisY.Minimum = LowerLimit(first.y1, second.y1, xaxis) - 0.4;
-                chart3.ChartAreas[0].AxisY.Maximum = UpperLimit(first.z1, second.z1, xaxis) + 0.4;
-                chart3.ChartAreas[0].AxisY.Minimum = LowerLimit(first.z1, second.z1, xaxis) - 0.4;
+                
+                /*float m1 = (float) (UpperLimit(first.x1, second.x1, xaxis) - LowerLimit(first.x1, second.x1, xaxis)) / 5;
+                int m2 = (int) UpperLimit(first.x1, second.x1, xaxis);
+                int m3 = (int) ((UpperLimit(first.x1, second.x1, xaxis) - m2)/m1 + 1);
+
+                int m4 = (int) LowerLimit(first.x1, second.x1, xaxis);
+                int m5 = (int) ((m4 - LowerLimit(first.x1, second.x1, xaxis))/m1 + 1);
+                */
+
+                int m1 = (int) Math.Ceiling(UpperLimit(first.x1, second.x1, xaxis)+ 0.4);
+                int m2 = (int) Math.Floor(LowerLimit(first.x1, second.x1, xaxis) - 0.4);
+                    
+                chart1.ChartAreas[0].AxisY.Interval = (m1-m2)/5;
+                chart1.ChartAreas[0].AxisY.Maximum = m1;
+                chart1.ChartAreas[0].AxisY.Minimum = m2;
+
+
+                int n1 = (int)Math.Ceiling(UpperLimit(first.y1, second.y1, xaxis) + 0.4);
+                int n2 = (int)Math.Floor(LowerLimit(first.y1, second.y1, xaxis) - 0.4);
+
+                chart2.ChartAreas[0].AxisY.Interval = (n1-n2)/5;
+                chart2.ChartAreas[0].AxisY.Maximum = n1;
+                chart2.ChartAreas[0].AxisY.Minimum = n2;
+
+
+                int o1 = (int)Math.Ceiling(UpperLimit(first.z1, second.z1, xaxis) + 0.4);
+                int o2 = (int)Math.Floor(LowerLimit(first.z1, second.z1, xaxis) - 0.4);
+
+                chart3.ChartAreas[0].AxisY.Interval = (o1-o2)/5;
+                chart3.ChartAreas[0].AxisY.Maximum = o1;
+                chart3.ChartAreas[0].AxisY.Minimum = o2;
 
 
 
@@ -654,14 +690,14 @@ namespace iss_bar_ho_jaega
                 bps2text.Text = second.BPS[secondCounter].ToString();
 
 
-            }
+            /*}
 
             catch
             {
                 timer.Stop();
                 MessageBox.Show("End of Data", "Done");
 
-            }
+            }*/
         }
 
         public void Stopit()
@@ -735,6 +771,19 @@ namespace iss_bar_ho_jaega
 
 
             }
+            for(int k=1;k<current.nrow-1;k++)
+            {
+                if (k>10)
+                {
+                    double summ = 0;
+                    for (int l=k; l > k - 10; l--)
+                    {
+                        summ = summ + x[l];
+                    }
+                    summ = summ / 10;
+                    x[k] = summ;
+                }
+            }
 
         }
         public void fillaccelydata(ref double[] x, ref workhorse current)         // Fills data int the channels (one at a time) for further processing
@@ -758,6 +807,19 @@ namespace iss_bar_ho_jaega
                 }
 
 
+            }
+            for (int k = 1; k < current.nrow - 1; k++)
+            {
+                if (k > 10)
+                {
+                    double summ = 0;
+                    for (int l = k; l > k - 10; l--)
+                    {
+                        summ = summ + x[l];
+                    }
+                    summ = summ / 10;
+                    x[k] = summ;
+                }
             }
 
         }
@@ -803,6 +865,11 @@ namespace iss_bar_ho_jaega
         }
 
         private void elementHost2_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
+        {
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
         {
 
         }
