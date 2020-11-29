@@ -145,8 +145,8 @@ namespace iss_bar_ho_jaega
             chart4.Series["plot1"].MarkerSize = 15;
             chart4.Series["plot2"].MarkerSize = 15;
 
-            chart4.Series["plot1"].Color = Color.Blue;
-            chart4.Series["plot2"].Color = Color.Orange;
+            chart4.Series["plot1"].Color = Color.Green;
+            chart4.Series["plot2"].Color = Color.Red;
 
         }
         
@@ -288,11 +288,14 @@ namespace iss_bar_ho_jaega
 
             chartx.Series.Add("File1");
             chartx.Series["File1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            chartx.Series["File1"].Color = Color.Blue;
+            chartx.Series["File1"].Color = Color.Green;
+            chartx.Series["File1"].BorderWidth = 3;
+            //chartx.Series["File1"].
 
             chartx.Series.Add("File2");
             chartx.Series["File2"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            chartx.Series["File2"].Color = Color.Green;
+            chartx.Series["File2"].Color = Color.Red;
+            chartx.Series["File2"].BorderWidth = 3;
         }
 
         public void Playit()
@@ -488,8 +491,8 @@ namespace iss_bar_ho_jaega
                 //String s2 = a2.ToString();
 
 
-                chart4.Series["plot1"].LabelForeColor = Color.Blue;
-                chart4.Series["plot2"].LabelForeColor = Color.Orange;
+                chart4.Series["plot1"].LabelForeColor = Color.Green;
+                chart4.Series["plot2"].LabelForeColor = Color.Red;
 
                 //chart4.Series["plot1"].Label = s1;
                 //chart4.Series["plot2"].Label = s2;

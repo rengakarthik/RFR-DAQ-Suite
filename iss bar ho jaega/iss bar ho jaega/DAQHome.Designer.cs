@@ -416,8 +416,9 @@
             this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
+            series2.BorderWidth = 6;
             series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series2.Legend = "Legend1";
             series2.Name = "Channel 1";
             this.chart1.Series.Add(series2);
@@ -490,7 +491,7 @@
             legend4.ForeColor = System.Drawing.Color.Lime;
             legend4.Name = "Legend1";
             this.chart4.Legends.Add(legend4);
-            this.chart4.Location = new System.Drawing.Point(621, 227);
+            this.chart4.Location = new System.Drawing.Point(574, 213);
             this.chart4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart4.Name = "chart4";
             series4.BorderWidth = 4;
@@ -506,7 +507,7 @@
             series5.Name = "plot2";
             this.chart4.Series.Add(series4);
             this.chart4.Series.Add(series5);
-            this.chart4.Size = new System.Drawing.Size(507, 311);
+            this.chart4.Size = new System.Drawing.Size(650, 311);
             this.chart4.TabIndex = 75;
             this.chart4.Text = "chart4";
             this.chart4.Click += new System.EventHandler(this.chart4_Click);
@@ -760,7 +761,6 @@
             this.Controls.Add(this.tps1full);
             this.Controls.Add(this.elementHost2);
             this.Controls.Add(this.elementHost1);
-            this.Controls.Add(this.chart4);
             this.Controls.Add(this.Purge2);
             this.Controls.Add(this.label_x2);
             this.Controls.Add(this.label_y2);
@@ -782,6 +782,7 @@
             this.Controls.Add(this.chart3);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.chart2);
+            this.Controls.Add(this.chart4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DAQHome";
