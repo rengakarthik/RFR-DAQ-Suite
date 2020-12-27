@@ -376,7 +376,7 @@
             legend1.ForeColor = System.Drawing.Color.Lime;
             legend1.Name = "Legend1";
             this.chart2.Legends.Add(legend1);
-            this.chart2.Location = new System.Drawing.Point(1, 254);
+            this.chart2.Location = new System.Drawing.Point(1, 261);
             this.chart2.Margin = new System.Windows.Forms.Padding(4);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;

@@ -32,7 +32,7 @@ namespace iss_bar_ho_jaega
         int started;
         double str1Max = 0;
         double str2Max = 0;
-        double strCP = 0;
+        //double strCP = 0;
 
 
 
@@ -276,6 +276,7 @@ namespace iss_bar_ho_jaega
             chartx.ChartAreas[0].AxisX.LabelStyle.Format = "";
             chartx.ChartAreas[0].AxisY.LabelStyle.Format = "";
             chartx.ChartAreas[0].AxisX.LabelStyle.IsEndLabelVisible = true;
+            chartx.ChartAreas[0].AxisX.LabelStyle.Enabled = false;
 
             chartx.ChartAreas[0].AxisX.Interval = 2;
             chartx.ChartAreas[0].AxisY.Interval = 0.2;
@@ -516,6 +517,7 @@ namespace iss_bar_ho_jaega
                 chart1.ChartAreas[0].AxisY.Interval = (m1-m2)/5;
                 chart1.ChartAreas[0].AxisY.Maximum = m1;
                 chart1.ChartAreas[0].AxisY.Minimum = m2;
+                chart1.ChartAreas[0].AxisX.LabelStyle.Enabled = false;
 
 
                 int n1 = (int)Math.Ceiling(UpperLimit(first.y1, second.y1, xaxis) + 0.4);
@@ -524,6 +526,7 @@ namespace iss_bar_ho_jaega
                 chart2.ChartAreas[0].AxisY.Interval = (n1-n2)/5;
                 chart2.ChartAreas[0].AxisY.Maximum = n1;
                 chart2.ChartAreas[0].AxisY.Minimum = n2;
+                chart2.ChartAreas[0].AxisX.LabelStyle.Enabled = false;
 
 
                 int o1 = (int)Math.Ceiling(UpperLimit(first.z1, second.z1, xaxis) + 0.4);
@@ -532,10 +535,11 @@ namespace iss_bar_ho_jaega
                 chart3.ChartAreas[0].AxisY.Interval = (o1-o2)/5;
                 chart3.ChartAreas[0].AxisY.Maximum = o1;
                 chart3.ChartAreas[0].AxisY.Minimum = o2;
+                chart3.ChartAreas[0].AxisX.LabelStyle.Enabled = false;
 
 
 
-                if (xaxis <= 20)
+                if (xaxis <= 80)
                 {
 
 
@@ -587,7 +591,7 @@ namespace iss_bar_ho_jaega
 
                 }
 
-                else if (xaxis > 20)
+                else if (xaxis > 80)
                 {
 
                     xaxis++;
@@ -829,9 +833,9 @@ namespace iss_bar_ho_jaega
 
         public double UpperLimit(double[] px1, double[] px2, int xaxis) //function to find max y value currently in graph
         {
-            int startPoint = (xaxis >= 20) ? (xaxis - 20) : 0;
-            double a = px1.Skip(startPoint).Take(20).Max();
-            double b = px2.Skip(startPoint).Take(20).Max();
+            int startPoint = (xaxis >= 80) ? (xaxis - 80) : 0;
+            double a = px1.Skip(startPoint).Take(80).Max();
+            double b = px2.Skip(startPoint).Take(80).Max();
             if (a > b)
                 return a;
             else
@@ -841,9 +845,9 @@ namespace iss_bar_ho_jaega
         }
         public double LowerLimit(double[] px1, double[] px2, int xaxis) //function to find min y value currently in graph
         {
-            int startPoint = (xaxis >= 20) ? (xaxis - 20) : 0;
-            double a = px1.Skip(startPoint).Take(20).Min();
-            double b = px2.Skip(startPoint).Take(20).Min();
+            int startPoint = (xaxis >= 80) ? (xaxis - 80) : 0;
+            double a = px1.Skip(startPoint).Take(80).Min();
+            double b = px2.Skip(startPoint).Take(80).Min();
             if (a < b && a > -9000.0)
                 return a;
             else
