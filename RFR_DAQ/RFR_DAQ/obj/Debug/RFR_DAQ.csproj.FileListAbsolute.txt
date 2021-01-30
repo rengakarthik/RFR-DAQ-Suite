@@ -1,0 +1,62 @@
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\bin\Debug\RFR_DAQ.exe.config
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\bin\Debug\RFR_DAQ.exe
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\bin\Debug\RFR_DAQ.pdb
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\RFR_DAQ.csprojAssemblyReference.cache
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\bps.g.cs
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\bps1.g.cs
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\Gauge.g.cs
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\Gauge1.g.cs
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\tps.g.cs
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\tps1.g.cs
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\RFR_DAQ_Content.g.cs
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\RFR_DAQ_MarkupCompile.cache
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\RFR_DAQ_MarkupCompile.lref
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\bps.baml
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\bps1.baml
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\Gauge.baml
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\Gauge1.baml
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\tps.baml
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\tps1.baml
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\RFR_DAQ.g.resources
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\RFR_DAQ.DAQHome.resources
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\RFR_DAQ.DD.resources
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\RFR_DAQ.Form1.resources
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\RFR_DAQ.Properties.Resources.resources
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\RFR_DAQ.Resource1.resources
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\RFR_DAQ.csproj.GenerateResource.cache
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\RFR_DAQ.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\RFR_DAQ.csproj.CopyComplete
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\RFR_DAQ.exe
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\iss bar ho jaega\iss bar ho jaega\obj\Debug\RFR_DAQ.pdb
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\bin\Debug\RFR_DAQ.exe.config
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\bin\Debug\RFR_DAQ.exe
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\bin\Debug\RFR_DAQ.pdb
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\RFR_DAQ.csprojAssemblyReference.cache
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\bps.g.cs
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\bps1.g.cs
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\Gauge.g.cs
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\Gauge1.g.cs
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\tps.g.cs
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\tps1.g.cs
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\RFR_DAQ_Content.g.cs
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\RFR_DAQ_MarkupCompile.cache
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\RFR_DAQ_MarkupCompile.lref
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\bps.baml
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\bps1.baml
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\Gauge.baml
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\Gauge1.baml
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\tps.baml
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\tps1.baml
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\RFR_DAQ.g.resources
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\RFR_DAQ.DAQHome.resources
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\RFR_DAQ.DD.resources
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\RFR_DAQ.Form1.resources
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\RFR_DAQ.Properties.Resources.resources
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\RFR_DAQ.Resource1.resources
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\RFR_DAQ.csproj.GenerateResource.cache
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\RFR_DAQ.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\RFR_DAQ.csproj.CopyComplete
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\RFR_DAQ.exe
+C:\Users\hp\source\repos\rengakarthik\RFR_DAQ\RFR_DAQ\RFR_DAQ\obj\Debug\RFR_DAQ.pdb
